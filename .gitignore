@@ -2,8 +2,15 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/UniProjectHub-BE/.vs/UniProjectHub-BE/FileContentIndex/fa5e7ee2-2c59-432f-9e73-0b1938b40e5d.vsidx
-/UniProjectHub-BE/.vs/UniProjectHub-BE/FileContentIndex/f8dfdcab-b34d-4ab1-9617-603fc705d7a7.vsidx
-/UniProjectHub-BE/.vs/UniProjectHub-BE/FileContentIndex/db97b2cf-8324-494a-81b2-be924f7f0cb4.vsidx
-/UniProjectHub-BE/.vs/UniProjectHub-BE/FileContentIndex/a3437b28-4531-4a2b-abab-cb97fc3577de.vsidx
-/UniProjectHub-BE/.vs/UniProjectHub-BE/FileContentIndex/a24b3ccb-ff99-4739-86d4-f82fb004524b.vsidx
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
