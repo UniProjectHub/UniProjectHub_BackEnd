@@ -1,0 +1,12 @@
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\bin\Debug\net8.0\Domain.dll
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.dll
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
