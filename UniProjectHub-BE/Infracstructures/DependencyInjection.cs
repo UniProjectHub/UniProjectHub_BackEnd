@@ -1,4 +1,6 @@
-﻿using Domain.Models;
+﻿using Domain.Interfaces;
+using Domain.Models;
+using Infracstructures.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -41,6 +43,8 @@ namespace Infracstructures
             {
                 o.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
+
+            services.AddScoped<ITokenService, TokenService>();
             return services;
         }
     }
