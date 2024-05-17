@@ -10,3 +10,16 @@ D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.pdb
 D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\ref\Domain.dll
 D:\Study\cn8\Test\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\bin\Debug\net8.0\Domain.deps.json
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\bin\Debug\net8.0\Domain.dll
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\bin\Debug\net8.0\Domain.pdb
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.dll
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\refint\Domain.dll
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\Domain.pdb
+E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Domain\obj\Debug\net8.0\ref\Domain.dll
