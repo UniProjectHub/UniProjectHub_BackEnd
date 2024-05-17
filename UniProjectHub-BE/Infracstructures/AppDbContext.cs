@@ -27,6 +27,21 @@ namespace Infracstructures
             // Configure primary key for IdentityUserLogin<string>
             builder.Entity<IdentityUserLogin<string>>().HasKey(l => l.UserId);
             builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            List<IdentityRole> roles = new List<IdentityRole>
+            {
+                new IdentityRole
+                {
+                    Name = "Admin",
+                    NormalizedName = "ADMIN"
+                },
+                new IdentityRole
+                {
+                    Name = "User",
+                    NormalizedName = "USER"
+                },
+            };
+            builder.Entity<IdentityRole>().HasData(roles);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
