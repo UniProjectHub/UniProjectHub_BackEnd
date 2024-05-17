@@ -1,130 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\",
+  "WorkspaceRootPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517070824_rename_database_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infracstructures\\Migrations\\20240517070824_rename_database_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\cn8\\EXE201\\MainGit\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517070752_rename_database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infracstructures\\Migrations\\20240517070752_rename_database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\cn8\\EXE201\\MainGit\\.vs\\MainGit\\v17\\DocumentLayout.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\application\\commons\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\commons\\pagination.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\infracstructures\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\infracstructures\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\infracstructures.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\infracstructures.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517064639_updateBaseModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infracstructures\\Migrations\\20240517064639_updateBaseModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\infracstructures\\fluentapis\\blogconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\blogconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\commentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\commentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\groupchatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\groupchatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\memberconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\memberconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\memberintaskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\memberintaskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\taskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\taskconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\groupchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\groupchat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\projectconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\projectconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\infracstructures\\fluentapis\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\notificationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|d:\\study\\cn8\\test\\uniprojecthub-be\\domain\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\memberintask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\memberintask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\infracstructures\\fluentapis\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\infracstructures\\fluentapis\\scheduleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\fluentapis\\scheduleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\Test\\UniProjectHub-BE\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\application\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,8 +32,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 16,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\.gitignore",
+              "RelativeDocumentMoniker": "..\\.gitignore",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\.gitignore",
+              "RelativeToolTip": "..\\.gitignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-17T07:39:33.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DocumentLayout.json",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\.vs\\MainGit\\v17\\DocumentLayout.json",
+              "RelativeDocumentMoniker": "..\\.vs\\MainGit\\v17\\DocumentLayout.json",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\.vs\\MainGit\\v17\\DocumentLayout.json",
+              "RelativeToolTip": "..\\.vs\\MainGit\\v17\\DocumentLayout.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-17T07:35:38.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\UnitOfWork.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\UnitOfWork.cs",
+              "RelativeToolTip": "Infracstructures\\UnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:32:06.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Infracstructures",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+              "RelativeDocumentMoniker": "Infracstructures\\Infracstructures.csproj",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+              "RelativeToolTip": "Infracstructures\\Infracstructures.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-17T07:30:30.274Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -202,400 +152,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240517070824_rename_database_2.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517070824_rename_database_2.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240517070824_rename_database_2.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517070824_rename_database_2.cs",
-              "RelativeToolTip": "Infracstructures\\Migrations\\20240517070824_rename_database_2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T07:08:24.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20240517070752_rename_database.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517070752_rename_database.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240517070752_rename_database.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517070752_rename_database.cs",
-              "RelativeToolTip": "Infracstructures\\Migrations\\20240517070752_rename_database.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T07:07:52.351Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Application\\IUnitOfWork.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\IUnitOfWork.cs",
+              "RelativeToolTip": "Application\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T07:03:42.414Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20240517064639_updateBaseModel.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517064639_updateBaseModel.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240517064639_updateBaseModel.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240517064639_updateBaseModel.cs",
-              "RelativeToolTip": "Infracstructures\\Migrations\\20240517064639_updateBaseModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:46:39.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CommentConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\CommentConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\CommentConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\CommentConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\CommentConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T03:20:29.481Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\CategoryConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\CategoryConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\CategoryConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\CategoryConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T03:27:08.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\AppDbContext.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\AppDbContext.cs",
-              "RelativeToolTip": "Infracstructures\\AppDbContext.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCEAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T07:57:12.179Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\DependencyInjection.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\DependencyInjection.cs",
-              "RelativeToolTip": "Infracstructures\\DependencyInjection.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACoAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T09:09:41.828Z",
+              "WhenOpened": "2024-05-17T07:28:56.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\appsettings.json",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
-              "RelativeToolTip": "UniProjectHub-BE\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-07T09:00:03.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "GroupChatConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\GroupChatConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\GroupChatConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\GroupChatConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\GroupChatConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:29:29.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MemberConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\MemberConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\MemberConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\MemberConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\MemberConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T03:32:26.055Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BlogConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\BlogConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\BlogConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\BlogConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\BlogConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T04:30:18.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MemberInTaskConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\MemberInTaskConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\MemberInTaskConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\MemberInTaskConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\MemberInTaskConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:39:16.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "TaskConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\TaskConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\TaskConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\TaskConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\TaskConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:35:18.117Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ProjectConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\ProjectConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\ProjectConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\ProjectConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\ProjectConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T06:23:42.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "NotificationConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\NotificationConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\NotificationConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\NotificationConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\NotificationConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T03:29:49.858Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Member.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Member.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Member.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Member.cs",
-              "RelativeToolTip": "Domain\\Models\\Member.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T15:25:18.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Task.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Task.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Task.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Task.cs",
-              "RelativeToolTip": "Domain\\Models\\Task.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABgAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T03:39:39.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Notification.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Notification.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Notification.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Notification.cs",
-              "RelativeToolTip": "Domain\\Models\\Notification.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAkwAsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T03:54:24.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "GroupChat.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\GroupChat.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\GroupChat.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\GroupChat.cs",
-              "RelativeToolTip": "Domain\\Models\\GroupChat.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T03:50:08.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Users.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Users.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Users.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Users.cs",
-              "RelativeToolTip": "Domain\\Models\\Users.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAuwBsAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T07:35:57.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Category.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Category.cs",
-              "RelativeToolTip": "Domain\\Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T04:09:48.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Comment.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Comment.cs",
-              "RelativeToolTip": "Domain\\Models\\Comment.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T14:14:17.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MemberInTask.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\MemberInTask.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\MemberInTask.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\MemberInTask.cs",
-              "RelativeToolTip": "Domain\\Models\\MemberInTask.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T03:46:37.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Blog.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Blog.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Blog.cs",
-              "RelativeToolTip": "Domain\\Models\\Blog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T04:06:45.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\UserConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\UserConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\UserConfiguration.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwB4AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T07:53:51.409Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ScheduleConfiguration.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\ScheduleConfiguration.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\FluentAPIs\\ScheduleConfiguration.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\FluentAPIs\\ScheduleConfiguration.cs",
-              "RelativeToolTip": "Infracstructures\\FluentAPIs\\ScheduleConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T08:32:02.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Schedule.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Schedule.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Schedule.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Models\\Schedule.cs",
-              "RelativeToolTip": "Domain\\Models\\Schedule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T07:45:53.997Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
-              "RelativeToolTip": "UniProjectHub-BE\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T09:12:10.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Domain",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj",
-              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj",
-              "RelativeToolTip": "Domain\\Domain.csproj",
+              "Title": "Pagination.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Commons\\Pagination.cs",
+              "RelativeDocumentMoniker": "Application\\Commons\\Pagination.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Commons\\Pagination.cs",
+              "RelativeToolTip": "Application\\Commons\\Pagination.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-07T08:03:41.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Application",
-              "DocumentMoniker": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj",
-              "RelativeDocumentMoniker": "Application\\Application.csproj",
-              "ToolTip": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj",
-              "RelativeToolTip": "Application\\Application.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-07T06:50:12.286Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-17T07:25:34.087Z",
+              "EditorCaption": ""
             }
           ]
         },
