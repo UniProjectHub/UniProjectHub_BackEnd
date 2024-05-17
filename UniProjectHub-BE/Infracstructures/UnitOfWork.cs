@@ -1,9 +1,8 @@
 ﻿using Application;
-using Application.Repositories;
 
 namespace Infracstructures
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork 
     {
         private readonly AppDbContext _context;
         
