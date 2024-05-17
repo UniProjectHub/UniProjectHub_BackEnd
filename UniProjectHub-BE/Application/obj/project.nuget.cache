@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XXg/XvkQC92bgdJLkSHxwP+B4fRi2+MQcKINR7DHKuUEVT6UzV4JyM671k4X40YFVVKHfSRqeYaYqYy4KF/llw==",
+  "dgSpecHash": "9Iu+Z1DrzK6h7M7bC+q9Y2TI7fWPfnEblw7nLtqBcE5AfVjsjn6gbxvwxYPOn8RZ/zpKqIydw3P/4J1I5FnbCw==",
   "success": true,
-  "projectFilePath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj",
+  "projectFilePath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PhiDN11\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\PhiDN11\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

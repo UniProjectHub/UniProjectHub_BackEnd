@@ -3732,11 +3732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+      "projectUniqueName": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
       "projectName": "Infracstructures",
-      "projectPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+      "projectPath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
       "packagesPath": "C:\\Users\\PhiDN11\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Infracstructures\\obj\\",
+      "outputPath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Infracstructures\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3753,8 +3753,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj": {
-              "projectPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj"
+            "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Application\\Application.csproj": {
+              "projectPath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Application\\Application.csproj"
             }
           }
         }

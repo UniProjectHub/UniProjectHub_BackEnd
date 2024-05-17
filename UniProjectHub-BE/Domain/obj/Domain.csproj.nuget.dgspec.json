@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj": {}
+    "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+    "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\PhiDN11\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\obj\\",
+        "outputPath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4j8J01zPNcvJsosX/ZvVyY6u7YfQZIgAlyL/99CQ4HlQg/6JqfGHDlrALcvfn+yK42ixsJG48qLYQ5hHhaPTsQ==",
+  "dgSpecHash": "SK5SwG18U81xkZJDYNrYahG6oBY2YDo5z9YbGwck6YIgnIypl4fhzayBoUmCB7Bv9AmYgcNToCuA64mLERhTVQ==",
   "success": true,
-  "projectFilePath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+  "projectFilePath": "D:\\Study\\cn8\\Test\\test\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PhiDN11\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\PhiDN11\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
