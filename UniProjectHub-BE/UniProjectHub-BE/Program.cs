@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -59,14 +60,13 @@ builder.Services.AddScoped<SignInManager<Users>>();
 
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme =
-    options.DefaultChallengeScheme =
-    options.DefaultForbidScheme =
-    options.DefaultScheme =
-    options.DefaultSignInScheme =
-    options.DefaultSignOutScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
 {
+    options.SaveToken = true;
+    options.RequireHttpsMetadata = false;
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -85,17 +85,14 @@ builder.Services.AddAuthentication(options =>
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
 })
-.AddCookie();
-
-//cấu hình login google, facebook
-builder.Services.AddAuthentication()
-    .AddGoogle(googleOptions =>
-    {
-        IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
-        googleOptions.ClientId = googleAuthNSection["ClientId"];
-        googleOptions.ClientSecret = googleAuthNSection["ClientSecret"];
-        //googleOptions.CallbackPath = "/signin-google";
-    });
+.AddCookie()
+.AddGoogle(options =>
+{
+    IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
+    options.ClientId = googleAuthNSection["ClientId"];
+    options.ClientSecret = googleAuthNSection["ClientSecret"];
+    //googleOptions.CallbackPath = "/signin-google";
+});
 //.AddFacebook(facebookOptions => {
 //    IConfigurationSection facebookAuthNSection = builder.Configuration.GetSection("Authentication:Facebook");
 //    facebookOptions.AppId = facebookAuthNSection["AppId"];
@@ -131,6 +128,10 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
+
+builder.Services.AddAuthorization();
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles); ;
 
 builder.Services.AddInfractstructure(builder.Configuration);
 
