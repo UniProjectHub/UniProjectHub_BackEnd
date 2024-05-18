@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Infracstructures
-build_property.ProjectDir = E:\Dev\EXE202\UniProjectHub-BE\UniProjectHub-BE\Infracstructures\
+build_property.ProjectDir = E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Infracstructures\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

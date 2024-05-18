@@ -164,7 +164,7 @@ namespace api.Controllers
         [HttpGet("LoginGoogle")]
         public IActionResult GoogleLogin()
         {
-            string redirectUrl = "api/User/CallBackGoogle";
+            string redirectUrl = "api/account/CallBackGoogle";
             var properties = signInManager.ConfigureExternalAuthenticationProperties("Google", redirectUrl);
             return new ChallengeResult("Google", properties);
         }
