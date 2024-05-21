@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj": {}
+    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj": {
+    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj",
+        "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\PhiDN11\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Application\\obj\\",
+        "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
+        "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj"
+              "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+                "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj"
               }
             }
           }
@@ -38,11 +38,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -94,21 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\PhiDN11\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\cn8\\Test\\UniProjectHub-BE\\Domain\\obj\\",
+        "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
+        "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,11 +123,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -160,7 +150,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
