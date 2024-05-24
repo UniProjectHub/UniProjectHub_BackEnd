@@ -51,3 +51,9 @@ E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Application\obj\Debug\net8.0\refint
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.pdb
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.genruntimeconfig.cache
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.sourcelink.json

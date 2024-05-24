@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {}
+    "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {}
   },
   "projects": {
-    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj": {
+    "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
-        "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\obj\\",
+        "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj": {
-                "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj"
+              "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj"
               }
             }
           }
@@ -89,21 +94,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+    "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
-        "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,6 +120,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -150,21 +160,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
+    "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+        "projectUniqueName": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
         "projectName": "Infracstructures",
-        "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
-        "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
-        "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\obj\\",
+        "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -172,14 +186,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj": {
-                "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj"
+              "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj"
               }
             }
           }
@@ -255,7 +270,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

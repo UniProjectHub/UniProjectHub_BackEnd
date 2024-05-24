@@ -51,3 +51,9 @@ E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\I
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\refint\Infracstructures.dll
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.pdb
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\ref\Infracstructures.dll
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.csproj.AssemblyReference.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.AssemblyInfoInputs.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.AssemblyInfo.cs
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.csproj.CoreCompileInputs.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.sourcelink.json
