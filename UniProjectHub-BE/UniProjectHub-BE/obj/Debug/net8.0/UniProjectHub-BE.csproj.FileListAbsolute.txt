@@ -480,3 +480,10 @@ C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\n
 C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.csproj.CoreCompileInputs.cache
 C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.sourcelink.json
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.csproj.AssemblyReference.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.AssemblyInfoInputs.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.AssemblyInfo.cs
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.csproj.CoreCompileInputs.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.MvcApplicationPartsAssemblyInfo.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.sourcelink.json

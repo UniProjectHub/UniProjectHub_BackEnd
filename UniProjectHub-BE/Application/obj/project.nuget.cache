@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xIgW6IXm/2jeBKQNyZjD8hPb6LS9QSd/cnuBYxr8BOjEdOhbiw3npQiM6QMX60X5TtjSnxFZbQq2jjZ6qcZHtA==",
+  "dgSpecHash": "IY4Wow74AuOv7Ybq0hVWYuurPaKMVtzPq3IMfqK1cpINGiuIIK2IC+YbyvsjIXPvckGzdfNacqGd5uoCrdBCew==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
+  "projectFilePath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adm\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
