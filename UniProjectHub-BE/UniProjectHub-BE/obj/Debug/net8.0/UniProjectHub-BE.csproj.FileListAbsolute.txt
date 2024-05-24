@@ -473,3 +473,10 @@ E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\U
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.genruntimeconfig.cache
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\ref\UniProjectHub-BE.dll
 E:\Dev\EXE202\UniProjectHub\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.csproj.AssemblyReference.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.AssemblyInfoInputs.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.AssemblyInfo.cs
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.csproj.CoreCompileInputs.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.sourcelink.json

@@ -7,15 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interfaces\**" />
     <Compile Remove="Repositories\**" />
-    <Compile Remove="Services\**" />
-    <EmbeddedResource Remove="Interfaces\**" />
     <EmbeddedResource Remove="Repositories\**" />
-    <EmbeddedResource Remove="Services\**" />
-    <None Remove="Interfaces\**" />
     <None Remove="Repositories\**" />
-    <None Remove="Services\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,11 +28,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
 </Project>
