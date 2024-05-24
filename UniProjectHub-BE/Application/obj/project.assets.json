@@ -4602,11 +4602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
+      "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
       "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\obj\\",
+      "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4628,8 +4628,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj"
+            "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj"
             }
           }
         }

@@ -57,3 +57,9 @@ C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0
 C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
 C:\Users\adm\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.sourcelink.json
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_BackEnd\UniProjectHub-BE\Application\obj\Debug\net8.0\Application.sourcelink.json

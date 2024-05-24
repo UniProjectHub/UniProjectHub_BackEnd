@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ARH+mgiHWk1BDrLBiRbvKUGPLNsSsF2+oyGKLwc3Yq0tQit3bfGW2vTQR2lFlE864BFhL+tXfRTJy/xCLla8Bw==",
+  "dgSpecHash": "AwKucQe3v8VcWOWqe+H/XG1lmtE8bA8J4SjrPgRaDHlTUc+ZRYAr/qrDH8vj6ezLHjREwcXT3Gg5YiV7uAjGGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adm\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+  "projectFilePath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adm\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
