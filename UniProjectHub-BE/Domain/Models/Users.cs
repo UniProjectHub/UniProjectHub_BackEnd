@@ -18,7 +18,8 @@ namespace Domain.Models
         public string? AvatarURL { get; set; }
         
         public int Status { get; set; }
-        public string? RefreshToken { get; set; }
+        public string RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiryTime { get; set; }
         public ICollection<Schedule>? Schedules { get; set; }
         public ICollection<Blog>? Blogs { get; set; }
         public ICollection<Notification>? Notifications { get; set; }

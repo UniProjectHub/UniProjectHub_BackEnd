@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace UniProjectHub_BE.Controllers
 {
@@ -21,10 +22,12 @@ namespace UniProjectHub_BE.Controllers
             _roleManager = roleManager;
         }
 
+
         // Get all users
         [HttpGet("users")]
         public IActionResult GetAllUsers()
         {
+            
             var users = _userManager.Users.Select(user => new
             {
                 user.Id,
