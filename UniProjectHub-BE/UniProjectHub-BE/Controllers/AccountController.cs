@@ -87,11 +87,11 @@ namespace api.Controllers
                     if (roleResult.Succeeded)
                     {
                         // Phát sinh token để xác nhận email
-                        var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-                        token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+                        var code = await userManager.GenerateEmailConfirmationTokenAsync(user);
+                        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
 
-                        // https://localhost:5001/confirm-email?userId=fdsfds&token=xyz&returnUrl=
-                        var callbackUrl = Request.Scheme + "://" + Request.Host + Url.Action("confirmemail", "account", new { userId = user.Id, token = token });
+                        // https://localhost:5001/confirm-email?userId=fdsfds&code=xyz&returnUrl=
+                        var callbackUrl = Request.Scheme + "://" + Request.Host + Url.Action("confirmemail", "account", new { userId = user.Id, code = code });
 
                         await emailSender.SendEmailAsync(user.Email,
                             "Confirm email", callbackUrl);
@@ -133,21 +133,21 @@ namespace api.Controllers
         }
 
         // GET: /Account/ConfirmEmail
-        [HttpGet("confirm-email")]
+        [HttpGet("confirmemail")]
         [AllowAnonymous]
-        public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        public async Task<IActionResult> ConfirmEmail(string userId, string code)
         {
-            if (userId == null || token == null)
+            if (userId == null || code == null)
             {
-                return BadRequest("Null userid, token");
+                return BadRequest("Null userid, code");
             }
             var user = await userManager.FindByIdAsync(userId);
             if (user == null)
             {
                 return BadRequest("Null user");
             }
-            token = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
-            var result = await userManager.ConfirmEmailAsync(user, token);
+            code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
+            var result = await userManager.ConfirmEmailAsync(user, code);
             if (result.Succeeded)
             {
                 //user.RegistrationTime = DateTime.Now; // Update the LastLoginTime property
@@ -161,53 +161,7 @@ namespace api.Controllers
             }
         }
 
-        [HttpPost("forgot-password")]
-        public async Task<IActionResult> ForgotPassword(ForgotPasswordDto forgotPasswordDto)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var user = await userManager.FindByEmailAsync(forgotPasswordDto.Email);
-            if (user == null)
-                return BadRequest("User not found.");
-
-            // Phát sinh token để xác nhận email
-            var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-            token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
-
-            // https://localhost:5001/confirm-email?userId=fdsfds&token=xyz&returnUrl=
-            var callbackUrl =  Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
-
-            await emailSender.SendEmailAsync(user.Email,
-                "Forgot password", callbackUrl);
-            Console.WriteLine("Token: " + token);
-            return Ok("Password reset link has been sent to your email.");
-        }
-
-        [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword(ResetPasswordDto resetPasswordDto)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var user = await userManager.FindByEmailAsync(resetPasswordDto.Email);
-            if (user == null)
-                return BadRequest("User not found.");
-
-            var resetPassResult = await userManager.ResetPasswordAsync(user, resetPasswordDto.Token, resetPasswordDto.NewPassword);
-
-            if (!resetPassResult.Succeeded)
-            {
-                foreach (var error in resetPassResult.Errors)
-                {
-                    ModelState.AddModelError(error.Code, error.Description);
-                }
-                return BadRequest(ModelState);
-            }
-            return Ok("Password has been reset successfully.");
-        }
-
-        [HttpGet("logingoogle")]
+        [HttpGet("LoginGoogle")]
         public IActionResult GoogleLogin()
         {
             string redirectUrl = "api/account/CallBackGoogle";
@@ -215,7 +169,7 @@ namespace api.Controllers
             return new ChallengeResult("Google", properties);
         }
 
-        [HttpGet("callbackgoogle")]
+        [HttpGet("CallBackGoogle")]
         public async Task<ActionResult> CallBackGoogle()
         {
             ExternalLoginInfo info = await signInManager.GetExternalLoginInfoAsync();
@@ -246,43 +200,6 @@ namespace api.Controllers
                 }
                 return BadRequest();
             }
-        }
-
-        [HttpPut("update-profile")]
-        public async Task<IActionResult> UpdateUserProfile(UpdateUserProfileDto updateUserProfileDto)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            var user = await userManager.FindByNameAsync(User.Identity.Name);
-            if (user == null)
-            {
-                return NotFound("User not found.");
-            }
-
-            user.FirstName = updateUserProfileDto.FirstName;
-            user.LastName = updateUserProfileDto.LastName;
-            user.PhoneNumber = updateUserProfileDto.PhoneNumber;
-            user.DateOfBirth = updateUserProfileDto.DateOfBirth;
-            user.IsStudent = updateUserProfileDto.IsStudent;
-            user.University = updateUserProfileDto.University;
-            user.IsMale = updateUserProfileDto.IsMale;
-            user.AvatarURL = updateUserProfileDto.AvatarURL;
-
-            var result = await userManager.UpdateAsync(user);
-
-            if (!result.Succeeded)
-            {
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(error.Code, error.Description);
-                }
-                return BadRequest(ModelState);
-            }
-
-            return Ok(new { message = "Profile updated successfully." });
         }
 
         private void SendEmail(string body, string email)
