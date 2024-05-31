@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UniProjectHub-BE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73a189a480169d1f76ca0f5c99aebbc247ba05db")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0592c5a3f9cfd8efc4ada18d777143c505bf54d7")]
->>>>>>> parent of 5d5c774 (Admin function, update user profile)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7093cae54d0cf2a26dceeca6e58a55acb1d130ad")]
 [assembly: System.Reflection.AssemblyProductAttribute("UniProjectHub-BE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UniProjectHub-BE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
