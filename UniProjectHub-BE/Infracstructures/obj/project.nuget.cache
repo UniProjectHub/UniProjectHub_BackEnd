@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EiG2HhJY6Lfq+2Mg3XXLpqZBFc9ED7bQoCE5ZJ2Xc1u+SyAckIXQY1PNfEJiNL6CCMoJ+IY185x1VvCA4dN9Kw==",
+  "dgSpecHash": "A71RY0nRGxaGKQTCyRPXLtjAFhj6kr4aXISYYdlgU3cIQL7Ayl8Av/mDrmzhdCrSb/7LnKgpu1HCJIcjz2ruSw==",
   "success": true,
   "projectFilePath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\adm\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\adm\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\mailkit\\4.5.0\\mailkit.4.5.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.5\\microsoft.aspnetcore.authentication.jwtbearer.8.0.5.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
