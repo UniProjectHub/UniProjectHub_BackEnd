@@ -1,6 +1,9 @@
-﻿using Domain.Models;
-using Infracstructures.InterfacesRepository;
+﻿using Application.Commons;
+using Application.InterfaceRepositories;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,47 +12,63 @@ using System.Threading.Tasks;
 
 namespace Infracstructures.Repositories
 {
-    public class GroupChatRepository : IGroupChatRepository
+    public class GroupChatRepository : GenericRepository<GroupChat>, IGroupChatRepository
     {
-        private readonly AppDbContext _context;
+        public GroupChatRepository(AppDbContext context) : base(context) { }
 
-        public GroupChatRepository(AppDbContext context)
+        public System.Threading.Tasks.Task AddAsync(GroupChat model)
         {
-            _context = context;
+            throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<GroupChat>> GetGroupChatsAsync()
+        public void AddAttach(GroupChat model)
         {
-            return await _context.GroupChats.ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<GroupChat> GetGroupChatByIdAsync(int id)
+        public void AddEntry(GroupChat model)
         {
-            return await _context.GroupChats.FindAsync(id);
+            throw new NotImplementedException();
         }
 
-        public async Task<GroupChat> CreateGroupChatAsync(GroupChat groupChat)
+        public System.Threading.Tasks.Task AddRangeAsync(List<GroupChat> models)
         {
-            _context.GroupChats.Add(groupChat);
-            await _context.SaveChangesAsync();
-            return groupChat;
+            throw new NotImplementedException();
         }
 
-        public async Task<GroupChat> UpdateGroupChatAsync(GroupChat groupChat)
+        public Task<GroupChat> CloneAsync(GroupChat model)
         {
-            _context.Entry(groupChat).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return groupChat;
+            throw new NotImplementedException();
         }
 
-       /* public async Task DeleteGroupChatAsync(int id)
+        public Task<List<GroupChat>> GetAllAsync()
         {
-            var groupChat = await _context.GroupChats.FindAsync(id);
-            if (groupChat != null)
-            {
-                _context.GroupChats.Remove(groupChat);
-                await _context.SaveChangesAsync();
-            }
-        }*/
+            throw new NotImplementedException();
+        }
+
+        public Task<List<GroupChat>> GetAllAsync(Func<IQueryable<GroupChat>, IIncludableQueryable<GroupChat, object>>? include = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<GroupChat?> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<GroupChat>> GetGroupChatsByProjectIdAsync(int projectId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Pagination<GroupChat>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateRange(List<GroupChat> models)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

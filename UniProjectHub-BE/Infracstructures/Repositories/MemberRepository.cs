@@ -1,6 +1,9 @@
-﻿using Domain.Models;
-using Infracstructures.InterfacesRepository;
+﻿using Application.Commons;
+using Application.InterfaceRepositories;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,47 +12,63 @@ using System.Threading.Tasks;
 
 namespace Infracstructures.Repositories
 {
-    public class MemberRepository : IMemberRepository
+    public class MemberRepository : GenericRepository<Member>, IMemberRepository
     {
-        private readonly AppDbContext _context;
+        public MemberRepository(AppDbContext context) : base(context) { }
 
-        public MemberRepository(AppDbContext context)
+        public System.Threading.Tasks.Task AddAsync(Member model)
         {
-            _context = context;
+            throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Member>> GetMembersAsync()
+        public void AddAttach(Member model)
         {
-            return await _context.Members.ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<Member> GetMemberByIdAsync(int id)
+        public void AddEntry(Member model)
         {
-            return await _context.Members.FindAsync(id);
+            throw new NotImplementedException();
         }
 
-        public async Task<Member> CreateMemberAsync(Member member)
+        public System.Threading.Tasks.Task AddRangeAsync(List<Member> models)
         {
-            _context.Members.Add(member);
-            await _context.SaveChangesAsync();
-            return member;
+            throw new NotImplementedException();
         }
 
-        public async Task<Member> UpdateMemberAsync(Member member)
+        public Task<Member> CloneAsync(Member model)
         {
-            _context.Entry(member).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-            return member;
+            throw new NotImplementedException();
         }
 
-        /*public async Task DeleteMemberAsync(int id)
+        public Task<List<Member>> GetAllAsync()
         {
-            var member = await _context.Members.FindAsync(id);
-            if (member != null)
-            {
-                _context.Members.Remove(member);
-                await _context.SaveChangesAsync();
-            }
-        }*/
+            throw new NotImplementedException();
+        }
+
+        public Task<List<Member>> GetAllAsync(Func<IQueryable<Member>, IIncludableQueryable<Member, object>>? include = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Member?> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Member>> GetMembersByProjectIdAsync(int projectId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Pagination<Member>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateRange(List<Member> models)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

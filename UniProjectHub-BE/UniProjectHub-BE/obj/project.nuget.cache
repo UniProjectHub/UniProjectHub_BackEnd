@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "O1GiVu6oSkbjFitW3N0AWJgUDZZOuYmChNymAFx6sy+oWktzgcGjywa+BVeNRy07rwqqflPVvydk2crOuRztXQ==",
+  "dgSpecHash": "01AI7v8Vj6Z+6humHhBtwkeF7IKLGPtaWF2P4RFd7bTZc4+iakn4LfZBSTseg2niSKQ/Az3t+gcX2QYpMA8MdQ==",
   "success": true,
   "projectFilePath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\adm\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\adm\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\mailkit\\4.5.0\\mailkit.4.5.0.nupkg.sha512",
     "C:\\Users\\adm\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\8.0.5\\microsoft.aspnetcore.authentication.google.8.0.5.nupkg.sha512",
