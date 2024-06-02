@@ -4,6 +4,7 @@ using Infracstructures;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240602125826_new-table-File")]
+    partial class newtableFile
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -470,11 +473,7 @@ namespace Infracstructures.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("RefreshTokenExpiryTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -534,21 +533,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-<<<<<<< HEAD
-                            Id = "56a07284-3902-476c-a25d-38eff7579b3b",
-=======
                             Id = "243b9fb3-c86b-42eb-a851-98dcb874d3ff",
->>>>>>> main
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "eee33c20-d7f4-4a53-9f65-3abcb5a074eb",
-=======
                             Id = "87d18e80-5469-4ee8-a9a4-34cb87204dcc",
->>>>>>> main
                             Name = "User",
                             NormalizedName = "USER"
                         });
