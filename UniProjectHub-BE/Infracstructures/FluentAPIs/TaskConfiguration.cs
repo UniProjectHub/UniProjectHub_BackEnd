@@ -19,6 +19,8 @@ namespace Infracstructures.FluentAPIs
 
             builder.HasOne(x => x.Project).WithMany(x => x.Tasks).HasForeignKey(x => x.ProjectId);
             builder.HasMany(x => x.Members).WithOne(x => x.Task).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(x => x.subTasks).WithOne(x => x.Task).OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

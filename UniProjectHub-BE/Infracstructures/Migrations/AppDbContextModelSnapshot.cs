@@ -304,6 +304,33 @@ namespace Infracstructures.Migrations
                     b.ToTable("Schedule", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Models.SubTask", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TaskId");
+
+                    b.ToTable("SubTask", (string)null);
+                });
+
             modelBuilder.Entity("Domain.Models.Task", b =>
                 {
                     b.Property<int>("Id")
@@ -474,13 +501,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9c29b9f5-1b27-4c52-90f7-a8cce92fd6fa",
+                            Id = "3d9610d3-50cd-4898-96b4-29775d3394b5",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "aa2c4031-41c7-4a13-ae51-eeb2e751901f",
+                            Id = "121ec967-2242-4c73-b473-9d089f6ed2b0",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -698,6 +725,17 @@ namespace Infracstructures.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Domain.Models.SubTask", b =>
+                {
+                    b.HasOne("Domain.Models.Task", "Task")
+                        .WithMany("subTasks")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Task");
+                });
+
             modelBuilder.Entity("Domain.Models.Task", b =>
                 {
                     b.HasOne("Domain.Models.Project", "Project")
@@ -782,6 +820,8 @@ namespace Infracstructures.Migrations
             modelBuilder.Entity("Domain.Models.Task", b =>
                 {
                     b.Navigation("Members");
+
+                    b.Navigation("subTasks");
                 });
 
             modelBuilder.Entity("Domain.Models.Users", b =>

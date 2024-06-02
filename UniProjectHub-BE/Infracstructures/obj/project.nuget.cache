@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RuTZJBfPwapaPPprU/SH75yc46L3TsDxUHWGraswH1UYltwpNrWzDqwt6K8PQV2lNBoFOVHgYtcxlo0MzH7+dQ==",
+  "dgSpecHash": "RMoJDaNohB8UocPzszPUzjFRkEiC8X96Q/vkATmGz2pQuQ3J0JTgWJU04pq9urai7y7Rare8GTiYbc6CefBynw==",
   "success": true,
   "projectFilePath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\caoco\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\caoco\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\caoco\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
+    "C:\\Users\\caoco\\.nuget\\packages\\fluentvalidation\\11.9.1\\fluentvalidation.11.9.1.nupkg.sha512",
     "C:\\Users\\caoco\\.nuget\\packages\\mailkit\\4.5.0\\mailkit.4.5.0.nupkg.sha512",
     "C:\\Users\\caoco\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.5\\microsoft.aspnetcore.authentication.jwtbearer.8.0.5.nupkg.sha512",
     "C:\\Users\\caoco\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
@@ -84,5 +85,12 @@
     "C:\\Users\\caoco\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\caoco\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
