@@ -3763,11 +3763,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+      "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
       "projectName": "Infracstructures",
-      "projectPath": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+      "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
       "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
-      "outputPath": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Infracstructures\\obj\\",
+      "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3784,8 +3784,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Application\\Application.csproj": {
-              "projectPath": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Application\\Application.csproj"
+            "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj": {
+              "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Application\\Application.csproj"
             }
           }
         }

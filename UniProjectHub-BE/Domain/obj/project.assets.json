@@ -816,11 +816,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Domain\\Domain.csproj",
+      "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Domain\\Domain.csproj",
+      "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
-      "outputPath": "E:\\Dev\\EXE202\\UniProjectHub-BE\\UniProjectHub-BE\\Domain\\obj\\",
+      "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
