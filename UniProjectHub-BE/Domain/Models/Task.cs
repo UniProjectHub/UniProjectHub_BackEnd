@@ -24,6 +24,7 @@ namespace Domain.Models
         public Project? Project { get; set; }
         public ICollection<MemberInTask>? Members { get; set; }
         public ICollection<SubTask>? subTasks { get; set; }
+        public ICollection<File>? files { get; set; }
 
     }
 }
