@@ -54,6 +54,7 @@ builder.Services.AddSwaggerGen(option =>
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+builder.Services.AddTransient<IManageImage, ManageImage>();
 
 
 //Mail setting
