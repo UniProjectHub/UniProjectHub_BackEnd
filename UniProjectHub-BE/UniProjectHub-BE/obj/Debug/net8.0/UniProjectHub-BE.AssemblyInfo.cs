@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UniProjectHub-BE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d7082c693051e9b3b5eb7b59c7644735fa72737")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+897cf83976a838d8845ed965fee9917ad2c20190")]
 [assembly: System.Reflection.AssemblyProductAttribute("UniProjectHub-BE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UniProjectHub-BE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
