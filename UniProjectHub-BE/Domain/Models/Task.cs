@@ -23,5 +23,7 @@ namespace Domain.Models
         public int RemainingTime { get; set; }
         public Project? Project { get; set; }
         public ICollection<MemberInTask>? Members { get; set; }
+        public ICollection<SubTask>? subTasks { get; set; }
+
     }
 }
