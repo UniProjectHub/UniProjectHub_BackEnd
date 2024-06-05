@@ -32,6 +32,9 @@ namespace Infracstructures.FluentAPIs
             builder.HasMany(x => x.Members).WithOne(x => x.User).OnDelete(DeleteBehavior.Cascade);
             //MemberInTasks
             builder.HasMany(x => x.MemberInTasks).WithOne(x => x.User).OnDelete(DeleteBehavior.Cascade);
+            //File
+            builder.HasMany(x => x.files).WithOne(x => x.Users).OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }
