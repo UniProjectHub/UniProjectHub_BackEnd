@@ -17,7 +17,7 @@ namespace Infracstructures.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -443,6 +443,9 @@ namespace Infracstructures.Migrations
                     b.Property<bool>("IsStudent")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsTeacher")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
@@ -530,13 +533,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "243b9fb3-c86b-42eb-a851-98dcb874d3ff",
+                            Id = "0410269c-7003-47fb-bf40-9a5e93922efc",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "87d18e80-5469-4ee8-a9a4-34cb87204dcc",
+                            Id = "a3028f44-5968-4b77-a58d-62d0817ce9ff",
                             Name = "User",
                             NormalizedName = "USER"
                         });

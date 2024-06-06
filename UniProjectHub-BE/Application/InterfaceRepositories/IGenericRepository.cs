@@ -28,5 +28,6 @@ namespace Application.InterfaceRepositories
 
         // Add paging method to generic interface 
         Task<Pagination<TModel>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10);
+        Task UpdateAsync(Domain.Models.GroupChat groupChat);
     }
 }

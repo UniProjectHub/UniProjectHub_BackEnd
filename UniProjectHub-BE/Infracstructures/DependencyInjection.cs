@@ -47,5 +47,6 @@ namespace Infracstructures
             services.AddScoped<ITokenService, TokenService>();
             return services;
         }
+
     }
 }
