@@ -17,6 +17,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using FluentValidation;
+using Infracstructures.Mappers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,7 @@ builder.Services.AddSwaggerGen();
 
 // Configure DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionStrings")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add custom repositories and services
 builder.Services.AddScoped<IGroupChatRepository, GroupChatRepository>();
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
@@ -38,6 +39,8 @@ builder.Services.AddScoped<IGroupChatService, GroupChatService>();
 
 // Add AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(MapperConfigs).Assembly);
+
 
 // Add FluentValidation
 builder.Services.AddValidatorsFromAssemblyContaining<ScheduleViewModelValidator>();

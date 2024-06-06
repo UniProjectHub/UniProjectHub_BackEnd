@@ -8,7 +8,6 @@ namespace Application.ViewModels.GroupChatViewModel
 {
     public class GroupChatViewModel
     {
-        public int Id { get; set; }
 
         public int ProjectId { get; set; }
         public string MemberId { get; set; }

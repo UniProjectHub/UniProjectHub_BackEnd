@@ -98,6 +98,10 @@ namespace Infracstructures.Repositories
             };
         }
 
+        public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
+        {
+            throw new NotImplementedException();
+        }
 
         public void UpdateRange(List<Schedule> models)
         {

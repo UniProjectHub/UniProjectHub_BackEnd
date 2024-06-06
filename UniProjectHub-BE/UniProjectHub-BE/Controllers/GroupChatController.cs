@@ -23,7 +23,6 @@ namespace UniProjectHub_BE.Controllers
             var groupChats = await _groupChatService.GetAllGroupChatsAsync();
             var result = groupChats.Select(gc => new
             {
-                gc.Id,
                 gc.ProjectId,
                 gc.MemberId,
                 gc.Messenger,
@@ -31,7 +30,17 @@ namespace UniProjectHub_BE.Controllers
             });
             return Ok(result);
         }
+        [HttpPost("create")]
+        public async Task<IActionResult> CreateGroupChat([FromBody] GroupChatViewModel groupChatViewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
+            await _groupChatService.AddGroupChatAsync(groupChatViewModel);
+            return Ok();
+        }
         [HttpGet("get-by-id/{id}")]
         public async Task<IActionResult> GetGroupChatById(int id)
         {
@@ -46,12 +55,25 @@ namespace UniProjectHub_BE.Controllers
         [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateGroupChat(int id, [FromBody] GroupChatViewModel groupChatViewModel)
         {
-            var result = await _groupChatService.UpdateGroupChatAsync(groupChatViewModel, id);
-            if (result == null)
+            if (!ModelState.IsValid)
             {
-                return NotFound();
+                return BadRequest(ModelState);
             }
-            return Ok(result);
+
+            try
+            {
+                await _groupChatService.UpdateGroupChatAsync(groupChatViewModel, id);
+                return Ok();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound("GroupChat not found");
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) here if needed
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpDelete("delete/{id}")]

@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.InterfaceRepositories;
+using Application.ViewModels.GroupChatViewModel;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
@@ -13,6 +14,7 @@ namespace Infracstructures.Repositories
 {
     public class GroupChatRepository : GenericRepository<GroupChat>, IGroupChatRepository
     {
+       
         public GroupChatRepository(AppDbContext context) : base(context) { }
 
         public async System.Threading.Tasks.Task AddAsync(GroupChat model) => await dbSet.AddAsync(model);
@@ -26,6 +28,8 @@ namespace Infracstructures.Repositories
         {
             throw new NotImplementedException();
         }
+
+       
 
         public async System.Threading.Tasks.Task AddRangeAsync(List<GroupChat> models) => await dbSet.AddRangeAsync(models);
 
@@ -77,9 +81,23 @@ namespace Infracstructures.Repositories
             };
         }
 
-        public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
+        public async System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {
-            throw new NotImplementedException();
+            var existingGroupChat = await context.GroupChats.FindAsync(groupChat.Id);
+            if (existingGroupChat == null)
+            {
+                throw new KeyNotFoundException("GroupChat not found");
+            }
+
+            // Update the properties
+            existingGroupChat.ProjectId = groupChat.ProjectId;
+            existingGroupChat.MemberId = groupChat.MemberId;
+            existingGroupChat.Messenger = groupChat.Messenger;
+            existingGroupChat.Status = groupChat.Status;
+
+            // Save the changes to the database
+            context.GroupChats.Update(existingGroupChat);
+            await context.SaveChangesAsync();
         }
 
         public void UpdateRange(List<GroupChat> models)

@@ -11,6 +11,8 @@ namespace Application.InterfaceServies
 {
     public interface IGroupChatService
     {
+        System.Threading.Tasks.Task AddGroupChatAsync(GroupChatViewModel groupChatViewModel);
+
         Task<List<GroupChatViewModel>> GetAllGroupChatsAsync();
         Task<GroupChatViewModel> GetGroupChatByIdAsync(int id);
         Task<GroupChatViewModel> UpdateGroupChatAsync(GroupChatViewModel groupChatViewModel, int id);

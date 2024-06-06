@@ -815,8 +815,8 @@ D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\U
 D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.genruntimeconfig.cache
 D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\ref\UniProjectHub-BE.dll
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\appsettings.Development.json
-D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\appsettings.json
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\UniProjectHub-BE.exe
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\appsettings.json
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\UniProjectHub-BE.deps.json
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\UniProjectHub-BE.runtimeconfig.json
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\UniProjectHub-BE.dll
