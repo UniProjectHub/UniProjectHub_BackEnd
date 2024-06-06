@@ -2,6 +2,9 @@
 {
     public class Pagination<T>
     {
+        public List<T> Items { get; set; }
+        public int TotalCount { get; set; }
+
         public int TotalItemCount { get; set; }
 
         private int _pageSize = 10;
@@ -51,6 +54,5 @@
 
         public bool Next => PageIndex + 1 < TotalPagesCount;
         public bool Previous => PageIndex > 0;
-        public ICollection<T> Items { get; set; }
     }
 }

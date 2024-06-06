@@ -11,10 +11,9 @@ namespace Application.InterfaceServies
 {
     public interface IGroupChatService
     {
-        Task<ValidationResult> ValidateGroupChatAsync(GroupChatViewModel groupChatViewModel);
-        Task<GroupChat> CreateGroupChatAsync(GroupChatViewModel groupChatViewModel);
-        Task<GroupChat> UpdateGroupChatAsync(GroupChatViewModel groupChatViewModel, int id);
-       // Task DeleteGroupChatAsync(int id);
-        Task<IEnumerable<GroupChatViewModel>> GetGroupChatsByProjectIdAsync(int projectId);
+        Task<List<GroupChatViewModel>> GetAllGroupChatsAsync();
+        Task<GroupChatViewModel> GetGroupChatByIdAsync(int id);
+        Task<GroupChatViewModel> UpdateGroupChatAsync(GroupChatViewModel groupChatViewModel, int id);
+        System.Threading.Tasks.Task DeleteGroupChatAsync(int id);
     }
 }

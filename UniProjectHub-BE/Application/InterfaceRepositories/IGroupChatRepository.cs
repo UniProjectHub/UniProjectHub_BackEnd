@@ -10,5 +10,7 @@ namespace Application.InterfaceRepositories
     public interface IGroupChatRepository : IGenericRepository<GroupChat>
     {
         Task<IEnumerable<GroupChat>> GetGroupChatsByProjectIdAsync(int projectId);
+        System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat);
+        System.Threading.Tasks.Task DeleteAsync(int id);
     }
 }
