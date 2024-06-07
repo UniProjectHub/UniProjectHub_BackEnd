@@ -15,7 +15,7 @@ namespace UniProjectHub_BE.Controllers
             _scheduleService = scheduleService;
         }
 
-        [HttpPost]
+        [HttpPost("create-schedule")]
         public async Task<IActionResult> CreateSchedule([FromBody] ScheduleViewModel scheduleViewModel)
         {
             // Validate the model
@@ -33,14 +33,14 @@ namespace UniProjectHub_BE.Controllers
         }
 
 
-        [HttpPut("{id}")]
+        [HttpPut("update-schedule/{id}")]
         public async Task<IActionResult> UpdateSchedule(int id, [FromBody] ScheduleViewModel scheduleViewModel)
         {
             var result = await _scheduleService.UpdateScheduleAsync(scheduleViewModel, id);
             return Ok(result);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("delete-schedule/{id}")]
         public async Task<IActionResult> DeleteSchedule(int id)
         {
             await _scheduleService.DeleteScheduleAsync(id);
@@ -54,7 +54,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("get-schedule-by-id/{id}")]
         public async Task<IActionResult> GetScheduleById(int id)
         {
             var result = await _scheduleService.GetScheduleByIdAsync(id);

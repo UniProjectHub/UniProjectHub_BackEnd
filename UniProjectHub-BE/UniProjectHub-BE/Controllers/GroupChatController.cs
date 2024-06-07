@@ -30,7 +30,7 @@ namespace UniProjectHub_BE.Controllers
             });
             return Ok(result);
         }
-        [HttpPost("create")]
+        [HttpPost("create-group-chat")]
         public async Task<IActionResult> CreateGroupChat([FromBody] GroupChatViewModel groupChatViewModel)
         {
             if (!ModelState.IsValid)

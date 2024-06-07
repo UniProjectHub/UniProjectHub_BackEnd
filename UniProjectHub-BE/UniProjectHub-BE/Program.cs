@@ -20,6 +20,23 @@ using FluentValidation;
 using Infracstructures.Mappers;
 
 var builder = WebApplication.CreateBuilder(args);
+//CORS
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("https://localhost:7067/",
+                                              "http://localhost:5275");
+                      });
+});
+
+// services.AddResponseCaching();
+builder.Services.AddControllers();
+
+
 
 // Add services to the container.
 
