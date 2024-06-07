@@ -207,7 +207,7 @@ namespace api.Controllers
             return Ok("Password has been reset successfully.");
         }
 
-        [HttpGet("logingoogle")]
+        [HttpGet("login-Google")]
         public IActionResult GoogleLogin()
         {
             string redirectUrl = "api/account/CallBackGoogle";
@@ -215,7 +215,7 @@ namespace api.Controllers
             return new ChallengeResult("Google", properties);
         }
 
-        [HttpGet("callbackgoogle")]
+        [HttpGet("callback-Google")]
         public async Task<ActionResult> CallBackGoogle()
         {
             ExternalLoginInfo info = await signInManager.GetExternalLoginInfoAsync();

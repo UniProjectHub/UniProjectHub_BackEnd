@@ -15,14 +15,14 @@ namespace UniProjectHub_BE.Controllers
             _memberService = memberService;
         }
 
-        [HttpPost]
+        [HttpPost("create-member")]
         public async Task<IActionResult> CreateMember([FromBody] MemberViewModel memberViewModel)
         {
             var result = await _memberService.CreateMemberAsync(memberViewModel);
             return Ok(result);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update-member/{id}")]
         public async Task<IActionResult> UpdateMember(int id, [FromBody] MemberViewModel memberViewModel)
         {
             var result = await _memberService.UpdateMemberAsync(memberViewModel, id);
@@ -36,7 +36,7 @@ namespace UniProjectHub_BE.Controllers
             return NoContent();
         }*/
 
-        [HttpGet("{projectId}")]
+        [HttpGet("get-members-by-project-id/{projectId}")]
         public async Task<IActionResult> GetMembersByProjectId(int projectId)
         {
             var result = await _memberService.GetMembersByProjectIdAsync(projectId);

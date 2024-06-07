@@ -21,47 +21,49 @@ namespace Application.Services
             _validator = validator;
         }
 
-        public async Task<FluentValidation.Results.ValidationResult> ValidateGroupChatAsync(GroupChatViewModel groupChatViewModel)
+        public async Task<ValidationResult> ValidateGroupChatAsync(GroupChatViewModel groupChatViewModel)
         {
             return await _validator.ValidateAsync(groupChatViewModel);
         }
 
-        public async Task<GroupChat> CreateGroupChatAsync(GroupChatViewModel groupChatViewModel)
+        public async Task<GroupChatViewModel> CreateGroupChatAsync(GroupChatViewModel groupChatViewModel)
         {
             var validationResult = await ValidateGroupChatAsync(groupChatViewModel);
             if (!validationResult.IsValid)
             {
-                var validationResults = validationResult.Errors
-                    .Select(e => new System.ComponentModel.DataAnnotations.ValidationResult(e.ErrorMessage, new[] { e.PropertyName }))
-                    .ToList();
-                var validationMessage = string.Join("; ", validationResults.Select(vr => vr.ErrorMessage));
-                throw new ValidationException(validationMessage, validationResult.Errors);
+                throw new ValidationException("Validation failed", validationResult.Errors);
             }
 
             var groupChat = _mapper.Map<GroupChat>(groupChatViewModel);
             await _groupChatRepository.AddAsync(groupChat);
-            return groupChat;
+            return _mapper.Map<GroupChatViewModel>(groupChat);
+        }
+        public async System.Threading.Tasks.Task AddGroupChatAsync(GroupChatViewModel groupChatViewModel)
+        {
+            var groupChat = new GroupChat
+            {
+                ProjectId = groupChatViewModel.ProjectId,
+                MemberId = groupChatViewModel.MemberId,
+                Messenger = groupChatViewModel.Messenger,
+                Status = groupChatViewModel.Status
+            };
+            await _groupChatRepository.AddAsync(groupChat);
         }
 
-        public async Task<GroupChat> UpdateGroupChatAsync(GroupChatViewModel groupChatViewModel, int id)
+        public async System.Threading.Tasks.Task UpdateGroupChatAsync(GroupChatViewModel groupChatViewModel, int id)
         {
             var groupChat = await _groupChatRepository.GetByIdAsync(id);
             if (groupChat == null)
-                throw new KeyNotFoundException("Group chat not found");
-
-            var validationResult = await ValidateGroupChatAsync(groupChatViewModel);
-            if (!validationResult.IsValid)
             {
-                var validationResults = validationResult.Errors
-                    .Select(e => new System.ComponentModel.DataAnnotations.ValidationResult(e.ErrorMessage, new[] { e.PropertyName }))
-                    .ToList();
-                var validationMessage = string.Join("; ", validationResults.Select(vr => vr.ErrorMessage));
-                throw new ValidationException(validationMessage, validationResult.Errors);
+                throw new KeyNotFoundException("GroupChat not found");
             }
 
-            _mapper.Map(groupChatViewModel, groupChat);
-            _groupChatRepository.Update(groupChat);
-            return groupChat;
+            groupChat.ProjectId = groupChatViewModel.ProjectId;
+            groupChat.MemberId = groupChatViewModel.MemberId;
+            groupChat.Messenger = groupChatViewModel.Messenger;
+            groupChat.Status = groupChatViewModel.Status;
+
+            await _groupChatRepository.UpdateAsync(groupChat);
         }
 
         public async Task<IEnumerable<GroupChatViewModel>> GetGroupChatsByProjectIdAsync(int projectId)
@@ -70,7 +72,24 @@ namespace Application.Services
             return _mapper.Map<IEnumerable<GroupChatViewModel>>(groupChats);
         }
 
-        Task<System.ComponentModel.DataAnnotations.ValidationResult> IGroupChatService.ValidateGroupChatAsync(GroupChatViewModel groupChatViewModel)
+        public async Task<List<GroupChatViewModel>> GetAllGroupChatsAsync()
+        {
+            var groupChats = await _groupChatRepository.GetAllAsync();
+            return _mapper.Map<List<GroupChatViewModel>>(groupChats);
+        }
+
+        public async Task<GroupChatViewModel> GetGroupChatByIdAsync(int id)
+        {
+            var groupChat = await _groupChatRepository.GetByIdAsync(id);
+            return _mapper.Map<GroupChatViewModel>(groupChat);
+        }
+
+        public async System.Threading.Tasks.Task DeleteGroupChatAsync(int id)
+        {
+            await _groupChatRepository.DeleteAsync(id);
+        }
+
+        Task<GroupChatViewModel> IGroupChatService.UpdateGroupChatAsync(GroupChatViewModel groupChatViewModel, int id)
         {
             throw new NotImplementedException();
         }
