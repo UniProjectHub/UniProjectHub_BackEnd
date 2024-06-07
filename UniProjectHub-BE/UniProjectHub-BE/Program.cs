@@ -1,20 +1,51 @@
-﻿using Domain.Interfaces;
+﻿using Application.InterfaceRepositories;
+using Application.InterfaceServies;
+using Application.Services;
+using Application.Validators;
+using Domain.Interfaces;
 using Domain.Models;
 using Infracstructures;
+using Infracstructures.Repositories;
 using Infracstructures.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+<<<<<<< HEAD
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+=======
+using Microsoft.EntityFrameworkCore;
+>>>>>>> main
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
+<<<<<<< HEAD
 using UniProjectHub_BE.Services;
+=======
+using FluentValidation;
+using Infracstructures.Mappers;
+>>>>>>> main
 
 var builder = WebApplication.CreateBuilder(args);
+//CORS
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("https://localhost:7067/",
+                                              "http://localhost:5275");
+                      });
+});
+
+// services.AddResponseCaching();
+builder.Services.AddControllers();
+
+
 
 // Add services to the container.
 
@@ -23,6 +54,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+<<<<<<< HEAD
 builder.Services.AddSwaggerGen(option =>
 {
     option.SwaggerDoc("v1", new OpenApiInfo { Title = "ASP.System API", Version = "v1" });
@@ -57,6 +89,25 @@ builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddTransient<IManageImage, ManageImage>();
 
 
+=======
+// Configure DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+// Add custom repositories and services
+builder.Services.AddScoped<IGroupChatRepository, GroupChatRepository>();
+builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
+builder.Services.AddScoped<IScheduleService, ScheduleService>();
+builder.Services.AddScoped<IGroupChatService, GroupChatService>();
+
+// Add AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(MapperConfigs).Assembly);
+
+
+// Add FluentValidation
+builder.Services.AddValidatorsFromAssemblyContaining<ScheduleViewModelValidator>();
+
+>>>>>>> main
 //Mail setting
 builder.Services.AddOptions();
 var mailsettings = builder.Configuration.GetSection("MailSettings");
@@ -112,6 +163,17 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = builder.Configuration["JWT:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"]))
     };
+<<<<<<< HEAD
+=======
+});
+// Configure Authentication and JWT Bearer
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
+>>>>>>> main
 })
 .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
 .AddGoogle(options =>
@@ -119,8 +181,14 @@ builder.Services.AddAuthentication(options =>
     IConfigurationSection googleAuthNSection = builder.Configuration.GetSection("Authentication:Google");
     options.ClientId = googleAuthNSection["ClientId"];
     options.ClientSecret = googleAuthNSection["ClientSecret"];
+<<<<<<< HEAD
     options.CallbackPath = "/signin-google";
 }); 
+=======
+    //googleOptions.CallbackPath = "/signin-google";
+});
+
+>>>>>>> main
 //.AddFacebook(facebookOptions => {
 //    IConfigurationSection facebookAuthNSection = builder.Configuration.GetSection("Authentication:Facebook");
 //    facebookOptions.AppId = facebookAuthNSection["AppId"];
@@ -144,12 +212,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+<<<<<<< HEAD
 
 app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .AllowCredentials()
                             .WithOrigins("https://localhost:7067"));
 
+=======
+>>>>>>> main
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
