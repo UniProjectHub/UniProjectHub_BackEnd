@@ -111,35 +111,6 @@ namespace Infracstructures.Migrations
                     b.ToTable("Comment", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Models.File", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Filename")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TaskId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TaskId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("File", (string)null);
-                });
-
             modelBuilder.Entity("Domain.Models.GroupChat", b =>
                 {
                     b.Property<int>("Id")
@@ -534,21 +505,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-<<<<<<< HEAD
                             Id = "56a07284-3902-476c-a25d-38eff7579b3b",
-=======
-                            Id = "243b9fb3-c86b-42eb-a851-98dcb874d3ff",
->>>>>>> main
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-<<<<<<< HEAD
                             Id = "eee33c20-d7f4-4a53-9f65-3abcb5a074eb",
-=======
-                            Id = "87d18e80-5469-4ee8-a9a4-34cb87204dcc",
->>>>>>> main
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -688,24 +651,6 @@ namespace Infracstructures.Migrations
                         .HasForeignKey("OwnerId");
 
                     b.Navigation("Blog");
-
-                    b.Navigation("Users");
-                });
-
-            modelBuilder.Entity("Domain.Models.File", b =>
-                {
-                    b.HasOne("Domain.Models.Task", "Task")
-                        .WithMany("files")
-                        .HasForeignKey("TaskId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Models.Users", "Users")
-                        .WithMany("files")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("Task");
 
                     b.Navigation("Users");
                 });
@@ -880,8 +825,6 @@ namespace Infracstructures.Migrations
                 {
                     b.Navigation("Members");
 
-                    b.Navigation("files");
-
                     b.Navigation("subTasks");
                 });
 
@@ -900,8 +843,6 @@ namespace Infracstructures.Migrations
                     b.Navigation("Notifications");
 
                     b.Navigation("Schedules");
-
-                    b.Navigation("files");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,5 @@
-﻿using Application.ViewModels.GroupChatViewModel;
+﻿using Application.ViewModels.FileViewModel;
+using Application.ViewModels.GroupChatViewModel;
 using Application.ViewModels.MemberViewModel;
 using AutoMapper;
 using Domain.Models;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using File = Domain.Models.File;
 
 namespace Infracstructures.Mappers
 {
@@ -16,6 +18,7 @@ namespace Infracstructures.Mappers
         {
             CreateMap<Member, MemberViewModel>().ReverseMap();
             CreateMap<GroupChat, GroupChatViewModel>().ReverseMap();
+            CreateMap<File, FileViewModel>().ReverseMap();
         }
     }
 }
