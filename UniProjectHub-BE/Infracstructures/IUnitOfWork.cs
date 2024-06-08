@@ -11,11 +11,8 @@ namespace Infracstructures
     {
         IMemberRepository MemberRepository { get; }
         IGroupChatRepository GroupChatRepository { get; }
-<<<<<<< HEAD
         IFileManageRepository FileManageRepository { get; }
-=======
         IScheduleRepository ScheduleRepository { get; }
->>>>>>> main
         Task<int> SaveChangesAsync();
     }
 }
