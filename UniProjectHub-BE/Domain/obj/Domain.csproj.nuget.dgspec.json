@@ -1,8 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Domain\\Domain.csproj": {}
   },
   "projects": {
@@ -17,33 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Domain\\Domain.csproj": {}
-=======
-    "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj": {}
->>>>>>> 54920aece9177c050c000d9d856927323bfc61d7
-  },
-  "projects": {
-    "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 0797ad8c7c610fc720f32542e01291e83263539b
-=======
-          "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> 54920aece9177c050c000d9d856927323bfc61d7
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -91,15 +61,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
->>>>>>> 0797ad8c7c610fc720f32542e01291e83263539b
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
->>>>>>> 54920aece9177c050c000d9d856927323bfc61d7
         }
       }
     }
