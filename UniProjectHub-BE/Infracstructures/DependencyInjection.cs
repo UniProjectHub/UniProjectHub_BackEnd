@@ -1,5 +1,9 @@
-﻿using Domain.Interfaces;
+﻿using Application.InterfaceRepositories;
+using Application.InterfaceServies;
+using Application.Services;
+using Domain.Interfaces;
 using Domain.Models;
+using Infracstructures.Repositories;
 using Infracstructures.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,7 +22,15 @@ namespace Infracstructures
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfractstructure(this IServiceCollection services, IConfiguration config)
-        {    // Use local DB
+        {    
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IProjectService, ProjectService>();
+            
+            // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 
             services.AddCors(options =>

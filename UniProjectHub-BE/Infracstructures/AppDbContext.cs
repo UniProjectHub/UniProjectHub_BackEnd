@@ -16,6 +16,11 @@ namespace Infracstructures
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public AppDbContext()
+        {
+        }
+
         public DbSet<Users> Users { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
 

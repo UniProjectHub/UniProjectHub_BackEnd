@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Commons;
+using Application.InterfaceRepositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+using Org.BouncyCastle.Asn1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infracstructures
 {
-    public class GenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         public AppDbContext context;
         public DbSet<TEntity> dbSet;
@@ -89,10 +93,94 @@ namespace Infracstructures
             dbSet.Remove(entityToDelete);
         }
 
-        public virtual void Update(TEntity entityToUpdate)
+        
+        public virtual async Task AddAsync(TEntity model)
         {
-            dbSet.Attach(entityToUpdate);
-            context.Entry(entityToUpdate).State = EntityState.Modified;
+            await dbSet.AddAsync(model);
+        }
+
+        public virtual void AddAttach(TEntity model)
+        {
+            dbSet.Attach(model).State = EntityState.Added;
+        }
+
+        public virtual void  AddEntry(TEntity model)
+        {
+            dbSet.Entry(model).State = EntityState.Added;
+        }
+
+        public virtual async Task AddRangeAsync(List<TEntity> models)
+        {
+            await dbSet.AddRangeAsync(models);
+        }
+
+        public virtual async Task<List<TEntity>> GetAllAsync() => await dbSet.ToListAsync();
+
+        /// <summary>
+        /// The function return list of TEntity with an include method.
+        /// Example for user we want to include the relation Role: 
+        /// + GetAllAsync(user => user.Include(x => x.Role));
+        /// </summary>
+        /// <param name="include"> The linq expression for include relations we want. </param>
+        /// <returns> Return the list of TEntity include relations. </returns>
+        public virtual async Task<List<TEntity>> GetAllAsync(Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
+        {
+            IQueryable<TEntity> query = dbSet;
+            if (include != null)
+            {
+                query = include(query);
+            }
+            return await query.ToListAsync();
+        }
+
+        public virtual async Task<TEntity?> GetByIdAsync(int id) => await dbSet.FindAsync(id);
+
+        public void Update(TEntity? model)
+        {
+            dbSet.Update(model);
+        }
+
+        public void UpdateRange(List<TEntity> models)
+        {
+            dbSet.UpdateRange(models);
+        }
+
+        // Implement to pagination method
+        public async Task<Pagination<TEntity>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10)
+        {
+            // get total count of items in the db set
+            var itemCount = await dbSet.CountAsync();
+
+            // Create Pagination instance
+            // to set data related to paging
+            // Calculate and replace pageIndex and pageSize
+            // if they are invalid
+            var result = new Pagination<TEntity>()
+            {
+                PageSize = pageSize,
+                TotalItemCount = itemCount,
+                PageIndex = pageIndex,
+            };
+
+            // Take items according to the page size and page index
+            // skip items in the previous pages
+            // and take next items equal to page size
+            var items = await dbSet.Skip(result.PageIndex * result.PageSize)
+                .Take(result.PageSize)
+                .AsNoTracking()
+                .ToListAsync();
+
+            // Assign items to page
+            result.Items = items;
+
+            return result;
+        }
+
+        public async Task<TEntity> CloneAsync(TEntity model)
+        {
+            dbSet.Entry(model).State = EntityState.Detached;
+            var values = dbSet.Entry(model).CurrentValues.Clone().ToObject() as TEntity;
+            return values;
         }
     }
 }
