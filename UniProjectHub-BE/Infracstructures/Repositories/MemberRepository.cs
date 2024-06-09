@@ -66,6 +66,11 @@ namespace Infracstructures.Repositories
             throw new NotImplementedException();
         }
 
+        public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
+        {
+            throw new NotImplementedException();
+        }
+
         public void UpdateRange(List<Member> models)
         {
             throw new NotImplementedException();

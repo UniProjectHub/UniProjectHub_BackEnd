@@ -17,7 +17,7 @@ namespace Infracstructures.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -444,6 +444,9 @@ namespace Infracstructures.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsStudent")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsTeacher")
                         .HasColumnType("bit");
 
                     b.Property<string>("LastName")
