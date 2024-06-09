@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Infracstructures")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f5114ebabfef00759312dd700b21b53cb4e37c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d08dc1e9644a3ea7bb73c6d7c58f374de8444478")]
 [assembly: System.Reflection.AssemblyProductAttribute("Infracstructures")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Infracstructures")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
