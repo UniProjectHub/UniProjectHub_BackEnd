@@ -55,11 +55,13 @@ namespace Infracstructures
             services.AddTransient<IFileManageRepository, FileManageRepository>();
             services.AddTransient<IFileManageService, FileManageService>();
             services.AddTransient<IFileValidator, FileViewModelValidator>();
+            services.AddMemoryCache();
 
             // Register AutoMapper
             services.AddAutoMapper(typeof(MapperConfigs).Assembly);
+            services.AddControllers();
 
-            
+
 
 
             return services;

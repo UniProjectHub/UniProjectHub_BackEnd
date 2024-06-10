@@ -12,6 +12,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Data;
+using Microsoft.Extensions.Caching.Memory;
+using System.Collections.Concurrent;
 
 namespace Infracstructures.Service
 {
@@ -20,13 +22,16 @@ namespace Infracstructures.Service
         private readonly IConfiguration _config;
         private readonly SymmetricSecurityKey _key;
         private readonly UserManager<Users> _userManager;
-        private static List<RefreshToken> _refreshTokens = new List<RefreshToken>(); 
+        private static List<RefreshToken> _refreshTokens = new List<RefreshToken>();
+        private readonly IMemoryCache _cache;
+        private readonly ConcurrentDictionary<string, string> _tokenStore = new ConcurrentDictionary<string, string>();
 
-        public TokenService(IConfiguration config, UserManager<Users> userManage)
+        public TokenService(IConfiguration config, UserManager<Users> userManage, IMemoryCache cache)
         {
             _config = config;
             _key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT:SigningKey"]));
             _userManager = userManage;
+            _cache = cache;
         }
 
         public async Task<string> CreateToken(Users user)
@@ -114,6 +119,23 @@ namespace Infracstructures.Service
             {
                 _refreshTokens.Remove(token);
             }
+        }
+
+        public string GenerateDownloadFileToken(string fileName)
+        {
+            var token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(32));
+            _tokenStore[token] = fileName;
+
+            var cacheEntryOptions = new MemoryCacheEntryOptions()
+                .SetSlidingExpiration(TimeSpan.FromHours(1)); // Token expires in 1 hour
+            _cache.Set(token, fileName, cacheEntryOptions);
+
+            return token;
+        }
+
+        public bool ValidateToken(string token, out string fileName)
+        {
+            return _cache.TryGetValue(token, out fileName);
         }
     }
 }
