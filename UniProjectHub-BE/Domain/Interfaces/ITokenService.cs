@@ -16,5 +16,7 @@ namespace Domain.Interfaces
         void SaveRefreshToken(string username, string refreshToken);
         void RemoveRefreshToken(string refreshToken);
         RefreshToken GetRefreshToken(string refreshToken);
+        string GenerateDownloadFileToken(string fileName);
+        bool ValidateToken(string token, out string fileName);
     }
 }
