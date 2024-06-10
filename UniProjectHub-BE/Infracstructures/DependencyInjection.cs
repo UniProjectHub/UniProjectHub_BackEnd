@@ -1,5 +1,12 @@
-﻿using Domain.Interfaces;
+﻿using Application.InterfaceRepositories;
+using Application.InterfaceServies;
+using Application.IValidators;
+using Application.Services;
+using Application.Validators;
+using Domain.Interfaces;
 using Domain.Models;
+using Infracstructures.Mappers;
+using Infracstructures.Repositories;
 using Infracstructures.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +52,16 @@ namespace Infracstructures
             });
 
             services.AddScoped<ITokenService, TokenService>();
+            services.AddTransient<IFileManageRepository, FileManageRepository>();
+            services.AddTransient<IFileManageService, FileManageService>();
+            services.AddTransient<IFileValidator, FileViewModelValidator>();
+
+            // Register AutoMapper
+            services.AddAutoMapper(typeof(MapperConfigs).Assembly);
+
+            
+
+
             return services;
         }
 

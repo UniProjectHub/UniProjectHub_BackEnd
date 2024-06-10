@@ -17,7 +17,7 @@ namespace Infracstructures.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.0")
+                .HasAnnotation("ProductVersion", "8.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -109,35 +109,6 @@ namespace Infracstructures.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Comment", (string)null);
-                });
-
-            modelBuilder.Entity("Domain.Models.File", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Filename")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TaskId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("TaskId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("File", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.GroupChat", b =>
@@ -446,9 +417,6 @@ namespace Infracstructures.Migrations
                     b.Property<bool>("IsStudent")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsTeacher")
-                        .HasColumnType("bit");
-
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
@@ -476,7 +444,11 @@ namespace Infracstructures.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("RefreshToken")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("RefreshTokenExpiryTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -683,24 +655,6 @@ namespace Infracstructures.Migrations
                     b.Navigation("Users");
                 });
 
-            modelBuilder.Entity("Domain.Models.File", b =>
-                {
-                    b.HasOne("Domain.Models.Task", "Task")
-                        .WithMany("files")
-                        .HasForeignKey("TaskId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Domain.Models.Users", "Users")
-                        .WithMany("files")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("Task");
-
-                    b.Navigation("Users");
-                });
-
             modelBuilder.Entity("Domain.Models.GroupChat", b =>
                 {
                     b.HasOne("Domain.Models.Users", "User")
@@ -871,8 +825,6 @@ namespace Infracstructures.Migrations
                 {
                     b.Navigation("Members");
 
-                    b.Navigation("files");
-
                     b.Navigation("subTasks");
                 });
 
@@ -891,8 +843,6 @@ namespace Infracstructures.Migrations
                     b.Navigation("Notifications");
 
                     b.Navigation("Schedules");
-
-                    b.Navigation("files");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Application.Dtos.Account;
 using Domain.Interfaces;
 using Domain.Models;
+using Infracstructures.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -41,7 +42,7 @@ namespace api.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login(LoginDto loginDto)
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -54,14 +55,39 @@ namespace api.Controllers
 
             if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
 
-            return Ok(
-                new NewUserDto
-                {
-                    UserName = user.UserName,
-                    Email = user.Email,
-                    Token = tokenService.CreateToken(user)
-                }
-            );
+            var accessToken = await tokenService.CreateToken(user);
+            var refreshToken = tokenService.GenerateRefreshToken();
+            tokenService.SaveRefreshToken(user.UserName, refreshToken);
+
+            return Ok(new NewUserDto
+            {
+                UserName = user.UserName,
+                Email = user.Email,
+                Token = accessToken,
+                RefreshToken = refreshToken
+            });
+        }
+
+        [HttpPost("refresh")]
+        public async Task<IActionResult> Refresh([FromBody] TokenModel tokenModel)
+        {
+            var principal = tokenService.GetPrincipalFromExpiredToken(tokenModel.AccessToken);
+            var username = principal.Identity.Name;
+
+            var savedRefreshToken = tokenService.GetRefreshToken(tokenModel.RefreshToken);
+
+            if (savedRefreshToken == null || savedRefreshToken.Username != username || savedRefreshToken.ExpiryDate <= DateTime.UtcNow)
+            {
+                return Unauthorized();
+            }
+
+            var user = await userManager.FindByNameAsync(username);
+            var newAccessToken = await tokenService.CreateToken(user);
+            var newRefreshToken = tokenService.GenerateRefreshToken();
+            tokenService.RemoveRefreshToken(tokenModel.RefreshToken);
+            tokenService.SaveRefreshToken(username, newRefreshToken);
+
+            return Ok(new TokenModel { AccessToken = newAccessToken, RefreshToken = newRefreshToken });
         }
 
         [HttpPost("register")]
@@ -112,7 +138,7 @@ namespace api.Controllers
                             {
                                 UserName = user.UserName,
                                 Email = user.Email,
-                                Token = tokenService.CreateToken(user)
+                                Token = tokenService.CreateToken(user).Result
                             }
                         );
                     }
@@ -151,7 +177,7 @@ namespace api.Controllers
             if (result.Succeeded)
             {
                 //user.RegistrationTime = DateTime.Now; // Update the LastLoginTime property
-                //await _userManager.UpdateAsync(user); // Save the changes to the user entity
+                //await userManager.UpdateAsync(user); // Save the changes to the user entity
                 //return View("ConfirmEmail");
                 return Ok("Confirm OK");
             }

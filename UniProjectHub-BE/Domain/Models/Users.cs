@@ -20,6 +20,7 @@ namespace Domain.Models
 
         public bool IsActive { get; set; } = true; // Add the IsActive property with a default value
         public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
         public ICollection<Schedule>? Schedules { get; set; }
         public ICollection<Blog>? Blogs { get; set; }
         public ICollection<Notification>? Notifications { get; set; }
