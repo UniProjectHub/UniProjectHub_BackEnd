@@ -408,6 +408,9 @@ namespace Infracstructures.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsMale")
                         .HasColumnType("bit");
 
@@ -449,9 +452,6 @@ namespace Infracstructures.Migrations
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
 
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
@@ -505,13 +505,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "56a07284-3902-476c-a25d-38eff7579b3b",
+                            Id = "0442a32e-48a6-4ac1-9b1b-4235832a782e",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "eee33c20-d7f4-4a53-9f65-3abcb5a074eb",
+                            Id = "3b3d6c7a-4365-44bc-bc73-3b35d6b9dc4c",
                             Name = "User",
                             NormalizedName = "USER"
                         });
