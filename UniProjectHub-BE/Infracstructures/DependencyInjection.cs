@@ -25,7 +25,17 @@ namespace Infracstructures
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfractstructure(this IServiceCollection services, IConfiguration config)
-        {    // Use local DB
+        {    
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IProjectService, ProjectService>();
+            
+            services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<ITaskService, TaskSevice>();
+            // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 
             services.AddCors(options =>

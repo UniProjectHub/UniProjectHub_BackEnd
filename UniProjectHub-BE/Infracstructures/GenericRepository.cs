@@ -1,4 +1,5 @@
 ﻿using Application.Commons;
+using Application.InterfaceRepositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Org.BouncyCastle.Asn1;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infracstructures
 {
-    public class GenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         public AppDbContext context;
         public DbSet<TEntity> dbSet;
@@ -92,17 +93,10 @@ namespace Infracstructures
             dbSet.Remove(entityToDelete);
         }
 
-        public virtual void Update(TEntity entityToUpdate)
-        {
-            dbSet.Attach(entityToUpdate);
-            context.Entry(entityToUpdate).State = EntityState.Modified;
-            context.SaveChangesAsync();
-        }
-
+        
         public virtual async Task AddAsync(TEntity model)
         {
             await dbSet.AddAsync(model);
-            await context.SaveChangesAsync();
         }
 
         public virtual void AddAttach(TEntity model)
@@ -110,10 +104,10 @@ namespace Infracstructures
             dbSet.Attach(model).State = EntityState.Added;
         }
 
-        public virtual void AddEntry(TEntity model)
+        public virtual void  AddEntry(TEntity model)
         {
             dbSet.Entry(model).State = EntityState.Added;
-        } 
+        }
 
         public virtual async Task AddRangeAsync(List<TEntity> models)
         {
@@ -140,6 +134,11 @@ namespace Infracstructures
         }
 
         public virtual async Task<TEntity?> GetByIdAsync(int id) => await dbSet.FindAsync(id);
+
+        public void Update(TEntity? model)
+        {
+            dbSet.Update(model);
+        }
 
         public void UpdateRange(List<TEntity> models)
         {
@@ -173,8 +172,11 @@ namespace Infracstructures
 
             // Assign items to page
             result.Items = items;
+
             return result;
         }
+
+        
 
         public async Task<TEntity> CloneAsync(TEntity model)
         {
@@ -183,5 +185,9 @@ namespace Infracstructures
             return values;
         }
 
+        public Task UpdateAsync(Domain.Models.GroupChat groupChat)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
