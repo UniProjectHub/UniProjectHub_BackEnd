@@ -1,6 +1,7 @@
 ﻿using Application.ViewModels.GroupChatViewModel;
 using Application.ViewModels.MemberViewModel;
 using Application.ViewModels.ProjectViewModel;
+using Application.ViewModels.TaskViewModel;
 using AutoMapper;
 using Domain.Models;
 using System;
@@ -20,7 +21,9 @@ namespace Infracstructures.Mappers
             CreateMap<GroupChat, GroupChatViewModel>().ReverseMap();
             //Project
             CreateMap<Project, ProjectViewModel>().ReverseMap();
-            
+            //Task
+            CreateMap<Domain.Models.Task, TaskViewModel>().ReverseMap();
+
         }
     }
 }
