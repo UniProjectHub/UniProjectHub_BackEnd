@@ -23,8 +23,13 @@ namespace Application.Services
             _unitOfWork = unitOfWork;
         }
         // Create
-        public async Task<TaskViewModel> CreateTaskAsync(TaskViewModel taskViewModel)
+        public async Task<TaskViewModel> CreateTaskAsync(int projectId, TaskViewModel taskViewModel)
         {
+            var projects = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+            if (projects == null)
+            {
+                return null;
+            }
             var task = new Domain.Models.Task
             {
                 TaskName = taskViewModel.TaskName,
@@ -34,7 +39,8 @@ namespace Application.Services
                 Tags = taskViewModel.Tags,
                 Deadline = taskViewModel.Deadline,
                 Rate = taskViewModel.Rate,
-                Comment = taskViewModel.Comment
+                Comment = taskViewModel.Comment,
+                ProjectId = projectId
             };
 
             _unitOfWork.TaskRepository.AddEntry(task);
@@ -65,6 +71,31 @@ namespace Application.Services
             };
 
             return taskViewModel;
+        }
+
+        public async Task<IEnumerable<TaskViewModel>> GetTasksByProjectIdAsync(int projectId)
+        {
+            var projects = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+            if (projects == null)
+            {
+                return null;
+            }
+            var tasks = await _unitOfWork.TaskRepository.GetTasksByProjectIdAsync(projectId);
+
+            var taskViewModels = tasks.Select(task => new TaskViewModel
+            {
+                Id = task.Id,
+                TaskName = task.TaskName,
+                Description = task.Description,
+                Status = task.Status,
+                Category = task.Category,
+                Tags = task.Tags,
+                Deadline = task.Deadline,
+                Rate = task.Rate,
+                Comment = task.Comment
+            });
+
+            return taskViewModels;
         }
 
         public async Task<IEnumerable<TaskViewModel>> GetTasksAsync()

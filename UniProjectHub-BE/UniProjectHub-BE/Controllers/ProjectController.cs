@@ -1,4 +1,5 @@
 ﻿using Application.InterfaceServies;
+using Application.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
@@ -25,6 +26,15 @@ namespace UniProjectHub_BE.Controllers
         public async Task<IActionResult> GetAllProjects()
         {
             var projectViewModels = await _projectService.GetAllProjectsAsync();
+            return Ok(projectViewModels);
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProjectById(int id)
+        {
+            var projectViewModels = await _projectService.GetProjectByIdAsync(id);
+            if (projectViewModels == null)
+                return NotFound();
+
             return Ok(projectViewModels);
         }
 

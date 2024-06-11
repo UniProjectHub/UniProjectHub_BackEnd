@@ -9,5 +9,6 @@ namespace Application.InterfaceRepositories
 {
     public interface ITaskRepository: IGenericRepository<Domain.Models.Task>
     {
+        Task<IEnumerable<Domain.Models.Task>> GetTasksByProjectIdAsync(int projectId);
     }
 }

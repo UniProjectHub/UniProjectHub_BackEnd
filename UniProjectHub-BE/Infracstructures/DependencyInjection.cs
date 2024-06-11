@@ -33,6 +33,8 @@ namespace Infracstructures
             services.AddTransient<IProjectRepository, ProjectRepository>();
             services.AddTransient<IProjectService, ProjectService>();
             
+            services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<ITaskService, TaskSevice>();
             // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 

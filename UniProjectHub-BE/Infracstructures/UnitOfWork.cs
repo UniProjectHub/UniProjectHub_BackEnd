@@ -28,7 +28,9 @@ namespace Infracstructures
         public IProjectRepository ProjectRepository => _projectRepository;
         public ITaskRepository TaskRepository => _taskRepository;
 
-       
+        public IFileManageRepository FileManageRepository => throw new NotImplementedException();
+
+        public IScheduleRepository ScheduleRepository => throw new NotImplementedException();
 
         public async Task<int> SaveChangesAsync()
         {

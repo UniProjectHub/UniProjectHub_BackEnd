@@ -1,6 +1,8 @@
 ﻿using Application.InterfaceServies;
+using Application.Services;
 using Application.ViewModels.TaskViewModel;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
 
@@ -17,17 +19,41 @@ namespace UniProjectHub_BE.Controllers
             _taskService = taskService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateTask(TaskViewModel request)
+        [HttpPost("{projectId}")]
+        public async Task<IActionResult> CreateTask(int projectId, TaskViewModel request)
         {
-            var taskViewModel = await _taskService.CreateTaskAsync(request);
-            return Ok(taskViewModel);
+            var taskViewModel = await _taskService.CreateTaskAsync(projectId, request);
+            if (taskViewModel != null)
+                return Ok(); // Task deleted successfully
+            else
+                return NotFound(); // Task not found or delete operation failed
+            
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAllTasks()
         {
             var taskViewModels = await _taskService.GetTasksAsync();
+            return Ok(taskViewModels);
+        }
+
+        [HttpGet("projects/{projectId}/tasks")]
+        public async Task<IActionResult> GetTasksForProjectAsync(int projectId)
+        {
+            var taskViewModels = await _taskService.GetTasksByProjectIdAsync(projectId);
+            if (taskViewModels == null)
+                return NotFound();
+
+            return Ok(taskViewModels);
+        }
+
+        [HttpGet("tasks/{id}")]
+        public async Task<IActionResult> GetTaskAsync(int id)
+        {
+            var taskViewModels = await _taskService.GetTaskAsync(id);
+            if (taskViewModels == null)
+                return NotFound();
+
             return Ok(taskViewModels);
         }
 

@@ -9,9 +9,10 @@ namespace Application.InterfaceServies
 {
     public interface ITaskService
     {
-        Task<TaskViewModel> CreateTaskAsync(TaskViewModel taskViewModel);
+        Task<TaskViewModel> CreateTaskAsync(int procheckId, TaskViewModel taskViewModel);
         Task<TaskViewModel> GetTaskAsync(int id);
         Task<IEnumerable<TaskViewModel>> GetTasksAsync();
+        Task<IEnumerable<TaskViewModel>> GetTasksByProjectIdAsync(int projectId);
         Task<TaskViewModel> UpdateTaskAsync(int id, TaskViewModel taskViewModel);
         Task<bool> DeleteTaskAsync(int id);
     }
