@@ -16,6 +16,10 @@ namespace Domain.Models
         public DateTime SlotStartTime { get; set; }
         public DateTime SlotEndTime { get; set; }
         public Users? User { get; set; }
-       
+        public int TeacherId { get; set; }
+        public Users Teacher { get; set; }
+        public string CourseName { get; set; }
+
+
     }
 }

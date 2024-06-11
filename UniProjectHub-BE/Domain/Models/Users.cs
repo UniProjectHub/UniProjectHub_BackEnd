@@ -13,12 +13,14 @@ namespace Domain.Models
         public string? LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public bool IsStudent { get; set; }
+        public bool IsTeacher { get; set; }
         public string? University { get; set; }
         public bool IsMale { get; set; }
         public string? AvatarURL { get; set; }
-        
-        public int Status { get; set; }
+
+        public bool IsActive { get; set; } = true; // Add the IsActive property with a default value
         public string? RefreshToken { get; set; }
+        public DateTime? RefreshTokenExpiryTime { get; set; }
         public ICollection<Schedule>? Schedules { get; set; }
         public ICollection<Blog>? Blogs { get; set; }
         public ICollection<Notification>? Notifications { get; set; }
@@ -29,4 +31,5 @@ namespace Domain.Models
         public ICollection<File>? files { get; set; }
 
     }
+
 }

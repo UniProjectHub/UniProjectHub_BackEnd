@@ -17,12 +17,14 @@ namespace Infracstructures
             _context = context;
             MemberRepository = new MemberRepository(context);
             GroupChatRepository = new GroupChatRepository(context);
+            FileRepository = new FileManageRepository(context);
             _projectRepository = projectRepository;
             _taskRepository = taskRepository;
         }
 
         public IMemberRepository MemberRepository { get;  }
         public IGroupChatRepository GroupChatRepository { get;  }
+        public IFileManageRepository FileRepository { get; }
         public IProjectRepository ProjectRepository => _projectRepository;
         public ITaskRepository TaskRepository => _taskRepository;
 
