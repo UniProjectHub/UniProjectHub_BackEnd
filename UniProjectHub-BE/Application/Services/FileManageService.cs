@@ -6,6 +6,7 @@ using Application.ViewModels.GroupChatViewModel;
 using AutoMapper;
 using Domain.Models;
 using FluentValidation;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -78,10 +79,20 @@ namespace Application.Services
             return _mapper.Map<IEnumerable<FileViewModel>>(files);
         }
 
-        public async Task<IEnumerable<FileViewModel>> GetFileByUserIdAsync(int userId)
+        public async Task<IEnumerable<FileViewModel>> GetFileByUserIdAsync(string userId)
         {
-            var files = await _fileRepository.GetFileByTaskIdAsync(userId);
+            var files = await _fileRepository.GetFileByUserIdAsync(userId);
             return _mapper.Map<IEnumerable<FileViewModel>>(files);
         }
+
+        public async Task<IEnumerable<FileViewModel>> GetFilesByUserIdAndTaskIdAsync(string userId, int taskId)
+        {
+            var files = await _fileRepository.GetAllAsync(query =>
+                query.Where(file => file.UserId == userId && file.TaskId == taskId)
+                     .Include(file => file.Users));
+
+            return _mapper.Map<IEnumerable<FileViewModel>>(files);
+        }
+
     }
 }

@@ -25,9 +25,15 @@ namespace UniProjectHub_BE.Controllers
         }
 
         [HttpPost]
-        [Route("uploadfile")]
+        [Route("upload-file")]
         public async Task<IActionResult> UploadFile(IFormFile _IFormFile, FileViewModel fileViewModel)
         {
+            var validationResult = _iManageImage.ValidateFileSize(_IFormFile);
+            if (!validationResult.Item1)
+            {
+                return BadRequest(validationResult.Item2);
+            }
+
             var uploadResult = await _iManageImage.UploadFile(_IFormFile);
             if (uploadResult == null)
             {
@@ -35,7 +41,8 @@ namespace UniProjectHub_BE.Controllers
             }
             FileViewModel file = new FileViewModel { 
                 CreatedAt = DateTime.Now,
-                Filename = uploadResult,
+                Filename = uploadResult.Filename,
+                RealFileName = uploadResult.RealFileName,
                 TaskId = fileViewModel.TaskId,
                 UserId = fileViewModel.UserId,
             };
@@ -52,7 +59,7 @@ namespace UniProjectHub_BE.Controllers
         //    return File(result.Item1, result.Item2, result.Item2);
         //}
 
-        [HttpGet("downloadfile")]
+        [HttpGet("download-file")]
         public async Task<IActionResult> DownloadFile(string token)
         {
             _logger.LogInformation($"Attempting to download file with token: {token}");
@@ -70,7 +77,7 @@ namespace UniProjectHub_BE.Controllers
             return File(result.Item1, result.Item2, result.Item3); // Use result.Item3 for the file name
         }
 
-        [HttpGet("generatedownloadlink")]
+        [HttpGet("generate-download-link")]
         public IActionResult GenerateDownloadLink(string fileName)
         {
             var token = _tokenService.GenerateDownloadFileToken(fileName);
@@ -89,7 +96,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         [HttpDelete]
-        [Route("removefile")]
+        [Route("remove-file")]
         public IActionResult RemoveFile(string FileName)
         {
             var result = _iManageImage.RemoveFile(FileName);
@@ -100,6 +107,51 @@ namespace UniProjectHub_BE.Controllers
             else
             {
                 return NotFound(new { message = "File not found." });
+            }
+        }
+
+        [HttpGet("getFiles")]
+        public async Task<IActionResult> GetFilesByUserIdAndTaskIdAsync(string userId, int taskId)
+        {
+            try
+            {
+                var files = await _fileService.GetFilesByUserIdAndTaskIdAsync(userId, taskId);
+                return Ok(files);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("getFilesByTaskId")]
+        public async Task<IActionResult> GetFilesByTaskIdAsync(int taskId)
+        {
+            try
+            {
+                var files = await _fileService.GetFileByTaskIdAsync(taskId);
+                return Ok(files); // Return list of files
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("getFilesByUserId")]
+        public async Task<IActionResult> GetFilesByUserIdAsync(string userId)
+        {
+            try
+            {
+                var files = await _fileService.GetFileByUserIdAsync(userId);
+                return Ok(files); // Return list of files
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
     }

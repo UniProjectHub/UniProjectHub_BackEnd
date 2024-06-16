@@ -12,7 +12,8 @@ namespace Domain.Models
         public int TaskId { get; set; }
         public string? UserId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string? Filename { get; set; }
+        public string Filename { get; set; }
+        public string RealFileName {  get; set; }
         public Users? Users { get; set; }
         public Task? Task { get; set; }
     }

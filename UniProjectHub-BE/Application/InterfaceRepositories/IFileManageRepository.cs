@@ -11,6 +11,6 @@ namespace Application.InterfaceRepositories
     public interface IFileManageRepository : IGenericRepository<File>
     {
         Task<IEnumerable<File>> GetFileByTaskIdAsync(int taskId);
-        Task<IEnumerable<File>> GetFileByUserIdAsync(int userId);
+        Task<IEnumerable<File>> GetFileByUserIdAsync(string userId);
     }
 }

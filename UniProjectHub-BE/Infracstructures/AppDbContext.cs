@@ -21,6 +21,7 @@ namespace Infracstructures
 
         public DbSet<Member> Members { get; set; }
         public DbSet<GroupChat> GroupChats { get; set; }
+        public DbSet<Payment> Payments { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

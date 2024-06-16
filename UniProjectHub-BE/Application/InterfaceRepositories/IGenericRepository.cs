@@ -13,7 +13,8 @@ namespace Application.InterfaceRepositories
         Task<TModel> CloneAsync(TModel model);
         Task<List<TModel>> GetAllAsync();
         Task<List<TModel>> GetAllAsync(Func<IQueryable<TModel>, IIncludableQueryable<TModel, object>>? include = null);
-
+        Task<List<TModel>> GetAllAsync(Func<IQueryable<TModel>, IQueryable<TModel>>? filter = null,
+        Func<IQueryable<TModel>, IIncludableQueryable<TModel, object>>? include = null);
         Task<TModel?> GetByIdAsync(int id);
 
         Task AddAsync(TModel model);
