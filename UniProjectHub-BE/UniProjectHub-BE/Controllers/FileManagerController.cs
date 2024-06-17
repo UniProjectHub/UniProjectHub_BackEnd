@@ -33,6 +33,11 @@ namespace UniProjectHub_BE.Controllers
             {
                 return BadRequest(validationResult.Item2);
             }
+            var checkDupplicateFileName = await _fileService.IsDuplicateFileAsync(fileViewModel.TaskId, _IFormFile.FileName);
+            if (checkDupplicateFileName)
+            {
+                return BadRequest("Dupplicate file name");
+            }
 
             var uploadResult = await _iManageImage.UploadFile(_IFormFile);
             if (uploadResult == null)

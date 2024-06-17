@@ -12,5 +12,6 @@ namespace Application.InterfaceRepositories
     {
         Task<IEnumerable<File>> GetFileByTaskIdAsync(int taskId);
         Task<IEnumerable<File>> GetFileByUserIdAsync(string userId);
+        Task<bool> IsDuplicateFileAsync(int taskId, string fileName);
     }
 }

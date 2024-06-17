@@ -35,5 +35,10 @@ namespace Infracstructures.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public async Task<bool> IsDuplicateFileAsync(int taskId, string fileName)
+        {
+            return await dbSet.AnyAsync(file => file.TaskId == taskId && file.Filename == fileName);
+        }
     }
 }

@@ -123,6 +123,11 @@ namespace Infracstructures.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Filename")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RealFileName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TaskId")
@@ -586,13 +591,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b7861dbe-4ad1-4715-bff8-0b85089a313a",
+                            Id = "d8a1e9f1-823c-4fed-b304-bce22156d777",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "9d85f044-c570-42fb-a5bf-e667e69eb05d",
+                            Id = "429cac3d-7594-4524-b6b4-32876dd1ab13",
                             Name = "User",
                             NormalizedName = "USER"
                         });

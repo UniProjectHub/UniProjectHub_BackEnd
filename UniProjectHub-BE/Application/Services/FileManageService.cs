@@ -94,5 +94,9 @@ namespace Application.Services
             return _mapper.Map<IEnumerable<FileViewModel>>(files);
         }
 
+        public async Task<bool> IsDuplicateFileAsync(int taskId, string fileName)
+        {
+            return await _fileRepository.IsDuplicateFileAsync(taskId, fileName);
+        }
     }
 }

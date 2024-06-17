@@ -20,5 +20,6 @@ namespace Application.InterfaceServies
         Task<IEnumerable<FileViewModel>> GetFileByTaskIdAsync(int taskId);
         Task<IEnumerable<FileViewModel>> GetFileByUserIdAsync(string userId);
         Task<IEnumerable<FileViewModel>> GetFilesByUserIdAndTaskIdAsync(string userId, int taskId);
+        Task<bool> IsDuplicateFileAsync(int taskId, string fileName);
     }
 }
