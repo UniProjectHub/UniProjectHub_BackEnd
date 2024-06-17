@@ -10,7 +10,7 @@ using UniProjectHub_BE.Services;
 
 namespace UniProjectHub_BE.Controllers
 {
-    [Authorize(Roles = "User")]
+    //[Authorize(Roles = "User")]
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors]

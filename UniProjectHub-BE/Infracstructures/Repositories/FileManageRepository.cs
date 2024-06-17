@@ -1,6 +1,7 @@
 ﻿using Application.Commons;
 using Application.InterfaceRepositories;
 using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -16,19 +17,28 @@ namespace Infracstructures.Repositories
         public FileManageRepository(AppDbContext context) : base(context) { }
 
 
-        public Task<IEnumerable<File>> GetFileByTaskIdAsync(int taskId)
+        public async Task<IEnumerable<File>> GetFileByTaskIdAsync(int taskId)
         {
-            throw new NotImplementedException();
+            return await dbSet
+                .Where(file => file.TaskId == taskId)
+                .ToListAsync();
         }
 
-        public Task<IEnumerable<File>> GetFileByUserIdAsync(int userId)
+        public async Task<IEnumerable<File>> GetFileByUserIdAsync(string userId)
         {
-            throw new NotImplementedException();
+            return await dbSet
+                .Where(file => file.UserId == userId)
+                .ToListAsync();
         }
 
         public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> IsDuplicateFileAsync(int taskId, string fileName)
+        {
+            return await dbSet.AnyAsync(file => file.TaskId == taskId && file.Filename == fileName);
         }
     }
 }

@@ -14,8 +14,9 @@ namespace Application.ViewModels.FileViewModel
         public int TaskId { get; set; }
         public string? UserId { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string? Filename { get; set; }
-        public Users? Users { get; set; }
-        public Task? Task { get; set; }
+        public string Filename { get; set; }
+        public string RealFileName { get; set; }
+        public string Username { get; set; }
+        public string TaskName { get; set; }
     }
 }

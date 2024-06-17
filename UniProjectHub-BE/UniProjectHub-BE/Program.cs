@@ -21,6 +21,7 @@ using System.Text.Json.Serialization;
 using UniProjectHub_BE.Services;
 using FluentValidation;
 using Infracstructures.Mappers;
+using Domain.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 //CORS
@@ -75,7 +76,11 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
-
+builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+// Add services to the container.
+builder.Services.Configure<PayOSSettings>(builder.Configuration.GetSection("PayOS"));
+builder.Services.AddSingleton<ManagePayment>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();

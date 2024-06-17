@@ -1,4 +1,5 @@
 ﻿using Application.Commons;
+using Application.InterfaceRepositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using Org.BouncyCastle.Asn1;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Infracstructures
 {
-    public class GenericRepository<TEntity> where TEntity : class
+    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         public AppDbContext context;
         public DbSet<TEntity> dbSet;
@@ -183,5 +184,28 @@ namespace Infracstructures
             return values;
         }
 
+        public Task UpdateAsync(Domain.Models.GroupChat groupChat)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<List<TEntity>> GetAllAsync(
+        Func<IQueryable<TEntity>, IQueryable<TEntity>>? filter = null,
+        Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
+        {
+            IQueryable<TEntity> query = dbSet;
+
+            if (include != null)
+            {
+                query = include(query);
+            }
+
+            if (filter != null)
+            {
+                query = filter(query);
+            }
+
+            return await query.ToListAsync();
+        }
     }
 }

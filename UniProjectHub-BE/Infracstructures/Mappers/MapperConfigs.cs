@@ -18,7 +18,9 @@ namespace Infracstructures.Mappers
         {
             CreateMap<Member, MemberViewModel>().ReverseMap();
             CreateMap<GroupChat, GroupChatViewModel>().ReverseMap();
-            CreateMap<File, FileViewModel>().ReverseMap();
+            CreateMap<File, FileViewModel>()
+            .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Users.UserName))
+            .ForMember(dest => dest.TaskName, opt => opt.MapFrom(src => src.Task.TaskName));
         }
     }
 }

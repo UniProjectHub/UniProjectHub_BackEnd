@@ -8,6 +8,7 @@ using Domain.Models;
 using Infracstructures.Mappers;
 using Infracstructures.Repositories;
 using Infracstructures.Service;
+using Infracstructures.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -54,6 +55,8 @@ namespace Infracstructures
             services.AddScoped<ITokenService, TokenService>();
             services.AddTransient<IFileManageRepository, FileManageRepository>();
             services.AddTransient<IFileManageService, FileManageService>();
+            services.AddTransient<IPaymentRepository, PaymentRepository>();
+            services.AddTransient<IPaymentService, PaymentService>();
             services.AddTransient<IFileValidator, FileViewModelValidator>();
             services.AddMemoryCache();
 
