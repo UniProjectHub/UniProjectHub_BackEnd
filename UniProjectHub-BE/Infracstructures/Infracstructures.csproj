@@ -21,6 +21,8 @@
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.5.2" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.5.2" />
     <PackageReference Include="MimeKit" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="payOS" Version="1.0.5" />
   </ItemGroup>
 
   <ItemGroup>

@@ -37,6 +37,9 @@ namespace Infracstructures.Mappers
             CreateMap<MemberInTask, MemberInTaskCreateModel>().ReverseMap();
             CreateMap<MemberInTask, MemberInTaskUpdateModel>().ReverseMap();
 
+            CreateMap<File, FileViewModel>()
+            .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Users.UserName))
+            .ForMember(dest => dest.TaskName, opt => opt.MapFrom(src => src.Task.TaskName));
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Infracstructures.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.5")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -109,6 +109,40 @@ namespace Infracstructures.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Comment", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Models.File", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Filename")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RealFileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TaskId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TaskId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("File", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Models.GroupChat", b =>
@@ -243,6 +277,43 @@ namespace Infracstructures.Migrations
                     b.ToTable("Notification", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Models.Payment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("OrderId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Payments");
+                });
+
             modelBuilder.Entity("Domain.Models.Project", b =>
                 {
                     b.Property<int>("Id")
@@ -279,6 +350,10 @@ namespace Infracstructures.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CourseName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("DateOfWeek")
                         .HasColumnType("nvarchar(max)");
 
@@ -294,10 +369,19 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("TeacherId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeacherId1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId1");
 
                     b.HasIndex("UserId");
 
@@ -417,6 +501,9 @@ namespace Infracstructures.Migrations
                     b.Property<bool>("IsStudent")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsTeacher")
+                        .HasColumnType("bit");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
@@ -444,10 +531,9 @@ namespace Infracstructures.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("RefreshTokenExpiryTime")
+                    b.Property<DateTime?>("RefreshTokenExpiryTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("SecurityStamp")
@@ -505,13 +591,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "0442a32e-48a6-4ac1-9b1b-4235832a782e",
+                            Id = "d8a1e9f1-823c-4fed-b304-bce22156d777",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "3b3d6c7a-4365-44bc-bc73-3b35d6b9dc4c",
+                            Id = "429cac3d-7594-4524-b6b4-32876dd1ab13",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -655,6 +741,24 @@ namespace Infracstructures.Migrations
                     b.Navigation("Users");
                 });
 
+            modelBuilder.Entity("Domain.Models.File", b =>
+                {
+                    b.HasOne("Domain.Models.Task", "Task")
+                        .WithMany("files")
+                        .HasForeignKey("TaskId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Models.Users", "Users")
+                        .WithMany("files")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Task");
+
+                    b.Navigation("Users");
+                });
+
             modelBuilder.Entity("Domain.Models.GroupChat", b =>
                 {
                     b.HasOne("Domain.Models.Users", "User")
@@ -719,12 +823,31 @@ namespace Infracstructures.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Domain.Models.Payment", b =>
+                {
+                    b.HasOne("Domain.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Models.Schedule", b =>
                 {
+                    b.HasOne("Domain.Models.Users", "Teacher")
+                        .WithMany()
+                        .HasForeignKey("TeacherId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Models.Users", "User")
                         .WithMany("Schedules")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Teacher");
 
                     b.Navigation("User");
                 });
@@ -825,6 +948,8 @@ namespace Infracstructures.Migrations
                 {
                     b.Navigation("Members");
 
+                    b.Navigation("files");
+
                     b.Navigation("subTasks");
                 });
 
@@ -843,6 +968,8 @@ namespace Infracstructures.Migrations
                     b.Navigation("Notifications");
 
                     b.Navigation("Schedules");
+
+                    b.Navigation("files");
                 });
 #pragma warning restore 612, 618
         }

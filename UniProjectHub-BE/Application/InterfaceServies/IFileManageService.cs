@@ -7,16 +7,19 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using File = Domain.Models.File;
 
 namespace Application.InterfaceServies
 {
     public interface IFileManageService
     {
         Task<FluentValidation.Results.ValidationResult> ValidateFileAsync(FileViewModel fileViewModel);
-        Task<Domain.Models.File> CreateFileAsync(FileViewModel fileViewModel);
-        Task<Domain.Models.File> UpdateFileAsync(FileViewModel fileViewModel, int id);
+        Task<File> CreateFileAsync(FileViewModel fileViewModel);
+        Task<File> UpdateFileAsync(FileViewModel fileViewModel, int id);
         // Task DeleteGroupChatAsync(int id);
         Task<IEnumerable<FileViewModel>> GetFileByTaskIdAsync(int taskId);
-        Task<IEnumerable<FileViewModel>> GetFileByUserIdAsync(int userId);
+        Task<IEnumerable<FileViewModel>> GetFileByUserIdAsync(string userId);
+        Task<IEnumerable<FileViewModel>> GetFilesByUserIdAndTaskIdAsync(string userId, int taskId);
+        Task<bool> IsDuplicateFileAsync(int taskId, string fileName);
     }
 }

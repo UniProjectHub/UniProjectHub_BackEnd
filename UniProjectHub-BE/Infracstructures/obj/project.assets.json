@@ -1092,6 +1092,22 @@
           }
         }
       },
+      "payOS/1.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/net6.0/payos-lib-backend-dotnet.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/payos-lib-backend-dotnet.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        }
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -1543,7 +1559,8 @@
           "Microsoft.Data.SqlClient": "5.1.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.0",
           "Microsoft.Extensions.Configuration": "8.0.0",
-          "Microsoft.Extensions.Configuration.Json": "8.0.0"
+          "Microsoft.Extensions.Configuration.Json": "8.0.0",
+          "payOS": "1.0.5"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -3093,6 +3110,19 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
+    "payOS/1.0.5": {
+      "sha512": "FMM3FMaO1MqTnf3G5bhn6Uf73hoz5BbIEFGDPyGj3JEhdhbLcViCgab7uI+aEjf4uSjLUUmr5bXvIJXzk0M7ZA==",
+      "type": "package",
+      "path": "payos/1.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/payos-lib-backend-dotnet.dll",
+        "lib/net6.0/payos-lib-backend-dotnet.runtimeconfig.json",
+        "payos.1.0.5.nupkg.sha512",
+        "payos.nuspec"
+      ]
+    },
     "System.Buffers/4.5.0": {
       "sha512": "pL2ChpaRRWI/p4LXyy4RgeWlYF2sgfj/pnVMvBqwNFr5cXg7CXNnWZWxrOONLg8VGdFB8oB+EG2Qw4MLgTOe+A==",
       "type": "package",
@@ -3957,7 +3987,9 @@
       "Microsoft.Extensions.Identity.Core >= 8.0.5",
       "Microsoft.IdentityModel.JsonWebTokens >= 7.5.2",
       "Microsoft.IdentityModel.Protocols.OpenIdConnect >= 7.5.2",
-      "MimeKit >= 4.5.0"
+      "MimeKit >= 4.5.0",
+      "Newtonsoft.Json >= 13.0.3",
+      "payOS >= 1.0.5"
     ]
   },
   "packageFolders": {
@@ -4063,6 +4095,14 @@
           "MimeKit": {
             "target": "Package",
             "version": "[4.5.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.3, )"
+          },
+          "payOS": {
+            "target": "Package",
+            "version": "[1.0.5, )"
           }
         },
         "imports": [
