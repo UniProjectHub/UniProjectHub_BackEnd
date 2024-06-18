@@ -7,12 +7,16 @@ using System.Threading.Tasks;
 
 namespace Infracstructures
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork 
     {
+        IProjectRepository ProjectRepository { get; }
         IMemberRepository MemberRepository { get; }
         IGroupChatRepository GroupChatRepository { get; }
+        ITaskRepository TaskRepository { get; } 
         IFileManageRepository FileManageRepository { get; }
         IScheduleRepository ScheduleRepository { get; }
+        ISubTaskRepository SubTaskRepository { get; }
+        IMemberInTaskRepository MemberInTaskRepository { get; }
         Task<int> SaveChangesAsync();
     }
 }
