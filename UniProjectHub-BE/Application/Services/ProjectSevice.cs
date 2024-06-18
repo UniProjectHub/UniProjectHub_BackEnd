@@ -51,6 +51,7 @@ namespace Application.Services
             var projects = await _unitOfWork.ProjectRepository.GetAllAsync();
             return projects.Select(p => new ProjectViewModel
             {
+                Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
                 Status = p.Status,
@@ -67,6 +68,7 @@ namespace Application.Services
 
             return new ProjectViewModel
             {
+                Id = project.Id,
                 Name = project.Name,
                 Description = project.Description,
                 Status = project.Status,

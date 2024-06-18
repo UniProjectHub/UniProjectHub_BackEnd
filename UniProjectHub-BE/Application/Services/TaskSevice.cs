@@ -84,7 +84,7 @@ namespace Application.Services
 
             var taskViewModels = tasks.Select(task => new TaskViewModel
             {
-                Id = task.Id,
+                Id= task.Id,
                 TaskName = task.TaskName,
                 Description = task.Description,
                 Status = task.Status,

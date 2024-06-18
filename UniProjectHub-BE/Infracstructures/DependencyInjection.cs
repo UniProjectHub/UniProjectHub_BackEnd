@@ -30,11 +30,21 @@ namespace Infracstructures
 
 
 
+            // Register Project-related services
             services.AddTransient<IProjectRepository, ProjectRepository>();
             services.AddTransient<IProjectService, ProjectService>();
-            
+
+            // Register Task-related services
             services.AddTransient<ITaskRepository, TaskRepository>();
             services.AddTransient<ITaskService, TaskSevice>();
+
+            // Register SubTask-related services
+            services.AddTransient<ISubTaskRepository, SubTaskRepository>();
+            services.AddTransient<ISubTaskService, SubTaskService>();
+
+            // Register MemberInTask-related services
+            services.AddTransient<IMemberInTaskService, MemberInTaskService>();
+            services.AddTransient<IMemberInTaskRepository, MemberInTaskRepository>();
             // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 

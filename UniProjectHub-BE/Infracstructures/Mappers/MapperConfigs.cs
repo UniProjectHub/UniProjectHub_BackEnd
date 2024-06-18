@@ -12,6 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using File = Domain.Models.File;
 using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
+using Application.ViewModels.SubTaskViewModel;
+using Application.ViewModels.MemberInTaskViewModel;
 
 namespace Infracstructures.Mappers
 {
@@ -26,6 +28,14 @@ namespace Infracstructures.Mappers
             CreateMap<Project, ProjectViewModel>().ReverseMap();
             //Task
             CreateMap<Domain.Models.Task, TaskViewModel>().ReverseMap();
+            //Subtask
+            CreateMap<SubTask, SubTaskViewModel>().ReverseMap();
+            CreateMap<SubTask, CreateSubTaskRequest>().ReverseMap();
+            CreateMap<SubTask, UpdateSubTaskRequest>().ReverseMap();
+            //MemberInTask
+            CreateMap<MemberInTask, MemberInTaskViewModel>().ReverseMap();
+            CreateMap<MemberInTask, MemberInTaskCreateModel>().ReverseMap();
+            CreateMap<MemberInTask, MemberInTaskUpdateModel>().ReverseMap();
 
         }
     }

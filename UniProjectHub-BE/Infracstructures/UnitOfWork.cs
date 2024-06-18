@@ -10,9 +10,14 @@ namespace Infracstructures
         private AppDbContext _context = new AppDbContext();
         private readonly IProjectRepository _projectRepository;
         private readonly ITaskRepository _taskRepository;
+        private readonly ISubTaskRepository _subTaskRepository;
+        private readonly IMemberInTaskRepository _memberInTaskRepository;
 
-
-        public UnitOfWork(AppDbContext context, IProjectRepository projectRepository, ITaskRepository taskRepository)
+        public UnitOfWork(AppDbContext context, 
+            IProjectRepository projectRepository, 
+            ITaskRepository taskRepository, 
+            ISubTaskRepository subTaskRepository, 
+            IMemberInTaskRepository memberInTaskRepository)
         {
             _context = context;
             MemberRepository = new MemberRepository(context);
@@ -20,6 +25,8 @@ namespace Infracstructures
             FileRepository = new FileManageRepository(context);
             _projectRepository = projectRepository;
             _taskRepository = taskRepository;
+            _subTaskRepository = subTaskRepository;
+            _memberInTaskRepository = memberInTaskRepository;
         }
 
         public IMemberRepository MemberRepository { get;  }
@@ -27,6 +34,8 @@ namespace Infracstructures
         public IFileManageRepository FileRepository { get; }
         public IProjectRepository ProjectRepository => _projectRepository;
         public ITaskRepository TaskRepository => _taskRepository;
+        public ISubTaskRepository SubTaskRepository => _subTaskRepository;
+        public IMemberInTaskRepository MemberInTaskRepository => _memberInTaskRepository;
 
         public IFileManageRepository FileManageRepository => throw new NotImplementedException();
 
