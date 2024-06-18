@@ -189,5 +189,24 @@ namespace Infracstructures
         {
             throw new NotImplementedException();
         }
+
+        public async Task<List<TEntity>> GetAllAsync(
+        Func<IQueryable<TEntity>, IQueryable<TEntity>>? filter = null,
+        Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
+        {
+            IQueryable<TEntity> query = dbSet;
+
+            if (include != null)
+            {
+                query = include(query);
+            }
+
+            if (filter != null)
+            {
+                query = filter(query);
+            }
+
+            return await query.ToListAsync();
+        }
     }
 }
