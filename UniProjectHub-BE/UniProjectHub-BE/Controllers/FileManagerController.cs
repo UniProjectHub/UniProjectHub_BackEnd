@@ -115,7 +115,7 @@ namespace UniProjectHub_BE.Controllers
             }
         }
 
-        [HttpGet("getFiles")]
+        [HttpGet("get-files")]
         public async Task<IActionResult> GetFilesByUserIdAndTaskIdAsync(string userId, int taskId)
         {
             try
@@ -130,7 +130,7 @@ namespace UniProjectHub_BE.Controllers
             }
         }
 
-        [HttpGet("getFilesByTaskId")]
+        [HttpGet("task/{taskId}")]
         public async Task<IActionResult> GetFilesByTaskIdAsync(int taskId)
         {
             try
@@ -145,7 +145,7 @@ namespace UniProjectHub_BE.Controllers
             }
         }
 
-        [HttpGet("getFilesByUserId")]
+        [HttpGet("user/{userId}")]
         public async Task<IActionResult> GetFilesByUserIdAsync(string userId)
         {
             try
