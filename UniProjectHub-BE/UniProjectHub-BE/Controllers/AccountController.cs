@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
+using UniProjectHub_BE.Services;
 using static Org.BouncyCastle.Crypto.Engines.SM2Engine;
 
 namespace api.Controllers
@@ -27,18 +28,24 @@ namespace api.Controllers
         private readonly ITokenService tokenService;
         private readonly SignInManager<Users> signInManager;
         private readonly Domain.Interfaces.IEmailSender emailSender;
+        private readonly ManageFisebase manageFirebase;
+        private readonly ICurrentUserService currentUserService;
 
         public AccountController(
             UserManager<Users> userManager, 
             ITokenService tokenService, 
             SignInManager<Users> signInManager,
-            Domain.Interfaces.IEmailSender emailSender
+            Domain.Interfaces.IEmailSender emailSender,
+            ManageFisebase manageFirebase,
+            ICurrentUserService currentUserService
             )
         {
             this.userManager = userManager;
             this.tokenService = tokenService;
             this.signInManager = signInManager;
             this.emailSender = emailSender;
+            this.manageFirebase = manageFirebase;
+            this.currentUserService = currentUserService;
         }
 
         [HttpPost("login")]
@@ -233,15 +240,15 @@ namespace api.Controllers
             return Ok("Password has been reset successfully.");
         }
 
-        [HttpGet("login-Google")]
+        [HttpGet("login-google")]
         public IActionResult GoogleLogin()
         {
-            string redirectUrl = "api/account/CallBackGoogle";
+            string redirectUrl = "api/account/callback-google";
             var properties = signInManager.ConfigureExternalAuthenticationProperties("Google", redirectUrl);
             return new ChallengeResult("Google", properties);
         }
 
-        [HttpGet("callback-Google")]
+        [HttpGet("callback-google")]
         public async Task<ActionResult> CallBackGoogle()
         {
             ExternalLoginInfo info = await signInManager.GetExternalLoginInfoAsync();
@@ -274,7 +281,8 @@ namespace api.Controllers
             }
         }
 
-        [HttpPut("update-profile")]
+        [Authorize]
+        [HttpPut()]
         public async Task<IActionResult> UpdateUserProfile(UpdateUserProfileDto updateUserProfileDto)
         {
             if (!ModelState.IsValid)
@@ -282,11 +290,13 @@ namespace api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var user = await userManager.FindByNameAsync(User.Identity.Name);
+            var user = await currentUserService.GetUser();
             if (user == null)
             {
                 return NotFound("User not found.");
             }
+
+            var url = manageFirebase.ImageURL(updateUserProfileDto.Avatar);
 
             user.FirstName = updateUserProfileDto.FirstName;
             user.LastName = updateUserProfileDto.LastName;
@@ -295,7 +305,7 @@ namespace api.Controllers
             user.IsStudent = updateUserProfileDto.IsStudent;
             user.University = updateUserProfileDto.University;
             user.IsMale = updateUserProfileDto.IsMale;
-            user.AvatarURL = updateUserProfileDto.AvatarURL;
+            user.AvatarURL = url;
 
             var result = await userManager.UpdateAsync(user);
 
