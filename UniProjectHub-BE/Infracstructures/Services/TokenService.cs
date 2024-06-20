@@ -34,13 +34,14 @@ namespace Infracstructures.Service
             _cache = cache;
         }
 
-        public async Task<string> CreateToken(Users user)
+        public async Task<string> GenerateToken(Users user)
         {
             var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.Email, user.Email),
             new Claim(JwtRegisteredClaimNames.GivenName, user.UserName),
-            new Claim(JwtRegisteredClaimNames.NameId, user.Id)
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
 
             var userRole = await _userManager.GetRolesAsync(user);
@@ -102,9 +103,13 @@ namespace Infracstructures.Service
             return principal;
         }
 
-        public void SaveRefreshToken(string username, string refreshToken)
+        public void SaveRefreshToken(string userId, string refreshToken)
         {
-            _refreshTokens.Add(new RefreshToken { Username = username, Token = refreshToken, ExpiryDate = DateTime.UtcNow.AddDays(double.Parse(_config["JWT:RefreshTokenExpiration"])) });
+            _refreshTokens.Add(new RefreshToken { 
+                UserId = userId, 
+                Token = refreshToken, 
+                ExpiryDate = DateTime.UtcNow.AddDays(double.Parse(_config["JWT:RefreshTokenExpiration"])) 
+            });
         }
 
         public RefreshToken GetRefreshToken(string refreshToken)
@@ -119,6 +124,11 @@ namespace Infracstructures.Service
             {
                 _refreshTokens.Remove(token);
             }
+        }
+
+        public void RemoveUserRefreshTokens(string userId)
+        {
+            _refreshTokens.RemoveAll(t => t.UserId == userId);
         }
 
         public string GenerateDownloadFileToken(string fileName)

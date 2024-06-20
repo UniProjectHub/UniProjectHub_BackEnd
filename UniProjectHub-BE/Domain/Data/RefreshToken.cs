@@ -8,6 +8,7 @@ namespace Domain.Data
 {
     public class RefreshToken
     {
+        public string UserId { get; set; }
         public string Username { get; set; }
         public string Token { get; set; }
         public DateTime ExpiryDate { get; set; }

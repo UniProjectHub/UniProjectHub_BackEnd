@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
@@ -62,7 +63,7 @@ namespace api.Controllers
 
             if (!result.Succeeded) return Unauthorized("Username not found and/or password incorrect");
 
-            var accessToken = await tokenService.CreateToken(user);
+            var accessToken = await tokenService.GenerateToken(user);
             var refreshToken = tokenService.GenerateRefreshToken();
             tokenService.SaveRefreshToken(user.UserName, refreshToken);
 
@@ -75,24 +76,41 @@ namespace api.Controllers
             });
         }
 
+        [HttpPost("logout")]
+        public async Task<IActionResult> Logout()
+        {
+            var userId = User.FindFirstValue(JwtRegisteredClaimNames.Sub);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return BadRequest("Invalid user.");
+            }
+
+            tokenService.RemoveRefreshToken(userId);
+            await signInManager.SignOutAsync();
+
+            return Ok("Logout successful.");
+        }
+
         [HttpPost("refresh")]
         public async Task<IActionResult> Refresh([FromBody] TokenModel tokenModel)
         {
-            var principal = tokenService.GetPrincipalFromExpiredToken(tokenModel.AccessToken);
-            var username = principal.Identity.Name;
-
-            var savedRefreshToken = tokenService.GetRefreshToken(tokenModel.RefreshToken);
-
-            if (savedRefreshToken == null || savedRefreshToken.Username != username || savedRefreshToken.ExpiryDate <= DateTime.UtcNow)
+            var refreshToken = tokenService.GetRefreshToken(tokenModel.RefreshToken);
+            if (refreshToken == null)
             {
                 return Unauthorized();
             }
 
-            var user = await userManager.FindByNameAsync(username);
-            var newAccessToken = await tokenService.CreateToken(user);
+            var user = userManager.Users.SingleOrDefault(u => u.Id == refreshToken.UserId);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var newAccessToken = await tokenService.GenerateToken(user);
             var newRefreshToken = tokenService.GenerateRefreshToken();
+
             tokenService.RemoveRefreshToken(tokenModel.RefreshToken);
-            tokenService.SaveRefreshToken(username, newRefreshToken);
+            tokenService.SaveRefreshToken(user.Id, newRefreshToken);
 
             return Ok(new TokenModel { AccessToken = newAccessToken, RefreshToken = newRefreshToken });
         }
@@ -145,7 +163,7 @@ namespace api.Controllers
                             {
                                 UserName = user.UserName,
                                 Email = user.Email,
-                                Token = tokenService.CreateToken(user).Result
+                                Token = tokenService.GenerateToken(user).Result
                             }
                         );
                     }
