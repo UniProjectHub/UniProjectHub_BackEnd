@@ -10,10 +10,10 @@ namespace Domain.Interfaces
 {
     public interface ITokenService
     {
-        Task<string> CreateToken(Users user);
+        Task<string> GenerateToken(Users user);
         string GenerateRefreshToken();
         ClaimsPrincipal GetPrincipalFromExpiredToken(string token);
-        void SaveRefreshToken(string username, string refreshToken);
+        void SaveRefreshToken(string userId, string refreshToken);
         void RemoveRefreshToken(string refreshToken);
         RefreshToken GetRefreshToken(string refreshToken);
         string GenerateDownloadFileToken(string fileName);

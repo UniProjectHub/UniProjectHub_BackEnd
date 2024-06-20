@@ -80,7 +80,10 @@ builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 // Add services to the container.
 builder.Services.Configure<PayOSSettings>(builder.Configuration.GetSection("PayOS"));
+builder.Services.Configure<FirebaseSettings>(builder.Configuration.GetSection("Firebase"));
+
 builder.Services.AddSingleton<ManagePayment>();
+builder.Services.AddSingleton<ManageFisebase>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
@@ -113,12 +116,12 @@ builder.Services.AddTransient<Domain.Interfaces.IEmailSender, SendMailService>()
 builder.Services.AddIdentity<Users, IdentityRole>(options =>
 {
     // Thiết lập về Password
-    options.Password.RequireDigit = false;
-    options.Password.RequireLowercase = false;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireUppercase = false;
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
     options.Password.RequiredLength = 2;
-    options.Password.RequiredUniqueChars = 0;
+    options.Password.RequiredUniqueChars = 1;
 
     // Cấu hình Lockout - khóa user
     options.Lockout.AllowedForNewUsers = true;
