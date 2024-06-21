@@ -17,6 +17,7 @@ namespace Infracstructures
         IScheduleRepository ScheduleRepository { get; }
         ISubTaskRepository SubTaskRepository { get; }
         IMemberInTaskRepository MemberInTaskRepository { get; }
+        IBlogRepository BlogRepository { get; }
         Task<int> SaveChangesAsync();
     }
 }

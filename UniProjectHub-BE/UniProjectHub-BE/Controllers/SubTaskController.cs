@@ -18,7 +18,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         // GET api/subtasks
-        [HttpGet]
+        [HttpGet("GetAllSubTasks")]
         public async Task<ActionResult<IEnumerable<SubTaskViewModel>>> GetAllSubTasks()
         {
             try
@@ -33,7 +33,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         // GET api/subtasks/5
-        [HttpGet("{id}")]
+        [HttpGet("GetSubTaskById/{id}")]
         public async Task<ActionResult<SubTaskViewModel>> GetSubTaskById(int id)
         {
             try
@@ -52,7 +52,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         // GET api/subtasks/task/5
-        [HttpGet("task/{taskId}")]
+        [HttpGet("GetSubTasksByTaskId/{taskId}")]
         public async Task<ActionResult<IEnumerable<SubTaskViewModel>>> GetSubTasksByTaskId(int taskId)
         {
             var subTasks = await _subTaskService.GetAllSubTasksByTaskIdAsync(taskId);
@@ -60,7 +60,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         // POST api/subtasks
-        [HttpPost]
+        [HttpPost("CreateSubTaskAsync")]
         public async Task<ActionResult<SubTaskViewModel>> CreateSubTaskAsync(CreateSubTaskRequest request)
         {
             try
@@ -75,7 +75,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         // PUT api/subtasks/5
-        [HttpPut("{id}")]
+        [HttpPut("UpdateSubTaskAsync/{id}")]
         public async Task<ActionResult<SubTaskViewModel>> UpdateSubTaskAsync(int id, [FromBody] UpdateSubTaskRequest request)
         {
             if (!ModelState.IsValid)
@@ -87,7 +87,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(subTaskViewModel);
         }
         // Delete a subtask by ID
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteSubTaskAsync/{id}")]
         public async Task<IActionResult> DeleteSubTaskAsync(int id)
         {
             try

@@ -46,6 +46,15 @@ namespace Infracstructures
             // Register MemberInTask-related services
             services.AddTransient<IMemberInTaskService, MemberInTaskService>();
             services.AddTransient<IMemberInTaskRepository, MemberInTaskRepository>();
+
+            // Register Blog-related services
+            services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddTransient<IBlogService, BlogService>();
+
+            // Register Category-related services
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICategoryService, CategoryService>();
+
             // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 

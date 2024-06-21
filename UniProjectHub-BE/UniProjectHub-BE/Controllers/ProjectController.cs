@@ -15,20 +15,20 @@ namespace UniProjectHub_BE.Controllers
         {
             _projectService = projectService;
         }
-        [HttpPost]
+        [HttpPost("CreateProject")]
         public async Task<IActionResult> CreateProject(CreateProjectRequest request)
         {
             var projectViewModel = await _projectService.CreateProjectAsync(request);
             return Ok(projectViewModel);
         }
 
-        [HttpGet]
+        [HttpGet("GetAllProjects")]
         public async Task<IActionResult> GetAllProjects()
         {
             var projectViewModels = await _projectService.GetAllProjectsAsync();
             return Ok(projectViewModels);
         }
-        [HttpGet("{id}")]
+        [HttpGet("GetProjectById/{id}")]
         public async Task<IActionResult> GetProjectById(int id)
         {
             var projectViewModels = await _projectService.GetProjectByIdAsync(id);
@@ -38,7 +38,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(projectViewModels);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("UpdateProject/{id}")]
         public async Task<IActionResult> UpdateProject(int id, UpdateProjectRequest request)
         {
             var updatedProjectViewModel = await _projectService.UpdateProjectAsync(id, request);
@@ -48,7 +48,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(updatedProjectViewModel);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteProject/{id}")]
         public async Task<IActionResult> DeleteProject(int id)
         {
             var result = await _projectService.DeleteProjectAsync(id);
