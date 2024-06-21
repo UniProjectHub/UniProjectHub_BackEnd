@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\subtaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\subtaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\repositories\\subtaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\subtaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\projectrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,20 +19,28 @@
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\memberintaskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\application\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\infracstructures\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\infracstructures\\repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\memberrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\application\\services\\projectsevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\projectsevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\domain\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -57,26 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\infracstructures\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\application\\interfacerepositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\interfacerepositories\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\application\\interfacerepositories\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\interfacerepositories\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\application\\interfaceservies\\iblogsevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\interfaceservies\\iblogsevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\infracstructures\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\application\\interfaceservies\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\interfaceservies\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,8 +62,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 20,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\TaskController.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\TaskController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAgwDwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:28:08.092Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -154,122 +143,124 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SubTaskController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\SubTaskController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\SubTaskController.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\SubTaskController.cs*",
-              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\SubTaskController.cs*",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAswFkAAAAoAAAA",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\SubTaskController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\SubTaskController.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAkwE4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T12:39:09.71Z",
+              "WhenOpened": "2024-06-21T13:27:18.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SubTaskRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\SubTaskRepository.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\SubTaskRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\SubTaskRepository.cs",
-              "RelativeToolTip": "Infracstructures\\Repositories\\SubTaskRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAwAAAA",
+              "Title": "MemberInTaskController.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAkwBoAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T12:34:22.312Z",
+              "WhenOpened": "2024-06-21T13:25:46.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProjectRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\ProjectRepository.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\ProjectRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\ProjectRepository.cs*",
-              "RelativeToolTip": "Infracstructures\\Repositories\\ProjectRepository.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T12:34:18.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MemberInTaskController.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MemberInTaskController.cs*",
-              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\MemberInTaskController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T12:25:01.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "BlogController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\BlogController.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\BlogController.cs*",
-              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\BlogController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAJAAAA",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\BlogController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAkwDYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T12:15:43.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaskController.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\TaskController.cs",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\TaskController.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\TaskController.cs*",
-              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\TaskController.cs*",
-              "ViewState": "AQIAADMAAAAAAAAAAAAowEUAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:09:31.063Z",
+              "WhenOpened": "2024-06-21T13:23:17.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\PaymentController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:23:11.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProjectSevice.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\ProjectSevice.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProjectSevice.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\ProjectSevice.cs",
+              "RelativeToolTip": "Application\\Services\\ProjectSevice.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAUwDAAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:21:45.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ProjectController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\ProjectController.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\ProjectController.cs*",
-              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\ProjectController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\ProjectController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:03:31.291Z",
+              "WhenOpened": "2024-06-21T13:21:18.208Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "BlogService.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\BlogService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\BlogService.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\BlogService.cs",
-              "RelativeToolTip": "Application\\Services\\BlogService.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwB8AAAAAAAAA",
+              "Title": "MembersController.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MembersController.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\MembersController.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MembersController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\MembersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:31:17.285Z"
+              "WhenOpened": "2024-06-21T13:20:58.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "MemberRepository.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\MemberRepository.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\MemberRepository.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\MemberRepository.cs",
+              "RelativeToolTip": "Infracstructures\\Repositories\\MemberRepository.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T13:20:55.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Infracstructures\\GenericRepository.cs",
               "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\GenericRepository.cs",
               "RelativeToolTip": "Infracstructures\\GenericRepository.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAmwKIAAAAOAAAA",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAwwKIAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:22:29.339Z"
+              "WhenOpened": "2024-06-20T15:22:29.339Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "UnitOfWork.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\UnitOfWork.cs",
               "RelativeDocumentMoniker": "Infracstructures\\UnitOfWork.cs",
@@ -281,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Infracstructures\\DependencyInjection.cs",
@@ -293,68 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IBlogRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "RelativeToolTip": "Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:21:13.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IBlogSevice.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceServies\\IBlogSevice.cs",
-              "RelativeDocumentMoniker": "Application\\InterfaceServies\\IBlogSevice.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceServies\\IBlogSevice.cs",
-              "RelativeToolTip": "Application\\InterfaceServies\\IBlogSevice.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:21:05.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CategoryRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\CategoryRepository.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\CategoryRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\CategoryRepository.cs",
-              "RelativeToolTip": "Infracstructures\\Repositories\\CategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:18:19.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "BlogRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\BlogRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
-              "RelativeToolTip": "Infracstructures\\Repositories\\BlogRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:20:08.795Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\CategoryService.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\CategoryService.cs",
-              "RelativeToolTip": "Application\\Services\\CategoryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:19:05.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Domain\\Models\\Category.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Category.cs",
@@ -363,30 +293,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T14:17:57.104Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ICategoryService.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceServies\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "Application\\InterfaceServies\\ICategoryService.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceServies\\ICategoryService.cs",
-              "RelativeToolTip": "Application\\InterfaceServies\\ICategoryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:19:31.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\ICategoryRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\ICategoryRepository.cs",
-              "RelativeToolTip": "Application\\InterfaceRepositories\\ICategoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T14:18:41.138Z"
             }
           ]
         },

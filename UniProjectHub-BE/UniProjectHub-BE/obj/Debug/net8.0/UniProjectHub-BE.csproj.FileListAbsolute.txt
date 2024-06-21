@@ -164,3 +164,6 @@ D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\r
 D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.pdb
 D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\UniProjectHub-BE.genruntimeconfig.cache
 D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\obj\Debug\net8.0\ref\UniProjectHub-BE.dll
+D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\Firebase.Auth.dll
+D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\Firebase.Storage.dll
+D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\UniProjectHub-BE\bin\Debug\net8.0\System.ServiceModel.dll
