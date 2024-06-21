@@ -233,6 +233,14 @@
               "target": "Package",
               "version": "[12.0.0, )"
             },
+            "Firebase.Auth": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.9.1, )"
