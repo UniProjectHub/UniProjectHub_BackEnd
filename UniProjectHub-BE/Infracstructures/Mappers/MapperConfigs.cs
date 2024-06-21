@@ -14,6 +14,7 @@ using File = Domain.Models.File;
 using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
 using Application.ViewModels.SubTaskViewModel;
 using Application.ViewModels.MemberInTaskViewModel;
+using Application.ViewModels.BlogModelView;
 
 namespace Infracstructures.Mappers
 {
@@ -36,6 +37,10 @@ namespace Infracstructures.Mappers
             CreateMap<MemberInTask, MemberInTaskViewModel>().ReverseMap();
             CreateMap<MemberInTask, MemberInTaskCreateModel>().ReverseMap();
             CreateMap<MemberInTask, MemberInTaskUpdateModel>().ReverseMap();
+            //Blog
+            CreateMap<Blog, BlogModelView>().ReverseMap();
+            CreateMap<Blog, BlogCreateModel>().ReverseMap();
+            CreateMap<Blog, BlogUpdateModel>().ReverseMap();
 
             CreateMap<File, FileViewModel>()
             .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Users.UserName))

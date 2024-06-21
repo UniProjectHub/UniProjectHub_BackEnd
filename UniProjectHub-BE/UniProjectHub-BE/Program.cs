@@ -98,7 +98,7 @@ builder.Services.AddScoped<IGroupChatRepository, GroupChatRepository>();
 builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddScoped<IScheduleService, ScheduleService>();
 builder.Services.AddScoped<IGroupChatService, GroupChatService>();
-
+builder.Services.AddScoped<IMemberService, MemberService>();
 // Add AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddAutoMapper(typeof(MapperConfigs).Assembly);

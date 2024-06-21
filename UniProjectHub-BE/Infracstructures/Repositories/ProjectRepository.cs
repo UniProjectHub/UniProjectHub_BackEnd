@@ -1,6 +1,7 @@
 ﻿using Application.Commons;
 using Application.InterfaceRepositories;
 using Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Infracstructures.Repositories
         {
             _context = context;
         }
+        
 
-       
     }
 }

@@ -19,7 +19,7 @@ namespace UniProjectHub_BE.Controllers
             _taskService = taskService;
         }
 
-        [HttpPost("{projectId}")]
+        [HttpPost("CreateTask/{projectId}")]
         public async Task<IActionResult> CreateTask(int projectId, TaskViewModel request)
         {
             var taskViewModel = await _taskService.CreateTaskAsync(projectId, request);
@@ -30,14 +30,14 @@ namespace UniProjectHub_BE.Controllers
             
         }
 
-        [HttpGet]
+        [HttpGet("GetAllTasks")]
         public async Task<IActionResult> GetAllTasks()
         {
             var taskViewModels = await _taskService.GetTasksAsync();
             return Ok(taskViewModels);
         }
 
-        [HttpGet("projects/{projectId}/tasks")]
+        [HttpGet("GetTasksForProjectAsync/{projectId}")]
         public async Task<IActionResult> GetTasksForProjectAsync(int projectId)
         {
             var taskViewModels = await _taskService.GetTasksByProjectIdAsync(projectId);
@@ -47,7 +47,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(taskViewModels);
         }
 
-        [HttpGet("tasks/{id}")]
+        [HttpGet("GetTaskAsync/{id}")]
         public async Task<IActionResult> GetTaskAsync(int id)
         {
             var taskViewModels = await _taskService.GetTaskAsync(id);
@@ -57,7 +57,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(taskViewModels);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("UpdateTask/{id}")]
         public async Task<IActionResult> UpdateTask(int id, TaskViewModel request)
         {
             var updatedTaskViewModel = await _taskService.UpdateTaskAsync(id, request);
@@ -67,7 +67,7 @@ namespace UniProjectHub_BE.Controllers
             return Ok(updatedTaskViewModel);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteTask/{id}")]
         public async Task<IActionResult> DeleteTask(int id)
         {
             var result = await _taskService.DeleteTaskAsync(id);

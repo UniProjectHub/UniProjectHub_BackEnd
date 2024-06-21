@@ -8607,19 +8607,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PhiDN11\\.nuget\\packages\\": {}
+    "C:\\Users\\adm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+      "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
       "projectName": "Infracstructures",
-      "projectPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
-      "packagesPath": "C:\\Users\\PhiDN11\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\obj\\",
+      "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+      "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+      "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8627,14 +8627,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Application.csproj": {
-              "projectPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Application.csproj"
+            "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj": {
+              "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj"
             }
           }
         }
@@ -8743,7 +8744,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
