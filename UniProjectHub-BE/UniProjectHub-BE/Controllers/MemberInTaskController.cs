@@ -16,34 +16,34 @@ namespace UniProjectHub_BE.Controllers
             _memberInTaskService = memberInTaskService;
         }
 
-        [HttpGet]
+        [HttpGet("GetAllAsync")]
         // Retrieves a list of all MemberInTask entities
         public async Task<IEnumerable<MemberInTaskViewModel>> GetAllAsync()
         {
             return await _memberInTaskService.GetAllAsync();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetByIdAsync/{id}")]
         // Retrieves a single MemberInTask entity by ID
         public async Task<MemberInTaskViewModel> GetByIdAsync(int id)
         {
             return await _memberInTaskService.GetByIdAsync(id);
         }
 
-        [HttpGet("task/{taskId}")]
+        [HttpGet("GetByTaskIdAsync/{taskId}")]
         // Retrieves a list of MemberInTask entities by Task ID
         public async Task<IEnumerable<MemberInTaskViewModel>> GetByTaskIdAsync(int taskId)
         {
             return await _memberInTaskService.GetByTaskIdAsync(taskId);
         }
-        [HttpPost]
+        [HttpPost("Create")]
         // Creates a new MemberInTask entity
         public async Task<ActionResult<MemberInTaskViewModel>> Create(MemberInTaskCreateModel model)
         {
             var result = await _memberInTaskService.CreateAsync(model);
             return Ok(result);
         }
-        [HttpPut("{id}")]
+        [HttpPut("Update/{id}")]
         // Updates an existing MemberInTask entity
         public async Task<ActionResult<MemberInTaskViewModel>> Update(int id, MemberInTaskUpdateModel model)
         {
@@ -54,7 +54,7 @@ namespace UniProjectHub_BE.Controllers
             }
             return Ok(result);
         }
-        [HttpDelete("{id}")]
+        [HttpDelete("Delete/{id}")]
         // Deletes a MemberInTask entity by ID
         public async Task<ActionResult<bool>> Delete(int id)
         {

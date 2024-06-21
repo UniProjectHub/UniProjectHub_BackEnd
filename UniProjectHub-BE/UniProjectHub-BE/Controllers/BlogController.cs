@@ -16,14 +16,14 @@ namespace UniProjectHub_BE.Controllers
             _blogService = blogService;
         }
 
-        [HttpPost]
+        [HttpPost("CreateBlogAsync")]
         public async Task<ActionResult<BlogModelView>> CreateBlogAsync(BlogCreateModel blogCreateModel)
         {
             var blog = await _blogService.CreateBlogAsync(blogCreateModel);
             return CreatedAtAction(nameof(GetBlogAsync), new { id = blog.Id }, blog);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("GetBlogAsync/{id}")]
         public async Task<ActionResult<BlogModelView>> GetBlogAsync(int id)
         {
             var blog = await _blogService.GetBlogAsync(id);
@@ -34,28 +34,28 @@ namespace UniProjectHub_BE.Controllers
             return Ok(blog);
         }
 
-        [HttpGet("category/{categoryId}")]
+        [HttpGet("GetBlogsByCategoryIdAsync/{categoryId}")]
         public async Task<ActionResult<IEnumerable<BlogModelView>>> GetBlogsByCategoryIdAsync(int categoryId)
         {
             var blogs = await _blogService.GetBlogsByCategoryIdAsync(categoryId);
             return Ok(blogs);
         }
 
-        [HttpGet]
+        [HttpGet("GetBlogsAsync")]
         public async Task<ActionResult<IEnumerable<BlogModelView>>> GetBlogsAsync()
         {
             var blogs = await _blogService.GetBlogsAsync();
             return Ok(blogs);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("UpdateBlogAsync/{id}")]
         public async Task<ActionResult> UpdateBlogAsync(int id, BlogUpdateModel blogUpdateModel)
         {
             await _blogService.UpdateBlogAsync(blogUpdateModel);
             return NoContent();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteBlogAsync/{id}")]
         public async Task<ActionResult> DeleteBlogAsync(int id)
         {
             await _blogService.DeleteBlogAsync(id);
