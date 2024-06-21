@@ -31,11 +31,11 @@ namespace UniProjectHub_BE.Services
                 throw ex;
             }
         }
-        public async Task<(byte[], string, string)> DownloadFile(string FileName)
+        public async Task<(byte[], string, string)> DownloadFile(string fileName)
         {
             try
             {
-                var _GetFilePath = FileHelper.GetFilePath(FileName);
+                var _GetFilePath = FileHelper.GetFilePath(fileName);
                 var provider = new FileExtensionContentTypeProvider();
                 if (!provider.TryGetContentType(_GetFilePath, out var _ContentType))
                 {

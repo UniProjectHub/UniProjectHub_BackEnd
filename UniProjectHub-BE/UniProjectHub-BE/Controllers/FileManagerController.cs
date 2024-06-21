@@ -106,9 +106,9 @@ namespace UniProjectHub_BE.Controllers
 
         [HttpDelete]
         [Route("remove-file")]
-        public IActionResult RemoveFile(string FileName)
+        public IActionResult RemoveFile(string fileName)
         {
-            var result = _iManageImage.RemoveFile(FileName);
+            var result = _iManageImage.RemoveFile(fileName);
             if (result)
             {
                 return Ok(new { message = "File deleted successfully." });
