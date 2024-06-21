@@ -26,8 +26,12 @@ namespace UniProjectHub_BE.Controllers
         public async Task<IActionResult> GetAllProjects()
         {
             var projectViewModels = await _projectService.GetAllProjectsAsync();
+            if (projectViewModels == null || !projectViewModels.Any())
+                return NotFound();
+
             return Ok(projectViewModels);
         }
+
         [HttpGet("GetProjectById/{id}")]
         public async Task<IActionResult> GetProjectById(int id)
         {

@@ -24,6 +24,10 @@ namespace UniProjectHub_BE.Controllers
             try
             {
                 var subTasks = await _subTaskService.GetAllSubTasksAsync();
+                if (subTasks == null || !subTasks.Any())
+                {
+                    return NotFound("No subtasks found");
+                }
                 return Ok(subTasks);
             }
             catch (Exception ex)
@@ -39,6 +43,10 @@ namespace UniProjectHub_BE.Controllers
             try
             {
                 var subTask = await _subTaskService.GetSubTaskByIdAsync(id);
+                if (subTask == null)
+                {
+                    return NotFound("Subtask not found");
+                }
                 return Ok(subTask);
             }
             catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
@@ -55,10 +63,20 @@ namespace UniProjectHub_BE.Controllers
         [HttpGet("GetSubTasksByTaskId/{taskId}")]
         public async Task<ActionResult<IEnumerable<SubTaskViewModel>>> GetSubTasksByTaskId(int taskId)
         {
-            var subTasks = await _subTaskService.GetAllSubTasksByTaskIdAsync(taskId);
-            return Ok(subTasks);
+            try
+            {
+                var subTasks = await _subTaskService.GetAllSubTasksByTaskIdAsync(taskId);
+                if (subTasks == null || !subTasks.Any())
+                {
+                    return NotFound("No subtasks found for task");
+                }
+                return Ok(subTasks);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error retrieving subtasks for task");
+            }
         }
-
         // POST api/subtasks
         [HttpPost("CreateSubTaskAsync")]
         public async Task<ActionResult<SubTaskViewModel>> CreateSubTaskAsync(CreateSubTaskRequest request)

@@ -18,23 +18,38 @@ namespace UniProjectHub_BE.Controllers
 
         [HttpGet("GetAllAsync")]
         // Retrieves a list of all MemberInTask entities
-        public async Task<IEnumerable<MemberInTaskViewModel>> GetAllAsync()
+        public async Task<ActionResult<IEnumerable<MemberInTaskViewModel>>> GetAllAsync()
         {
-            return await _memberInTaskService.GetAllAsync();
+            var memberInTasks = await _memberInTaskService.GetAllAsync();
+            if (memberInTasks == null || !memberInTasks.Any())
+            {
+                return NotFound();
+            }
+            return Ok(memberInTasks);
         }
 
         [HttpGet("GetByIdAsync/{id}")]
         // Retrieves a single MemberInTask entity by ID
-        public async Task<MemberInTaskViewModel> GetByIdAsync(int id)
+        public async Task<ActionResult<MemberInTaskViewModel>> GetByIdAsync(int id)
         {
-            return await _memberInTaskService.GetByIdAsync(id);
+            var memberInTask = await _memberInTaskService.GetByIdAsync(id);
+            if (memberInTask == null)
+            {
+                return NotFound();
+            }
+            return Ok(memberInTask);
         }
 
         [HttpGet("GetByTaskIdAsync/{taskId}")]
         // Retrieves a list of MemberInTask entities by Task ID
-        public async Task<IEnumerable<MemberInTaskViewModel>> GetByTaskIdAsync(int taskId)
+        public async Task<ActionResult<IEnumerable<MemberInTaskViewModel>>> GetByTaskIdAsync(int taskId)
         {
-            return await _memberInTaskService.GetByTaskIdAsync(taskId);
+            var memberInTasks = await _memberInTaskService.GetByTaskIdAsync(taskId);
+            if (memberInTasks == null || !memberInTasks.Any())
+            {
+                return NotFound();
+            }
+            return Ok(memberInTasks);
         }
         [HttpPost("Create")]
         // Creates a new MemberInTask entity

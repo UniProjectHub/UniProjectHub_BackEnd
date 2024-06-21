@@ -34,6 +34,9 @@ namespace UniProjectHub_BE.Controllers
         public async Task<IActionResult> GetAllTasks()
         {
             var taskViewModels = await _taskService.GetTasksAsync();
+            if (taskViewModels == null || !taskViewModels.Any())
+                return NotFound();
+
             return Ok(taskViewModels);
         }
 
