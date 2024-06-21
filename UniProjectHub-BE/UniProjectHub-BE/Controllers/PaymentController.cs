@@ -3,6 +3,7 @@ using Domain.Data;
 using Domain.Enums;
 using Domain.Models;
 using Infracstructures.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
@@ -13,6 +14,7 @@ using UniProjectHub_BE.Services;
 
 namespace UniProjectHub_BE.Controllers
 {
+    
     [Route("api/payment")]
     [ApiController]
     public class PaymentController : ControllerBase
@@ -31,6 +33,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         //create link and create payment
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetPaymentInfo()
         {

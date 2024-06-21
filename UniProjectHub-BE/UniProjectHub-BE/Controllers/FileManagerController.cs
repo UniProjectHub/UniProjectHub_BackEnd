@@ -1,4 +1,5 @@
-﻿using Application.InterfaceServies;
+﻿using Application.Dtos.File;
+using Application.InterfaceServies;
 using Application.Services;
 using Application.ViewModels.FileViewModel;
 using Application.ViewModels.GroupChatViewModel;
@@ -9,6 +10,9 @@ using UniProjectHub_BE.Services;
 
 namespace UniProjectHub_BE.Controllers
 {
+    //[Authorize(Roles = "User")]
+    [ApiController]
+    [Route("api/file")]
     public class FileManagerController : Controller
     {
         private readonly IManageImage _iManageImage;
@@ -26,7 +30,7 @@ namespace UniProjectHub_BE.Controllers
 
         [HttpPost]
         [Route("upload-file")]
-        public async Task<IActionResult> UploadFile(IFormFile _IFormFile, FileViewModel fileViewModel)
+        public async Task<IActionResult> UploadFile(IFormFile _IFormFile, FileUploadDTO fileViewModel)
         {
             var validationResult = _iManageImage.ValidateFileSize(_IFormFile);
             if (!validationResult.Item1)
@@ -102,9 +106,9 @@ namespace UniProjectHub_BE.Controllers
 
         [HttpDelete]
         [Route("remove-file")]
-        public IActionResult RemoveFile(string FileName)
+        public IActionResult RemoveFile(string fileName)
         {
-            var result = _iManageImage.RemoveFile(FileName);
+            var result = _iManageImage.RemoveFile(fileName);
             if (result)
             {
                 return Ok(new { message = "File deleted successfully." });
