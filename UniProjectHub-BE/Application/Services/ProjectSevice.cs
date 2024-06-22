@@ -38,19 +38,19 @@ namespace Application.Services
 
             await _unitOfWork.ProjectRepository.AddAsync(project);
             await _unitOfWork.SaveChangesAsync();
-            //var menber = new MemberViewModel
-            //{
-            //    MemberId = ownerId,
-            //    IsOwner = true,
-            //    ProjectId = project.Id,
-            //    Role = 1
+            var menber = new Member
+            {
+                MenberId = ownerId,
+                IsOwner = true,
+                ProjectId = project.Id,
+                Role = 1,
+                JoinTime = DateTime.UtcNow
 
+            };
+            
 
-            //};
-            //var members = _mapper.Map<Member>(menber);
-
-            //await _unitOfWork.MemberRepository.AddAsync(members);
-            //await _unitOfWork.SaveChangesAsync();
+            await _unitOfWork.MemberRepository.AddAsync(menber);
+            await _unitOfWork.SaveChangesAsync();
 
             return new ProjectViewModel
             {

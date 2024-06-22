@@ -9,8 +9,13 @@ namespace Application.InterfaceRepositories
 {
     public interface IMemberRepository : IGenericRepository<Member>
     {
+        Task<Member> GetByIdAsync(int id);
+
         Task<IEnumerable<Member>> GetMembersByProjectIdAsync(int projectId);
         Task<IEnumerable<int>> GetProjectIdsByUserOwnerAsync(string userId);
         Task<IEnumerable<int>> GetProjectIdsByUserAsync(string userId);
+        System.Threading.Tasks.Task AddAsync(Member member);
+        System.Threading.Tasks.Task Update(Member member);
+        System.Threading.Tasks.Task DeleteAsync(Member member);
     }
 }

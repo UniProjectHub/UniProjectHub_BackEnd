@@ -89,14 +89,9 @@ namespace Infracstructures.Repositories
                 .Take(pageSize)
                 .ToListAsync();
 
-            return new Pagination<Schedule>
-            {
-                TotalItemCount = totalRecords,
-                PageSize = pageSize,
-                PageIndex = pageIndex,
-                Items = schedules
-            };
+            return new Pagination<Schedule>(schedules, totalRecords, pageIndex, pageSize);
         }
+
 
         public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {

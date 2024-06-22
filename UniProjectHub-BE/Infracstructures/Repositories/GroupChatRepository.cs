@@ -14,9 +14,15 @@ namespace Infracstructures.Repositories
 {
     public class GroupChatRepository : GenericRepository<GroupChat>, IGroupChatRepository
     {
-       
-        public GroupChatRepository(AppDbContext context) : base(context) { }
+        private readonly AppDbContext _context;
+        private readonly DbSet<GroupChat> _dbSet;
 
+        public GroupChatRepository(AppDbContext context) : base(context)
+        {
+            _context = context;
+            _dbSet = context.Set<GroupChat>();
+        }
+ 
         public async System.Threading.Tasks.Task AddAsync(GroupChat model) => await dbSet.AddAsync(model);
 
         public void AddAttach(GroupChat model)
@@ -68,18 +74,17 @@ namespace Infracstructures.Repositories
             return await dbSet.Where(gc => gc.ProjectId == projectId).ToListAsync();
         }
 
-        public async Task<Pagination<GroupChat>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10)
+        public async Task<Pagination<TEntity>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10)
         {
-            var totalItems = await dbSet.CountAsync();
-            var items = await dbSet.Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
-            return new Pagination<GroupChat>
-            {
-                Items = items,
-                TotalItemCount = totalItems,
-                PageIndex = pageIndex,
-                PageSize = pageSize
-            };
+            var totalRecords = await _context.Set<TEntity>().CountAsync();
+            var items = await _context.Set<TEntity>()
+                .Skip(pageIndex * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return new Pagination<TEntity>(items, totalRecords, pageIndex, pageSize);
         }
+
 
         public async System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {
