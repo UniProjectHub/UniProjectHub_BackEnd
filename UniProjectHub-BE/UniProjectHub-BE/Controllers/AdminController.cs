@@ -9,7 +9,7 @@ using UniProjectHub_BE.Services;
 
 namespace UniProjectHub_BE.Controllers
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     [ApiController]
     [Route("api/admin")]
     public class AdminController : ControllerBase
