@@ -55,9 +55,17 @@ namespace api.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var user = await userManager.Users.FirstOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
+            var user = await userManager.FindByNameAsync(loginDto.Username);
 
-            if (user == null) return Unauthorized("Invalid username!");
+            if (user == null)
+            {
+                return Unauthorized(new { message = "Invalid username!" });
+            }
+
+            if (!user.EmailConfirmed)
+            {
+                return Unauthorized(new { message = "Email not confirmed." });
+            }
 
             var result = await signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
@@ -113,6 +121,29 @@ namespace api.Controllers
             tokenService.SaveRefreshToken(user.Id, newRefreshToken);
 
             return Ok(new TokenModel { AccessToken = newAccessToken, RefreshToken = newRefreshToken });
+        }
+
+        [HttpPost("resend-confirmation-email")]
+        public async Task<IActionResult> ResendConfirmationEmail([FromBody] ResendConfirmationEmailDTO model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await userManager.FindByEmailAsync(model.Email);
+                if (user == null || user.EmailConfirmed)
+                {
+                    // Don't reveal that the user does not exist or is already confirmed
+                    return Ok(new { message = "Confirmation email sent. Please check your email." });
+                }
+
+                var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+                var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account", new { userId = user.Id, token }, Request.Scheme);
+
+                await emailSender.SendEmailAsync(model.Email, "Confirm your email", confirmationLink);
+
+                return Ok(new { message = "Confirmation email sent. Please check your email." });
+            }
+
+            return BadRequest();
         }
 
         [HttpPost("register")]
@@ -184,7 +215,7 @@ namespace api.Controllers
         }
 
         // GET: /Account/ConfirmEmail
-        [HttpGet("confirm-email")]
+        [HttpGet("confirm-email/{userId}")]
         [AllowAnonymous]
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
@@ -195,7 +226,7 @@ namespace api.Controllers
             var user = await userManager.FindByIdAsync(userId);
             if (user == null)
             {
-                return BadRequest("Null user");
+                return BadRequest("User not found.");
             }
             token = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
             var result = await userManager.ConfirmEmailAsync(user, token);
@@ -204,11 +235,11 @@ namespace api.Controllers
                 //user.RegistrationTime = DateTime.Now; // Update the LastLoginTime property
                 //await userManager.UpdateAsync(user); // Save the changes to the user entity
                 //return View("ConfirmEmail");
-                return Ok("Confirm OK");
+                return Ok(new { message = "Email confirmed successfully!" });
             }
             else
             {
-                return BadRequest("Confirm fail!!");
+                return BadRequest("Error confirming your email.");
             }
         }
 

@@ -38,6 +38,10 @@ namespace UniProjectHub_BE.Controllers
         public async Task<ActionResult<IEnumerable<BlogModelView>>> GetBlogsByCategoryIdAsync(int categoryId)
         {
             var blogs = await _blogService.GetBlogsByCategoryIdAsync(categoryId);
+            if (blogs == null || !blogs.Any())
+            {
+                return NotFound();
+            }
             return Ok(blogs);
         }
 
@@ -45,6 +49,10 @@ namespace UniProjectHub_BE.Controllers
         public async Task<ActionResult<IEnumerable<BlogModelView>>> GetBlogsAsync()
         {
             var blogs = await _blogService.GetBlogsAsync();
+            if (blogs == null || !blogs.Any())
+            {
+                return NotFound();
+            }
             return Ok(blogs);
         }
 
