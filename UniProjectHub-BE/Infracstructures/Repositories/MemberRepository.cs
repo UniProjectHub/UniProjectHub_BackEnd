@@ -75,5 +75,19 @@ namespace Infracstructures.Repositories
         {
             throw new NotImplementedException();
         }
+        public async Task<IEnumerable<int>> GetProjectIdsByUserOwnerAsync(string userId)
+        {
+            return await context.Set<Member>()
+                .Where(m => m.MenberId == userId && m.IsOwner)
+                .Select(m => m.ProjectId)
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<int>> GetProjectIdsByUserAsync(string userId)
+        {
+            return await context.Set<Member>()
+                .Where(m => m.MenberId == userId)
+                .Select(m => m.ProjectId)
+                .ToListAsync();
+        }
     }
 }

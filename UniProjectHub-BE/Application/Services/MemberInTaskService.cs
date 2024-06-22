@@ -42,16 +42,17 @@ namespace Application.Services
         }
         public async Task<MemberInTaskViewModel> CreateAsync(MemberInTaskCreateModel model)
         {
-            var taskExists = await _unitOfWork.TaskRepository.GetByIdAsync(model.TaskId);
-            if (taskExists == null)
+            var memberInTask = new MemberInTask
             {
-                throw new ArgumentException("Invalid TaskId", nameof(model.TaskId));
-            }
+                TaskId = model.TaskId,
+                MemberId = model.MemberId,
+                // Initialize other properties if needed
+            };
 
-            var subTask = _mapper.Map<MemberInTaskCreateModel, SubTask>(model);
-            await _unitOfWork.SubTaskRepository.AddAsync(subTask);
+            await _unitOfWork.MemberInTaskRepository.AddAsync(memberInTask);
             await _unitOfWork.SaveChangesAsync();
-            return _mapper.Map<SubTask, MemberInTaskViewModel>(subTask);
+
+            return _mapper.Map<MemberInTask, MemberInTaskViewModel>(memberInTask);
         }
 
         public async Task<MemberInTaskViewModel> UpdateAsync(int id, MemberInTaskUpdateModel model)
