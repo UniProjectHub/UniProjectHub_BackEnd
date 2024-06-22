@@ -194,7 +194,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .AllowCredentials()
-                            .WithOrigins("https://localhost:7067"));
+                            .WithOrigins("https://localhost:7067", "http://localhost:5275",
+                "http://localhost:5173", "http://localhost:5174")
 
 app.UseHttpsRedirection();
 
