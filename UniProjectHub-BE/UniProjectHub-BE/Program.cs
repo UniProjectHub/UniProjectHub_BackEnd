@@ -1,10 +1,21 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using Application.InterfaceRepositories;
+using Application.InterfaceServies;
+using Application.Services;
+using Application.Validators;
+using Domain.Interfaces;
+using Domain.Models;
+using Infracstructures;
+using Infracstructures.Repositories;
+using Infracstructures.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +25,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Text;
+using System.Text.Json.Serialization;
 using UniProjectHub_BE.Services;
 using Infracstructures.Repositories;
 using Infracstructures.Services;
@@ -22,6 +34,8 @@ using Application.InterfaceRepositories;
 using Application.InterfaceServies;
 using Application.Services;
 using FluentValidation;
+using Infracstructures.Mappers;
+using Domain.Data;
 using Application.ViewModels.MemberViewModel;
  using Application.Validators;
 using Domain.Models;
@@ -47,9 +61,6 @@ builder.Services.AddCors(options =>
         });
 });
 
-// DbContext configuration
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Services
 builder.Services.AddScoped<IMemberRepository, MemberRepository>();
@@ -97,7 +108,70 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-// Authentication and JWT Bearer configuration
+builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+// Add services to the container.
+builder.Services.Configure<PayOSSettings>(builder.Configuration.GetSection("PayOS"));
+builder.Services.Configure<FirebaseSettings>(builder.Configuration.GetSection("Firebase"));
+
+builder.Services.AddSingleton<ManagePayment>();
+builder.Services.AddSingleton<ManageFisebase>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+builder.Services.AddTransient<IManageImage, ManageImage>();
+
+
+// Configure DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Add AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+builder.Services.AddAutoMapper(typeof(MapperConfigs).Assembly);
+
+
+// Add FluentValidation
+builder.Services.AddValidatorsFromAssemblyContaining<ScheduleViewModelValidator>();
+
+//Mail setting
+builder.Services.AddOptions();
+var mailsettings = builder.Configuration.GetSection("MailSettings");
+builder.Services.Configure<MailSettings>(mailsettings);
+builder.Services.AddTransient<Domain.Interfaces.IEmailSender, SendMailService>();
+
+builder.Services.AddIdentity<Users, IdentityRole>(options =>
+{
+    // Thiết lập về Password
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 2;
+    options.Password.RequiredUniqueChars = 1;
+
+    // Cấu hình Lockout - khóa user
+    options.Lockout.AllowedForNewUsers = true;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
+    options.Lockout.MaxFailedAccessAttempts = 7;
+    options.Lockout.AllowedForNewUsers = true;
+
+    // Cấu hình về User.
+    options.User.AllowedUserNameCharacters =
+        "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    options.User.RequireUniqueEmail = true;
+
+    // Cấu hình đăng nhập.
+    options.SignIn.RequireConfirmedEmail = true;
+    options.SignIn.RequireConfirmedPhoneNumber = false;
+    options.SignIn.RequireConfirmedAccount = true;
+})
+    .AddDefaultTokenProviders()
+    .AddEntityFrameworkStores<AppDbContext>();
+
+builder.Services.AddScoped<UserManager<Users>>();
+builder.Services.AddScoped<SignInManager<Users>>();
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -115,38 +189,7 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = builder.Configuration["JWT:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:SigningKey"]))
     };
-});
-
-// Identity configuration
-builder.Services.AddIdentity<Users, IdentityRole>(options =>
-{
-    // Password settings
-    options.Password.RequireDigit = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequireNonAlphanumeric = true;
-    options.Password.RequireUppercase = true;
-    options.Password.RequiredLength = 2;
-    options.Password.RequiredUniqueChars = 1;
-
-    // Lockout settings
-    options.Lockout.AllowedForNewUsers = true;
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
-    options.Lockout.MaxFailedAccessAttempts = 7;
-
-    // User settings
-    options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-    options.User.RequireUniqueEmail = true;
-
-    // SignIn settings
-    options.SignIn.RequireConfirmedEmail = true;
-    options.SignIn.RequireConfirmedPhoneNumber = false;
-    options.SignIn.RequireConfirmedAccount = true;
-})
-.AddDefaultTokenProviders()
-.AddEntityFrameworkStores<AppDbContext>();
-
-// Authentication setup
-builder.Services.AddAuthentication(options =>
+}); builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
