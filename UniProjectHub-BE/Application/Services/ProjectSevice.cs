@@ -31,6 +31,8 @@ namespace Application.Services
             {
                 Name = request.Name,
                 Description = request.Description,
+                NameLeader = request.NameLeader,
+                TypeOfSpace = request.TypeOfSpace,
                 Status = request.Status,
                 IsGroup = request.IsGroup,
                 CreatedAt = DateTime.UtcNow
@@ -56,6 +58,8 @@ namespace Application.Services
             {
                 Name = project.Name,
                 Description = project.Description,
+                NameLeader = project.NameLeader,
+                TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
                 CreatedAt = project.CreatedAt
@@ -71,6 +75,8 @@ namespace Application.Services
                 Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
+                NameLeader = p.NameLeader,
+                TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
                 CreatedAt = p.CreatedAt
@@ -88,6 +94,8 @@ namespace Application.Services
                 Id = project.Id,
                 Name = project.Name,
                 Description = project.Description,
+                NameLeader = project.NameLeader,
+                TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
                 CreatedAt = project.CreatedAt
@@ -114,6 +122,8 @@ namespace Application.Services
                 Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
+                NameLeader = p.NameLeader,
+                TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
                 CreatedAt = p.CreatedAt
@@ -139,6 +149,8 @@ namespace Application.Services
                 Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
+                NameLeader = p.NameLeader,
+                TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
                 CreatedAt = p.CreatedAt
@@ -155,6 +167,8 @@ namespace Application.Services
 
             project.Name = request.Name;
             project.Description = request.Description;
+            project.NameLeader = request.NameLeader;
+            project.TypeOfSpace = request.TypeOfSpace;
             project.Status = request.Status;
             project.IsGroup = request.IsGroup;
 
@@ -165,6 +179,8 @@ namespace Application.Services
             {
                 Name = project.Name,
                 Description = project.Description,
+                NameLeader = project.NameLeader,
+                TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
                 CreatedAt = project.CreatedAt

@@ -18,6 +18,8 @@ namespace Infracstructures
         ISubTaskRepository SubTaskRepository { get; }
         IMemberInTaskRepository MemberInTaskRepository { get; }
         IBlogRepository BlogRepository { get; }
+        ICategoryRepository CategoryRepository { get; }
+        ICommentRepository CommentRepository { get; }
         Task<int> SaveChangesAsync();
     }
 }

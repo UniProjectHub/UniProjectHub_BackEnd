@@ -20,7 +20,7 @@ namespace UniProjectHub_BE.Controllers
         public async Task<ActionResult<BlogModelView>> CreateBlogAsync(BlogCreateModel blogCreateModel)
         {
             var blog = await _blogService.CreateBlogAsync(blogCreateModel);
-            return CreatedAtAction(nameof(GetBlogAsync), new { id = blog.Id }, blog);
+            return Ok(blog);
         }
 
         [HttpGet("GetBlogAsync/{id}")]
