@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240622100530_new")]
-    partial class @new
+    [Migration("20240622173230_update-project-2-field")]
+    partial class updateproject2field
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -337,8 +337,14 @@ namespace Infracstructures.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NameLeader")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<string>("TypeOfSpace")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -594,13 +600,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5a3f358e-f83e-4d52-b485-a51d6c490eb1",
+                            Id = "77082fe1-0511-44f5-9d1c-9ae881b7cef0",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "3647bf7d-9652-4d27-a217-0c884f7efa9a",
+                            Id = "8013fb96-47b0-4bd2-b738-fee7c6244006",
                             Name = "User",
                             NormalizedName = "USER"
                         });

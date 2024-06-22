@@ -14,6 +14,7 @@ namespace Infracstructures
         private readonly IMemberInTaskRepository _memberInTaskRepository;
         private readonly IBlogRepository _blogRepository;
         private readonly ICategoryRepository _categoryRepository;
+        private readonly ICommentRepository _commentRepository;
 
         public UnitOfWork(AppDbContext context, 
             IProjectRepository projectRepository, 
@@ -21,7 +22,8 @@ namespace Infracstructures
             ISubTaskRepository subTaskRepository, 
             IMemberInTaskRepository memberInTaskRepository,
             IBlogRepository blogRepository,
-            ICategoryRepository categoryRepository)
+            ICategoryRepository categoryRepository,
+            ICommentRepository commentRepository)
         {
             _context = context;
             MemberRepository = new MemberRepository(context);
@@ -33,6 +35,7 @@ namespace Infracstructures
             _memberInTaskRepository = memberInTaskRepository;
             _blogRepository = blogRepository;
             _categoryRepository = categoryRepository;
+            _commentRepository = commentRepository;
         }
 
         public IMemberRepository MemberRepository { get;  }
@@ -43,7 +46,8 @@ namespace Infracstructures
         public ISubTaskRepository SubTaskRepository => _subTaskRepository;
         public IMemberInTaskRepository MemberInTaskRepository => _memberInTaskRepository;
         public IBlogRepository BlogRepository => _blogRepository;
-        public ICategoryRepository CategoryRepository => _categoryRepository;   
+        public ICategoryRepository CategoryRepository => _categoryRepository;  
+        public ICommentRepository CommentRepository => _commentRepository;
         public IFileManageRepository FileManageRepository => throw new NotImplementedException();
 
         public IScheduleRepository ScheduleRepository => throw new NotImplementedException();

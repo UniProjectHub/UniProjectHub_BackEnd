@@ -31,7 +31,7 @@ namespace Application.Services
                 return null;
             }
             var task = new Domain.Models.Task
-            {
+            {   
                 TaskName = taskViewModel.TaskName,
                 Description = taskViewModel.Description,
                 Status = taskViewModel.Status,

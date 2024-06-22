@@ -14,6 +14,8 @@ namespace Infracstructures.Repositories
     {
         private readonly AppDbContext _context;
         private readonly DbSet<Member> _dbSet;
+
+
     
 
         public async Task<Member> GetByIdAsync(int id)
@@ -167,6 +169,22 @@ namespace Infracstructures.Repositories
         void IGenericRepository<Member>.Update(Member model)
         {
             throw new NotImplementedException();
+        }
+
+       
+        public async Task<IEnumerable<int>> GetProjectIdsByUserOwnerAsync(string userId)
+        {
+            return await _context.Set<Member>()
+                .Where(m => m.MenberId == userId && m.IsOwner)
+                .Select(m => m.ProjectId)
+                .ToListAsync();
+        }
+        public async Task<IEnumerable<int>> GetProjectIdsByUserAsync(string userId)
+        {
+            return await _context.Set<Member>()
+                .Where(m => m.MenberId == userId)
+                .Select(m => m.ProjectId)
+                .ToListAsync();
         }
 
         System.Threading.Tasks.Task IMemberRepository.Update(Member member)

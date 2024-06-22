@@ -55,6 +55,14 @@ namespace Infracstructures
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<ICategoryService, CategoryService>();
 
+            // Register Member-related services
+            services.AddTransient<IMemberRepository, MemberRepository>();
+            services.AddTransient<IMemberService, MemberService>();
+
+            // Register Comment-related services
+            services.AddTransient<ICommentRepository, CommentRepository>();
+            services.AddTransient<ICommentService, CommentService>();
+
             // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 
@@ -92,9 +100,6 @@ namespace Infracstructures
             // Register AutoMapper
             services.AddAutoMapper(typeof(MapperConfigs).Assembly);
             services.AddControllers();
-
-
-
 
             return services;
         }

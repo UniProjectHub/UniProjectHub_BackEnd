@@ -1,5 +1,6 @@
 ﻿using Application.InterfaceServies;
 using Application.Services;
+using Application.ViewModels.ProjectViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
@@ -15,10 +16,10 @@ namespace UniProjectHub_BE.Controllers
         {
             _projectService = projectService;
         }
-        [HttpPost("CreateProject")]
-        public async Task<IActionResult> CreateProject(CreateProjectRequest request)
+        [HttpPost("CreateProject/{ownerId}")]
+        public async Task<IActionResult> CreateProject(CreateProjectRequest request, string ownerId)
         {
-            var projectViewModel = await _projectService.CreateProjectAsync(request);
+            var projectViewModel = await _projectService.CreateProjectAsync(request, ownerId);
             return Ok(projectViewModel);
         }
 
@@ -40,6 +41,43 @@ namespace UniProjectHub_BE.Controllers
                 return NotFound();
 
             return Ok(projectViewModels);
+        }
+
+        [HttpGet("GetProjectsByUserOwner/{userId}")]
+        public async Task<ActionResult<IEnumerable<ProjectViewModel>>> GetProjectsByUserOwner(string userId)
+        {
+            try
+            {
+                var projects = await _projectService.GetProjectsByUserOwnerAsync(userId);
+                if (projects == null || !projects.Any())
+                {
+                    return NotFound(); // or return Ok(Enumerable.Empty<ProjectViewModel>());
+                }
+                return Ok(projects);
+            }
+            catch (Exception ex)
+            {
+                // log the exception
+                return StatusCode(500, "Internal Server Error");
+            }
+        }
+        [HttpGet("GetProjectsByUserAsync/{userId}")]
+        public async Task<ActionResult<IEnumerable<ProjectViewModel>>> GetProjectsByUserAsync(string userId)
+        {
+            try
+            {
+                var projects = await _projectService.GetProjectsByUserAsync(userId);
+                if (projects == null || !projects.Any())
+                {
+                    return NotFound(); // 404 Not Found
+                }
+                return Ok(projects);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or handle it as needed
+                return StatusCode(500, "An error occurred while retrieving projects"); // 500 Internal Server Error
+            }
         }
 
         [HttpPut("UpdateProject/{id}")]

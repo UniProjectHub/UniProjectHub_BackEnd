@@ -1,5 +1,8 @@
-﻿using Application.InterfaceServies;
+﻿using Application.InterfaceRepositories;
+using Application.InterfaceServies;
+using Application.ViewModels.MemberViewModel;
 using Application.ViewModels.ProjectViewModel;
+using AutoMapper;
 using Domain.Models;
 using Infracstructures;
 using System;
@@ -14,19 +17,22 @@ namespace Application.Services
     public class ProjectService : IProjectService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-
-        public ProjectService(IUnitOfWork unitOfWork)
+        public ProjectService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         // Create
-        public async Task<ProjectViewModel> CreateProjectAsync(CreateProjectRequest request)
+        public async Task<ProjectViewModel> CreateProjectAsync(CreateProjectRequest request, string ownerId)
         {
             var project = new Project
             {
                 Name = request.Name,
                 Description = request.Description,
+                NameLeader = request.NameLeader,
+                TypeOfSpace = request.TypeOfSpace,
                 Status = request.Status,
                 IsGroup = request.IsGroup,
                 CreatedAt = DateTime.UtcNow
@@ -34,11 +40,26 @@ namespace Application.Services
 
             await _unitOfWork.ProjectRepository.AddAsync(project);
             await _unitOfWork.SaveChangesAsync();
+            var menber = new Member
+            {
+                MenberId = ownerId,
+                IsOwner = true,
+                ProjectId = project.Id,
+                Role = 1,
+                JoinTime = DateTime.UtcNow
+
+            };
+            
+
+            await _unitOfWork.MemberRepository.AddAsync(menber);
+            await _unitOfWork.SaveChangesAsync();
 
             return new ProjectViewModel
             {
                 Name = project.Name,
                 Description = project.Description,
+                NameLeader = project.NameLeader,
+                TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
                 CreatedAt = project.CreatedAt
@@ -54,6 +75,8 @@ namespace Application.Services
                 Id = p.Id,
                 Name = p.Name,
                 Description = p.Description,
+                NameLeader = p.NameLeader,
+                TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
                 CreatedAt = p.CreatedAt
@@ -71,11 +94,69 @@ namespace Application.Services
                 Id = project.Id,
                 Name = project.Name,
                 Description = project.Description,
+                NameLeader = project.NameLeader,
+                TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
                 CreatedAt = project.CreatedAt
             };
         }
+
+        public async Task<IEnumerable<ProjectViewModel>> GetProjectsByUserOwnerAsync(string userId)
+        {
+            var projectIds = await _unitOfWork.MemberRepository.GetProjectIdsByUserOwnerAsync(userId);
+
+            var projects = new List<Project>();
+
+            foreach (var projectId in projectIds)
+            {
+                var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+                if (project != null)
+                {
+                    projects.Add(project);
+                }
+            }
+
+            return projects.Select(p => new ProjectViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                NameLeader = p.NameLeader,
+                TypeOfSpace = p.TypeOfSpace,
+                Status = p.Status,
+                IsGroup = p.IsGroup,
+                CreatedAt = p.CreatedAt
+            });
+        }
+        public async Task<IEnumerable<ProjectViewModel>> GetProjectsByUserAsync(string userId)
+        {
+            var projectIds = await _unitOfWork.MemberRepository.GetProjectIdsByUserAsync(userId);
+
+            var projects = new List<Project>();
+
+            foreach (var projectId in projectIds)
+            {
+                var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+                if (project != null)
+                {
+                    projects.Add(project);
+                }
+            }
+
+            return projects.Select(p => new ProjectViewModel
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description,
+                NameLeader = p.NameLeader,
+                TypeOfSpace = p.TypeOfSpace,
+                Status = p.Status,
+                IsGroup = p.IsGroup,
+                CreatedAt = p.CreatedAt
+            });
+        }
+
 
         // Update
         public async Task<ProjectViewModel> UpdateProjectAsync(int id, UpdateProjectRequest request)
@@ -86,6 +167,8 @@ namespace Application.Services
 
             project.Name = request.Name;
             project.Description = request.Description;
+            project.NameLeader = request.NameLeader;
+            project.TypeOfSpace = request.TypeOfSpace;
             project.Status = request.Status;
             project.IsGroup = request.IsGroup;
 
@@ -96,6 +179,8 @@ namespace Application.Services
             {
                 Name = project.Name,
                 Description = project.Description,
+                NameLeader = project.NameLeader,
+                TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
                 CreatedAt = project.CreatedAt
