@@ -1,4 +1,5 @@
 ﻿using Application.InterfaceServies;
+using Application.Validators;
 using Application.ViewModels.MemberViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -18,9 +19,17 @@ namespace UniProjectHub_BE.Controllers
             _memberService = memberService;
         }
 
-        [HttpPost("create-member")]
+        [HttpPost("add-member")]
         public async Task<IActionResult> CreateMember([FromBody] MemberViewModel memberViewModel)
         {
+            var validator = new MemberViewModelValidator();
+            var validationResult = await validator.ValidateAsync(memberViewModel);
+
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors); // Return validation errors
+            }
+
             try
             {
                 var result = await _memberService.CreateMemberAsync(memberViewModel);
