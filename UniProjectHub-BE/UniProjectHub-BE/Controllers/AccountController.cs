@@ -75,8 +75,9 @@ namespace api.Controllers
             var refreshToken = tokenService.GenerateRefreshToken();
             tokenService.SaveRefreshToken(user.UserName, refreshToken);
 
-            return Ok(new NewUserDto
+            return Ok(new UserDto
             {
+                UserId = user.Id,
                 UserName = user.UserName,
                 Email = user.Email,
                 Token = accessToken,
