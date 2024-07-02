@@ -26,7 +26,7 @@ namespace UniProjectHub_BE.Controllers
                 var subTasks = await _subTaskService.GetAllSubTasksAsync();
                 if (subTasks == null || !subTasks.Any())
                 {
-                    return NotFound("No subtasks found");
+                    return Ok(null);
                 }
                 return Ok(subTasks);
             }
@@ -45,13 +45,13 @@ namespace UniProjectHub_BE.Controllers
                 var subTask = await _subTaskService.GetSubTaskByIdAsync(id);
                 if (subTask == null)
                 {
-                    return NotFound("Subtask not found");
+                    return Ok(null);
                 }
                 return Ok(subTask);
             }
             catch (HttpRequestException ex) when (ex.StatusCode == HttpStatusCode.NotFound)
             {
-                return NotFound("Subtask not found");
+                return Ok(null);
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace UniProjectHub_BE.Controllers
                 var subTasks = await _subTaskService.GetAllSubTasksByTaskIdAsync(taskId);
                 if (subTasks == null || !subTasks.Any())
                 {
-                    return NotFound("No subtasks found for task");
+                    return Ok(null);
                 }
                 return Ok(subTasks);
             }

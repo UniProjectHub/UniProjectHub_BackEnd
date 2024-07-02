@@ -17,6 +17,8 @@ namespace Domain.Models
         public string? Category {  get; set; }
         public string? Tags { get; set; }
         public DateTime CreatedAt { get; set; }
+        public DateTime StartDate { get; set; }
+
         public DateTime Deadline { get; set; }
         public int Rate { get; set; }
         public string? Comment { get; set; }

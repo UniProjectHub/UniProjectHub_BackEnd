@@ -35,7 +35,7 @@ namespace UniProjectHub_BE.Controllers
             var category = await _categoryService.GetCategoryAsync(id);
             if (category == null)
             {
-                return NotFound();
+                return Ok(null);
             }
             return category;
         }

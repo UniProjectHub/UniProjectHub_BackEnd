@@ -37,7 +37,7 @@ namespace UniProjectHub_BE.Controllers
                 var result = await _commentService.GetCommentAsync(id);
                 if (result == null)
                 {
-                    return NotFound();
+                    return Ok(null);
                 }
                 return Ok(result);
             }

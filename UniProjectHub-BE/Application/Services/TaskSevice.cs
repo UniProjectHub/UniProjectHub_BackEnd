@@ -3,6 +3,7 @@ using Application.ViewModels.ProjectViewModel;
 using Application.ViewModels.TaskViewModel;
 using Domain.Models;
 using Infracstructures;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,11 +17,12 @@ namespace Application.Services
     public class TaskSevice : ITaskService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UserManager<Users> _userManager;
 
-
-        public TaskSevice(IUnitOfWork unitOfWork)
+        public TaskSevice(IUnitOfWork unitOfWork, UserManager<Users> userManager)
         {
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
         }
         // Create
         public async Task<TaskViewModel> CreateTaskAsync(int projectId, TaskViewModel taskViewModel)
@@ -33,13 +35,11 @@ namespace Application.Services
             var task = new Domain.Models.Task
             {   
                 TaskName = taskViewModel.TaskName,
-                Description = taskViewModel.Description,
                 Status = taskViewModel.Status,
                 Category = taskViewModel.Category,
                 Tags = taskViewModel.Tags,
                 Deadline = taskViewModel.Deadline,
                 Rate = taskViewModel.Rate,
-                Comment = taskViewModel.Comment,
                 ProjectId = projectId
             };
 
@@ -49,7 +49,7 @@ namespace Application.Services
             return taskViewModel;
         }
 
-        public async Task<TaskViewModel> GetTaskAsync(int id)
+        public async Task<ShowTask> GetTaskAsync(int id)
         {
             var task = await _unitOfWork.TaskRepository.GetByIdAsync(id);
             if (task == null)
@@ -57,20 +57,52 @@ namespace Application.Services
                 return null;
             }
 
-            var taskViewModel = new TaskViewModel
+            var showTask = new ShowTask
             {
                 Id = task.Id,
                 TaskName = task.TaskName,
-                Description = task.Description,
                 Status = task.Status,
                 Category = task.Category,
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
-                Comment = task.Comment
             };
+            var subTasks = await _unitOfWork.SubTaskRepository.GetAllSubTasksByTaskIdAsync(id);
+            ShowSubTask showSubTask = new ShowSubTask();
+            if (subTasks.Any())
+            {
+                showTask.SubTasks = new List<ShowSubTask>();
+                foreach (var subTask in subTasks)
+                {
+                    showSubTask = new ShowSubTask
+                    {
+                        Id = subTask.Id,
+                        Description = subTask.Description,
+                        Deadline = subTask.Deadline,
+                        Tags = subTask.Tags
+                    };
+                    showTask.SubTasks.Add(showSubTask);
+                }
+            }
+            var members = await _unitOfWork.MemberInTaskRepository.GetByTaskIdAsync(id);
+            var user = new Users();
+            ShowMember showMember = new ShowMember();
+            if (members.Any())
+            {
+                showTask.members = new List<ShowMember>();
+                foreach (var member in members)
+                {
+                    user = _userManager.Users.FirstOrDefault(x => x.Id == member.MemberId);
+                    showMember = new ShowMember
+                    {
+                        Id = member.MemberId,
+                        Name = user.UserName
+                    };
+                    showTask.members.Add(showMember);
+                }
+            }
 
-            return taskViewModel;
+            return showTask;
         }
 
         public async Task<IEnumerable<TaskViewModel>> GetTasksByProjectIdAsync(int projectId)
@@ -86,13 +118,11 @@ namespace Application.Services
             {
                 Id= task.Id,
                 TaskName = task.TaskName,
-                Description = task.Description,
                 Status = task.Status,
                 Category = task.Category,
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
-                Comment = task.Comment
             });
 
             return taskViewModels;
@@ -106,13 +136,11 @@ namespace Application.Services
             {
                 Id = task.Id,
                 TaskName = task.TaskName,
-                Description = task.Description,
                 Status = task.Status,
                 Category = task.Category,
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
-                Comment = task.Comment
             });
 
             return taskViewModels;
@@ -127,13 +155,11 @@ namespace Application.Services
             }
 
             task.TaskName = taskViewModel.TaskName;
-            task.Description = taskViewModel.Description;
             task.Status = taskViewModel.Status;
             task.Category = taskViewModel.Category;
             task.Tags = taskViewModel.Tags;
             task.Deadline = taskViewModel.Deadline;
             task.Rate = taskViewModel.Rate;
-            task.Comment = taskViewModel.Comment;
 
             await _unitOfWork.SaveChangesAsync();
             return taskViewModel;

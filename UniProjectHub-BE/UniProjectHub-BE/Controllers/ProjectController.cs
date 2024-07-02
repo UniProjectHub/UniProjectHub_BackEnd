@@ -28,7 +28,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var projectViewModels = await _projectService.GetAllProjectsAsync();
             if (projectViewModels == null || !projectViewModels.Any())
-                return NotFound();
+                return Ok(null);
 
             return Ok(projectViewModels);
         }
@@ -38,7 +38,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var projectViewModels = await _projectService.GetProjectByIdAsync(id);
             if (projectViewModels == null)
-                return NotFound();
+                return Ok(null);
 
             return Ok(projectViewModels);
         }
@@ -51,7 +51,7 @@ namespace UniProjectHub_BE.Controllers
                 var projects = await _projectService.GetProjectsByUserOwnerAsync(userId);
                 if (projects == null || !projects.Any())
                 {
-                    return NotFound(); // or return Ok(Enumerable.Empty<ProjectViewModel>());
+                    return Ok(null); // or return Ok(Enumerable.Empty<ProjectViewModel>());
                 }
                 return Ok(projects);
             }
@@ -69,7 +69,7 @@ namespace UniProjectHub_BE.Controllers
                 var projects = await _projectService.GetProjectsByUserAsync(userId);
                 if (projects == null || !projects.Any())
                 {
-                    return NotFound(); // 404 Not Found
+                    return Ok(null); // 404 Not Found
                 }
                 return Ok(projects);
             }
@@ -85,7 +85,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var updatedProjectViewModel = await _projectService.UpdateProjectAsync(id, request);
             if (updatedProjectViewModel == null)
-                return NotFound();
+                return Ok(null);
 
             return Ok(updatedProjectViewModel);
         }
@@ -97,7 +97,7 @@ namespace UniProjectHub_BE.Controllers
             if (result)
                 return Ok(); // Project deleted successfully
             else
-                return NotFound(); // Project not found or delete operation failed
+                return Ok(null); // Project not found or delete operation failed
         }
     }
 }

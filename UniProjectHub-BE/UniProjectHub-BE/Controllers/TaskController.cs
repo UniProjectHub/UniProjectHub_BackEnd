@@ -26,8 +26,8 @@ namespace UniProjectHub_BE.Controllers
             if (taskViewModel != null)
                 return Ok(); // Task deleted successfully
             else
-                return NotFound(); // Task not found or delete operation failed
-            
+                return Ok(null); // Task not found or delete operation failed
+
         }
 
         [HttpGet("GetAllTasks")]
@@ -35,7 +35,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var taskViewModels = await _taskService.GetTasksAsync();
             if (taskViewModels == null || !taskViewModels.Any())
-                return NotFound();
+                return Ok(null);
 
             return Ok(taskViewModels);
         }
@@ -45,7 +45,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var taskViewModels = await _taskService.GetTasksByProjectIdAsync(projectId);
             if (taskViewModels == null)
-                return NotFound();
+                return Ok(null);
 
             return Ok(taskViewModels);
         }
@@ -55,7 +55,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var taskViewModels = await _taskService.GetTaskAsync(id);
             if (taskViewModels == null)
-                return NotFound();
+                return Ok(null);
 
             return Ok(taskViewModels);
         }
@@ -65,7 +65,7 @@ namespace UniProjectHub_BE.Controllers
         {
             var updatedTaskViewModel = await _taskService.UpdateTaskAsync(id, request);
             if (updatedTaskViewModel == null)
-                return NotFound();
+                return Ok(null);
 
             return Ok(updatedTaskViewModel);
         }

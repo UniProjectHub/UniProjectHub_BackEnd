@@ -29,7 +29,7 @@ namespace UniProjectHub_BE.Controllers
             var blog = await _blogService.GetBlogAsync(id);
             if (blog == null)
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(blog);
         }
@@ -40,7 +40,7 @@ namespace UniProjectHub_BE.Controllers
             var blogs = await _blogService.GetBlogsByCategoryIdAsync(categoryId);
             if (blogs == null || !blogs.Any())
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(blogs);
         }
@@ -51,7 +51,7 @@ namespace UniProjectHub_BE.Controllers
             var blogs = await _blogService.GetBlogsAsync();
             if (blogs == null || !blogs.Any())
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(blogs);
         }

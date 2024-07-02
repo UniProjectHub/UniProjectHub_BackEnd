@@ -1,6 +1,7 @@
 ﻿using Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace Application.ViewModels.ProjectViewModel
         public string? Description { get; set; }
         public string? NameLeader { get; set; }
         public string? TypeOfSpace { get; set; }
+        public string? Img { get; set; }
         public int Status { get; set; }
         public bool IsGroup { get; set; }
         public DateTime CreatedAt { get; set; }
@@ -24,8 +26,10 @@ namespace Application.ViewModels.ProjectViewModel
             public string Description { get; set; }
             public string? NameLeader { get; set; }
             public string? TypeOfSpace { get; set; }
+            public string? Img { get; set; }
             public int Status { get; set; }
             public bool IsGroup { get; set; }
+            public ICollection<MemberViewModelInProject>? Members { get; set; }
         }
 
         public class UpdateProjectRequest
@@ -34,8 +38,13 @@ namespace Application.ViewModels.ProjectViewModel
             public string Description { get; set; }
             public string? NameLeader { get; set; }
             public string? TypeOfSpace { get; set; }
+            public string? Img { get; set; }
             public int Status { get; set; }
             public bool IsGroup { get; set; }
         }
+    }
+    public class MemberViewModelInProject
+    {
+        public string? UserId { get; set; }
     }
 }

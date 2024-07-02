@@ -54,6 +54,27 @@ namespace Application.Services
             await _unitOfWork.MemberRepository.AddAsync(menber);
             await _unitOfWork.SaveChangesAsync();
 
+            
+            if (request.Members != null && request.Members.Count() > 0) {
+
+                foreach (var memberInProject in request.Members)
+                {
+                    if (memberInProject.UserId != ownerId){
+                        menber = new Member
+                        {
+                            MenberId = memberInProject.UserId,
+                            IsOwner = false,
+                            ProjectId = project.Id,
+                            Role = 1,
+                            JoinTime = DateTime.UtcNow
+                        };
+                        await _unitOfWork.MemberRepository.AddAsync(menber);
+                        await _unitOfWork.SaveChangesAsync();
+                    }
+                    
+                }
+            }
+
             return new ProjectViewModel
             {
                 Name = project.Name,
