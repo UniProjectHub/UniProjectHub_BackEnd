@@ -23,7 +23,7 @@ namespace UniProjectHub_BE.Controllers
             var memberInTasks = await _memberInTaskService.GetAllAsync();
             if (memberInTasks == null || !memberInTasks.Any())
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(memberInTasks);
         }
@@ -35,7 +35,7 @@ namespace UniProjectHub_BE.Controllers
             var memberInTask = await _memberInTaskService.GetByIdAsync(id);
             if (memberInTask == null)
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(memberInTask);
         }
@@ -65,7 +65,7 @@ namespace UniProjectHub_BE.Controllers
             var result = await _memberInTaskService.UpdateAsync(id, model);
             if (result == null)
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(result);
         }
@@ -78,7 +78,7 @@ namespace UniProjectHub_BE.Controllers
                 var result = await _memberInTaskService.DeleteAsync(id);
                 if (!result)
                 {
-                    return NotFound();
+                    return Ok(null);
                 }
                 return Ok(result);
             }
