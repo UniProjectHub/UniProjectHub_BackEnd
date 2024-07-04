@@ -35,7 +35,7 @@ Before running the application, ensure you have the following installed:
 git clone https://github.com/your-username/UniProjectHub_BackEnd.git
 cd UniProjectHub_BackEnd
 
-## Database Setup:
+##### Database Setup:
 Create a SQL Server database and update the connection string in appsettings.json:
 
 json
@@ -45,7 +45,7 @@ json
     "DefaultConnection": "Server=localhost;Database=UniProjectHubDB;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }
-## Run Migrations:
+##### Run Migrations:
 Apply database migrations using Entity Framework Core:
 
 bash
