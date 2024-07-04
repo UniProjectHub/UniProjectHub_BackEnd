@@ -15,8 +15,8 @@ namespace Infracstructures.Repositories
         private readonly AppDbContext _context;
         private readonly DbSet<Member> _dbSet;
 
+       
 
-    
 
         public async Task<Member> GetByIdAsync(int id)
         {
@@ -55,12 +55,7 @@ namespace Infracstructures.Repositories
         {
             var clonedMember = new Member
             {
-                // Assuming Member is a class and requires deep cloning
-                // Implement cloning logic here
-                // Example: 
-                // Name = model.Name,
-                // Email = model.Email,
-                // etc.
+                 
             };
 
             _dbSet.Add(clonedMember);
@@ -86,7 +81,7 @@ namespace Infracstructures.Repositories
 
         public async System.Threading.Tasks.Task DeleteAsync(Member member)
         {
-            _dbSet.Remove(member);
+            _context.Members.Remove(member);
             await _context.SaveChangesAsync();
         }
 
@@ -151,7 +146,7 @@ namespace Infracstructures.Repositories
 
         public async System.Threading.Tasks.Task UpdateAsync(Member member)
         {
-            _dbSet.Update(member);
+            _context.Members.Update(member);
             await _context.SaveChangesAsync();
         }
 

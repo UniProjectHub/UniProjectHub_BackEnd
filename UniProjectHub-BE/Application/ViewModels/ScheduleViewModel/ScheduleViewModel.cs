@@ -12,9 +12,7 @@ namespace Application.ViewModels.ScheduleViewModel
         public string DateOfWeek { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
-        public DateTime SlotStartTime { get; set; }
-        public DateTime SlotEndTime { get; set; }
-        public int TeacherId { get; set; }
+       
         public string CourseName { get; set; }
     }
 }

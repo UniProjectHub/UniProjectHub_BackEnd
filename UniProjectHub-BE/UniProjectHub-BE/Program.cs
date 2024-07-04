@@ -238,7 +238,7 @@ app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .AllowCredentials()
                             .WithOrigins("https://localhost:7067","http://localhost:5275",
-                "http://localhost:5173", "http://localhost:5174"));
+                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175"));
 
 app.UseHttpsRedirection();
 
