@@ -3,15 +3,19 @@
 Microsoft.EntityFrameworkCore.SqlServer
 5.0.17
 Detected automatically on Jun 11, 2024 (NuGet) · UniProjectHub-BE/Application/Application - Backup.csproj · Apache-2.0
+
 AutoMapper
 12.0.0
 Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
+
 FluentValidation
 11.9.1
 Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · Apache-2.0
+
 Microsoft.AspNetCore.Http
 2.1.34
 Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · Apache-2.0
+
 Microsoft.Data.SqlClient
 5.1.5
 Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
