@@ -179,6 +179,13 @@ namespace Infracstructures.Repositories
                 .Select(m => m.ProjectId)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<int>> GetProjectIdsByUserNotOwnerAsync(string userId)
+        {
+            return await _context.Set<Member>()
+                .Where(m => m.MenberId == userId && m.IsOwner == false)
+                .Select(m => m.ProjectId)
+                .ToListAsync();
+        }
         public async Task<IEnumerable<int>> GetProjectIdsByUserAsync(string userId)
         {
             return await _context.Set<Member>()

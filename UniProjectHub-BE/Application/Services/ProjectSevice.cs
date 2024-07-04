@@ -125,14 +125,13 @@ namespace Application.Services
 
         public async Task<IEnumerable<ProjectViewModel>> GetProjectsByUserOwnerAsync(string userId)
         {
-            var projectIds = await _unitOfWork.MemberRepository.GetProjectIdsByUserOwnerAsync(userId);
-
+            var ownerProjectIds = await _unitOfWork.MemberRepository.GetProjectIdsByUserOwnerAsync(userId);
             var projects = new List<Project>();
 
-            foreach (var projectId in projectIds)
+            foreach (var projectId in ownerProjectIds)
             {
                 var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
-                if (project != null)
+                if (project != null && project.IsGroup == false)
                 {
                     projects.Add(project);
                 }
@@ -147,8 +146,57 @@ namespace Application.Services
                 TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
-                CreatedAt = p.CreatedAt
+                CreatedAt = p.CreatedAt,
+                IsOwner = true
             });
+        }
+        public async Task<IEnumerable<ProjectViewModel>> GetGroupProjectsByUserAsync(string userId)
+        {
+            var ownerProjectIds = await _unitOfWork.MemberRepository.GetProjectIdsByUserOwnerAsync(userId);
+            var notOwnerProjectIds = await _unitOfWork.MemberRepository.GetProjectIdsByUserNotOwnerAsync(userId);
+            var projects = new List<Project>();
+            var projectViews = new List<ProjectViewModel>();
+
+            foreach (var projectId in ownerProjectIds)
+            {
+                var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+                if (project != null && project.IsGroup)
+                {
+                    projectViews.Add(new ProjectViewModel
+                    {
+                        Id = project.Id,
+                        Name = project.Name,
+                        Description = project.Description,
+                        NameLeader = project.NameLeader,
+                        TypeOfSpace = project.TypeOfSpace,
+                        Status = project.Status,
+                        IsGroup = project.IsGroup,
+                        CreatedAt = project.CreatedAt,
+                        IsOwner = true
+                    });
+                }
+            }
+
+            foreach (var projectId in notOwnerProjectIds)
+            {
+                var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+                if (project != null && project.IsGroup)
+                {
+                    projectViews.Add(new ProjectViewModel
+                    {
+                        Id = project.Id,
+                        Name = project.Name,
+                        Description = project.Description,
+                        NameLeader = project.NameLeader,
+                        TypeOfSpace = project.TypeOfSpace,
+                        Status = project.Status,
+                        IsGroup = project.IsGroup,
+                        CreatedAt = project.CreatedAt,
+                        IsOwner = false
+                    });
+                }
+            }
+            return projectViews;
         }
         public async Task<IEnumerable<ProjectViewModel>> GetProjectsByUserAsync(string userId)
         {
