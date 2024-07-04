@@ -1,126 +1,62 @@
 # UniProjectHub_BackEnd
- 40 Total
-Microsoft.EntityFrameworkCore.SqlServer
-5.0.17
-Detected automatically on Jun 11, 2024 (NuGet) · UniProjectHub-BE/Application/Application - Backup.csproj · Apache-2.0
+UniProjectHub_BackEnd
+This repository contains the backend services for UniProjectHub, a platform for managing schedules and courses.
 
-AutoMapper
-12.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
+Technologies Used
+Framework: ASP.NET Core 8.0
+Database: Microsoft SQL Server with Entity Framework Core
+Authentication: JWT Bearer Authentication
+API Documentation: Swagger (OpenAPI)
+Mapping: AutoMapper
+Validation: FluentValidation
+Dependencies
+Microsoft.EntityFrameworkCore.SqlServer - 8.0.0
+AutoMapper - 12.0.0
+FluentValidation - 11.9.1
+Microsoft.AspNetCore.Authentication.JwtBearer - 8.0.5
+Swashbuckle.AspNetCore - 6.4.0
+Prerequisites
+Before running the application, ensure you have the following installed:
 
-FluentValidation
-11.9.1
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · Apache-2.0
+.NET SDK 8.0 or higher
+SQL Server (or use Docker for containerized development)
+Getting Started
+Clone the repository:
 
-Microsoft.AspNetCore.Http
-2.1.34
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · Apache-2.0
+bash
+Copy code
+git clone https://github.com/your-username/UniProjectHub_BackEnd.git
+cd UniProjectHub_BackEnd
+Database Setup:
 
-Microsoft.Data.SqlClient
-5.1.5
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
-Microsoft.EntityFrameworkCore.Design
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
-Microsoft.EntityFrameworkCore.SqlServer
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj
-Microsoft.EntityFrameworkCore.Tools
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj
-Microsoft.Extensions.Configuration
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
-Microsoft.Extensions.Configuration.Json
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj · MIT
-payOS
-1.0.5
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Application/Application.csproj
-Microsoft.AspNetCore.Identity.EntityFrameworkCore
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/Domain/Domain.csproj · MIT
-Microsoft.AspNetCore.Authentication.Google
-8.0.5
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj
-Microsoft.AspNetCore.OpenApi
-8.0.5
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · MIT
-Microsoft.Data.SqlClient
-5.2.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · MIT
-Microsoft.EntityFrameworkCore.Analyzers
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · MIT
-Microsoft.EntityFrameworkCore.Design
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · MIT
-Microsoft.EntityFrameworkCore.SqlServer
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj
-Microsoft.EntityFrameworkCore.Tools
-8.0.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj
-Microsoft.Extensions.Identity.Core
-8.0.5
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · MIT 40 Total
-RestSharp
-110.2.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · Apache-2.0
-Swashbuckle.AspNetCore
-6.4.0
-Detected automatically on Jun 17, 2024 (NuGet) · UniProjectHub-BE/UniProjectHub-BE/UniProjectHub-BE.csproj · MIT
-AutoMapper
-12.0.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-AutoMapper.Extensions.Microsoft.DependencyInjection
-12.0.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Firebase.Auth
-1.0.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj
-FirebaseStorage.net
-1.0.3
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · NOASSERTION
-FluentValidation
-11.9.1
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · Apache-2.0
-FluentValidation.AspNetCore
-11.3.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · Apache-2.0
-FluentValidation.DependencyInjectionExtensions
-11.9.1
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · Apache-2.0
-MailKit
-4.5.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Microsoft.AspNetCore.Authentication.JwtBearer
-8.0.5
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Microsoft.AspNetCore.Cors
-2.2.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · Apache-2.0
-Microsoft.AspNetCore.Identity.EntityFrameworkCore
-8.0.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Microsoft.AspNetCore.Mvc.NewtonsoftJson
-8.0.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Microsoft.Extensions.Identity.Core
-8.0.5
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Microsoft.IdentityModel.JsonWebTokens
-7.5.2
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Microsoft.IdentityModel.Protocols.OpenIdConnect
-7.5.2
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-MimeKit
-4.5.0
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-Newtonsoft.Json
-13.0.3
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/Infracstructures.csproj · MIT
-payOS
-1.0.5
-Detected automatically on Jun 20, 2024 (NuGet) · UniProjectHub-BE/Infracstructures/
+Create a SQL Server database and update the connection string in appsettings.json.
+json
+Copy code
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=UniProjectHubDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
+Run Migrations:
+
+bash
+Copy code
+dotnet ef database update
+Start the Application:
+
+bash
+Copy code
+dotnet run
+Explore APIs:
+
+Open your browser and navigate to http://localhost:5275/swagger to view and test the APIs using Swagger.
+Contributing
+We welcome contributions to UniProjectHub! To contribute, follow these steps:
+
+Fork the repository.
+Create your feature branch: git checkout -b feature/AmazingFeature.
+Commit your changes: git commit -m 'Add some AmazingFeature'.
+Push to the branch: git push origin feature/AmazingFeature.
+Submit a pull request.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
