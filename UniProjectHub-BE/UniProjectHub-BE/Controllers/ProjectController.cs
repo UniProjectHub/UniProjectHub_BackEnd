@@ -79,6 +79,24 @@ namespace UniProjectHub_BE.Controllers
                 return StatusCode(500, "An error occurred while retrieving projects"); // 500 Internal Server Error
             }
         }
+        [HttpGet("GetGroupProjectsByUserAsync/{userId}")]
+        public async Task<ActionResult<IEnumerable<ProjectViewModel>>> GetGroupProjectsByUserAsync(string userId)
+        {
+            try
+            {
+                var projects = await _projectService.GetGroupProjectsByUserAsync(userId);
+                if (projects == null || !projects.Any())
+                {
+                    return Ok(null); // 404 Not Found
+                }
+                return Ok(projects);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception or handle it as needed
+                return StatusCode(500, "An error occurred while retrieving projects"); // 500 Internal Server Error
+            }
+        }
 
         [HttpPut("UpdateProject/{id}")]
         public async Task<IActionResult> UpdateProject(int id, UpdateProjectRequest request)
