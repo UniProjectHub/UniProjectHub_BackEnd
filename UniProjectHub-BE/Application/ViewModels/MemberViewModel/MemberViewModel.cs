@@ -9,7 +9,7 @@ namespace Application.ViewModels.MemberViewModel
 {
     public class MemberViewModel
     {
-        public Users UserId;
+        //public Users UserId;
         public int ProjectId { get; set; }
         public string MemberId { get; set; }
         public bool IsOwner { get; set; }

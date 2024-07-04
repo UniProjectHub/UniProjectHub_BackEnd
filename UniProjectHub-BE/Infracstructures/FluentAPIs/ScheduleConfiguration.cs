@@ -16,7 +16,13 @@ namespace Infracstructures.FluentAPIs
             builder.ToTable(nameof(Schedule));
             builder.HasKey(x => x.Id);
 
-            builder.HasOne(x => x.User).WithMany(x => x.Schedules).HasForeignKey(x => x.UserId);
+            builder.Property(x => x.CourseName).IsRequired();
+  
+            builder.HasOne(x => x.User)
+                   .WithMany(x => x.Schedules)
+                   .HasForeignKey(x => x.UserId);
+
+            
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Application.InterfaceServies;
 using Application.Validators;
 using Application.ViewModels.MemberViewModel;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace UniProjectHub_BE.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}"); // 500 Internal Server Error
+                return StatusCode(500, $"Error: {ex.Message}"); // 500 Internal Server Error
             }
         }
 
@@ -53,11 +54,16 @@ namespace UniProjectHub_BE.Controllers
                 }
                 return Ok(result); // 200 OK with the updated member or appropriate response
             }
+            catch (ValidationException ex)
+            {
+                return BadRequest(ex.Message); // 400 Bad Request with validation error message
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Internal server error: {ex.Message}"); // 500 Internal Server Error
             }
         }
+    
 
         [HttpDelete("delete-member/{id}")]
         public async Task<IActionResult> DeleteMember(int id)

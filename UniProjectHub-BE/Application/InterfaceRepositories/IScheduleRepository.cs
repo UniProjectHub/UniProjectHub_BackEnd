@@ -10,6 +10,7 @@ namespace Application.InterfaceRepositories
     public interface IScheduleRepository : IGenericRepository<Schedule>
     {
         void Delete(Schedule schedule);
+        Task<List<Schedule>> GetAllSchedulesAsync();
 
         // Define methods specific to Schedule entity, if needed
         public Task<IEnumerable<Schedule>> GetScheduleByProjectIdAsync(int id);

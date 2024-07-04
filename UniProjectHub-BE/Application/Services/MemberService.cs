@@ -61,14 +61,13 @@ namespace Application.Services
             if (member == null)
                 throw new KeyNotFoundException("Member not found");
 
-            var validationResult = await ValidateMemberAsync(memberViewModel);
+            var validationResult = await _validator.ValidateAsync(memberViewModel);
             if (!validationResult.IsValid)
             {
                 var validationResults = validationResult.Errors
                     .Select(e => new System.ComponentModel.DataAnnotations.ValidationResult(e.ErrorMessage, new[] { e.PropertyName }))
                     .ToList();
                 var validationMessage = string.Join("; ", validationResults.Select(vr => vr.ErrorMessage));
-               // nedd fix agian
                 throw new ValidationException(validationMessage, (IEnumerable<ValidationFailure>)validationResults);
             }
 

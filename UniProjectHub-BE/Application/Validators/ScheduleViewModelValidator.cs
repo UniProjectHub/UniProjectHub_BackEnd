@@ -22,18 +22,8 @@ namespace Application.Validators
                 .Must(BeAValidDateTime).WithMessage("End time must be a valid date and time.")
                 .GreaterThan(x => x.StartTime).WithMessage("End time must be greater than start time.");
 
-            RuleFor(x => x.SlotStartTime)
-                .NotEmpty().WithMessage("Slot start time is required.")
-                .Must(BeAValidDateTime).WithMessage("Slot start time must be a valid date and time.")
-                .LessThan(x => x.StartTime).WithMessage("Slot start time must be less than start time.");
-
-            RuleFor(x => x.SlotEndTime)
-                .NotEmpty().WithMessage("Slot end time is required.")
-                .Must(BeAValidDateTime).WithMessage("Slot end time must be a valid date and time.")
-                .GreaterThan(x => x.EndTime).WithMessage("Slot end time must be greater than end time.");
-
-            RuleFor(x => x.TeacherId)
-                .NotEmpty().WithMessage("Teacher ID is required.");
+            
+            
 
             RuleFor(x => x.CourseName)
                 .NotEmpty().WithMessage("Course name is required.");

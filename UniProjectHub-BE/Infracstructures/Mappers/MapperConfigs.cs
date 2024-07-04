@@ -1,22 +1,17 @@
-﻿using Application.ViewModels.FileViewModel;
+﻿using Application.ViewModels.BlogModelView;
+using Application.ViewModels.CategoryViewModel;
+using Application.ViewModels.CommentViewModel;
+using Application.ViewModels.FileViewModel;
 using Application.ViewModels.GroupChatViewModel;
+using Application.ViewModels.MemberInTaskViewModel;
 using Application.ViewModels.MemberViewModel;
 using Application.ViewModels.ProjectViewModel;
+using Application.ViewModels.ScheduleViewModel;
+using Application.ViewModels.SubTaskViewModel;
 using Application.ViewModels.TaskViewModel;
 using AutoMapper;
 using Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using File = Domain.Models.File;
-using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
-using Application.ViewModels.SubTaskViewModel;
-using Application.ViewModels.MemberInTaskViewModel;
-using Application.ViewModels.BlogModelView;
-using Application.ViewModels.CategoryViewModel;
-using Application.ViewModels.CommentViewModel;
 
 namespace Infracstructures.Mappers
 {
@@ -50,7 +45,12 @@ namespace Infracstructures.Mappers
 
             CreateMap<File, FileViewModel>()
             .ForMember(dest => dest.Username, opt => opt.MapFrom(src => src.Users.UserName))
-            .ForMember(dest => dest.TaskName, opt => opt.MapFrom(src => src.Task.TaskName));
+                        .ForMember(dest => dest.TaskName, opt => opt.MapFrom(src => src.Task.TaskName));
+
+            CreateMap<ScheduleViewModel, Schedule>()
+    .ForMember(dest => dest.Id, opt => opt.Ignore()); // Assuming Id is an identity column
+            CreateMap<Schedule, ScheduleViewModel>();
+
         }
     }
 }
