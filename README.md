@@ -1,4 +1,4 @@
-# UniProjectHub_BackEnd
+ 
 # UniProjectHub_BackEnd
 
 This repository contains the backend services for UniProjectHub, a platform for managing schedules and courses.
@@ -34,7 +34,56 @@ Before running the application, ensure you have the following installed:
 ```bash
 git clone https://github.com/your-username/UniProjectHub_BackEnd.git
 cd UniProjectHub_BackEnd
+
+## Database Setup:
+Create a SQL Server database and update the connection string in appsettings.json:
+
+json
  
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=UniProjectHubDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
+## Run Migrations:
+Apply database migrations using Entity Framework Core:
+
+bash
+ 
+dotnet ef database update
+## Start the Application:
+Run the backend application locally:
+
+bash
+ 
+dotnet run
+## Explore APIs:
+Open your browser and navigate to http://localhost:5275/swagger to view and test the APIs using Swagger.
+
+## Contributing
+We welcome contributions to UniProjectHub! To contribute, follow these steps:
+
+1.Fork the repository.
+2.Create your feature branch: git checkout -b feature/AmazingFeature.
+3.Commit your changes: git commit -m 'Add some AmazingFeature'.
+4.Push to the branch: git push origin feature/AmazingFeature.
+5.Submit a pull request.
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Feel free to adjust any details or add more specific instructions as per your project's requirements!
+
+sql
+Copy code
+
+Copy and paste this section into your `README.md` file and adjust any placeholders (`your-username`, specific URLs, etc.) according to your project's setup. Let me know if you need further assistance!
+
+
+
+
+
+
+
 ## Packages Used
 - **Microsoft.EntityFrameworkCore.SqlServer:** 5.0.17
 - **AutoMapper:** 12.0.0
