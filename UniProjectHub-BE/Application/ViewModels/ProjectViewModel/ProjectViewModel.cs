@@ -19,6 +19,7 @@ namespace Application.ViewModels.ProjectViewModel
         public int Status { get; set; }
         public bool IsGroup { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool IsOwner { get; set; }
 
         public class CreateProjectRequest
         {

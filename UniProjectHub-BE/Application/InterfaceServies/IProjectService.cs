@@ -13,6 +13,7 @@ namespace Application.InterfaceServies
         Task<ProjectViewModel> CreateProjectAsync(CreateProjectRequest request, string ownerId);
         Task<IEnumerable<ProjectViewModel>> GetAllProjectsAsync();
         Task<ProjectViewModel> GetProjectByIdAsync(int id);
+        Task<IEnumerable<ProjectViewModel>> GetGroupProjectsByUserAsync(string userId);
         Task<ProjectViewModel> UpdateProjectAsync(int id, UpdateProjectRequest request);
         Task<bool> DeleteProjectAsync(int id);
         Task<IEnumerable<ProjectViewModel>> GetProjectsByUserOwnerAsync(string userId);
