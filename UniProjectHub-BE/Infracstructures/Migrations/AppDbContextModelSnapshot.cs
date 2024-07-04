@@ -378,7 +378,8 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("TeacherId1")
@@ -606,13 +607,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "2ebeed65-007a-4ce8-9caa-54e8b84bcb81",
+                            Id = "d2919212-ce1d-4b11-b611-15e00f5ba427",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "42c2cda4-6d9d-4b0c-8f54-2063fcb3a6c2",
+                            Id = "507513f2-29ab-46ef-b60f-c5e48c90d8f1",
                             Name = "User",
                             NormalizedName = "USER"
                         });

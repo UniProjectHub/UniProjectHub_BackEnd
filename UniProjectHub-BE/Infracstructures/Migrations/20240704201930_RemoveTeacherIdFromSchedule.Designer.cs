@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240704154651_Update1")]
-    partial class Update1
+    [Migration("20240704201930_RemoveTeacherIdFromSchedule")]
+    partial class RemoveTeacherIdFromSchedule
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -372,13 +372,29 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("EndTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("SlotEndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("SlotStartTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("TeacherId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeacherId1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId1");
 
                     b.HasIndex("UserId");
 
@@ -594,13 +610,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "db02369c-7b65-479a-8ae9-232b34612170",
+                            Id = "d2919212-ce1d-4b11-b611-15e00f5ba427",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "5f04a776-588c-4f69-ad1d-9012f150f1d7",
+                            Id = "507513f2-29ab-46ef-b60f-c5e48c90d8f1",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -839,10 +855,18 @@ namespace Infracstructures.Migrations
 
             modelBuilder.Entity("Domain.Models.Schedule", b =>
                 {
+                    b.HasOne("Domain.Models.Users", "Teacher")
+                        .WithMany()
+                        .HasForeignKey("TeacherId1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Domain.Models.Users", "User")
                         .WithMany("Schedules")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Teacher");
 
                     b.Navigation("User");
                 });

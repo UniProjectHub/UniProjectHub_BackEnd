@@ -182,7 +182,7 @@ namespace Infracstructures.Repositories
                 .ToListAsync();
         }
 
-        System.Threading.Tasks.Task IMemberRepository.Update(Member member)
+        System.Threading.Tasks.Task IMemberRepository.UpdateAsync(Member member)
         {
             throw new NotImplementedException();
         }

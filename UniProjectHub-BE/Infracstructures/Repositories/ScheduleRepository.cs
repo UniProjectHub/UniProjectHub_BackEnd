@@ -18,7 +18,10 @@ namespace Infracstructures.Repositories
         {
             _context = context;
         }
-
+        public async Task<List<Schedule>> GetAllSchedulesAsync()
+        {
+            return await _context.Set<Schedule>().ToListAsync();
+        }
         public async System.Threading.Tasks.Task AddAsync(Schedule model)
         {
             await _context.Set<Schedule>().AddAsync(model);
