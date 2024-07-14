@@ -1,28 +1,28 @@
-# Stage 1: Build
+#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER app
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
+
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-
-# Copy and restore all projects first to leverage Docker cache
-COPY UniProjectHub-BE/UniProjectHub-BE.csproj ./UniProjectHub-BE/
-COPY Domain/Domain.csproj ./Domain/
-COPY Application/Application.csproj ./Application/
-COPY Infracstructures/Infracstructures.csproj ./Infracstructures/
-RUN dotnet restore ./UniProjectHub-BE/UniProjectHub-BE.csproj
-
-# Copy full solution and build
+COPY ["UniProjectHub-BE/UniProjectHub-BE.csproj", "UniProjectHub-BE/"]
+COPY ["Infracstructures/Infracstructures.csproj", "Infracstructures/"]
+COPY ["Application/Application.csproj", "Application/"]
+COPY ["Domain/Domain.csproj", "Domain/"]
+RUN dotnet restore "./UniProjectHub-BE/UniProjectHub-BE.csproj"
 COPY . .
 WORKDIR "/src/UniProjectHub-BE"
-RUN dotnet build "./UniProjectHub-BE.csproj" -c Release -o /app/build
+RUN dotnet build "./UniProjectHub-BE.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Stage 2: Publish
 FROM build AS publish
-RUN dotnet publish "./UniProjectHub-BE.csproj" -c Release -o /app/publish /p:UseAppHost=false
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./UniProjectHub-BE.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-# Stage 3: Runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-
-# Expose port and run the application
-EXPOSE 80
 ENTRYPOINT ["dotnet", "UniProjectHub-BE.dll"]

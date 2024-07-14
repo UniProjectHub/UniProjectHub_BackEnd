@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.4'
 
 services:
   sqlserver:
@@ -6,6 +6,8 @@ services:
     hostname: sqlserver-db
     container_name: sqlserver
     user: root
+    networks:
+      - demo
     environment:
       SA_PASSWORD: "sa@root123@"
       ACCEPT_EULA: "Y"
@@ -16,11 +18,14 @@ services:
       - mssql-log:/var/opt/mssql/log
       - mssql-secrets:/var/opt/mssql/secrets
 
-  webapi:
+  uniprojecthub-be:
+    image: ${DOCKER_REGISTRY-}apnunihub
     build:
       context: .
       dockerfile: UniProjectHub-BE/Dockerfile
-    container_name: webapi
+    container_name: uniprojecthub-be
+    networks:
+      - demo
     ports:
       - "80"
     depends_on:
@@ -52,6 +57,10 @@ services:
       - Firebase__Bucket=apnuni-9df6a.appspot.com
       - Firebase__AuthEmail=apnunihub@gmail.com
       - Firebase__AuthPassword=@test123
+
+networks:
+  demo:
+    driver: bridge 
 
 volumes:
   sqlserverdata:
