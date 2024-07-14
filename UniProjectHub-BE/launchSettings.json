@@ -5,6 +5,10 @@
       "commandVersion": "1.0",
       "serviceActions": {
         "uniprojecthub-be": "StartDebugging"
+      },
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "https://+:443;http://+:80",
+        "ASPNETCORE_HTTPS_PORT": "443"
       }
     }
   }

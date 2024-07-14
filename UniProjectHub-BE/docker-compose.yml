@@ -32,7 +32,7 @@ services:
       - sqlserver
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ConnectionStrings__DefaultConnection=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True;
+      - ConnectionStrings__DefaultConnection=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True
       - FMPKey=Insert_key_here
       - JWT__Issuer=https://localhost
       - JWT__Audience=https://localhost
@@ -57,6 +57,9 @@ services:
       - Firebase__Bucket=apnuni-9df6a.appspot.com
       - Firebase__AuthEmail=apnunihub@gmail.com
       - Firebase__AuthPassword=@test123
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_HTTPS_PORT=443
 
 networks:
   demo:
