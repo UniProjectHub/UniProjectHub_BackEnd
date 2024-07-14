@@ -40,7 +40,7 @@ namespace UniProjectHub_BE.Services
         {
             try
             {
-                int amount = 5000;
+                int amount = 49000;
                 var orderCode = GenerateOrderCode();
                 var description = "APN" + orderCode;
                 var code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(orderCode + ""));
