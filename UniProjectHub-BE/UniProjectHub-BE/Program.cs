@@ -43,7 +43,9 @@ using Infracstructures;
 using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 // Configuration
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
@@ -240,8 +242,7 @@ app.UseCors(policy => policy.AllowAnyHeader()
                             .WithOrigins("https://localhost:7067","http://localhost:5275",
                 "http://localhost:5173", "http://localhost:5174", "http://localhost:5175"));
 
-app.UseHttpsRedirection();
-
+ 
 app.UseAuthentication();
 app.UseAuthorization();
 
