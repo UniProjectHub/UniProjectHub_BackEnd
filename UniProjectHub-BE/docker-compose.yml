@@ -17,8 +17,7 @@ services:
       - sqlserverdata:/var/opt/mssql/data
       - mssql-log:/var/opt/mssql/log
       - mssql-secrets:/var/opt/mssql/secrets
-
-  uniprojecthub-be:
+uniprojecthub-be:
     image: ${DOCKER_REGISTRY-}apnunihub
     build:
       context: .
@@ -27,15 +26,16 @@ services:
     networks:
       - demo
     ports:
-      - "80"
+      - "80:80"
+      - "443:443"
     depends_on:
       - sqlserver
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ConnectionStrings__DefaultConnection=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True
+      - ConnectionStrings__DefaultConnectionVPS=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True;
       - FMPKey=Insert_key_here
-      - JWT__Issuer=https://localhost
-      - JWT__Audience=https://localhost
+      - JWT__Issuer=https://localhost:7067
+      - JWT__Audience=https://localhost:7067
       - JWT__SigningKey=sdgfijjh3466iu345g87g08c24g7204gr803g30587ghh35807fg39074fvg80493745gf082b507807g807fgf
       - JWT__AccessTokenExpiration=30
       - JWT__RefreshTokenExpiration=7
@@ -51,19 +51,12 @@ services:
       - PayOS__ClientId=70556595-b5cc-47ff-88bf-a26e780b0396
       - PayOS__ApiKey=b40c5d3b-9c3d-42f6-8022-4c92d1b7bd7d
       - PayOS__ChecksumKey=93246dfb9408c3e521d521f5ea788647014b99560489d4a7b5f5177722056bc1
-      - PayOS__ReturnUrl=https://localhost/api/payment
-      - PayOS__ReturnUrlFail=https://localhost/api/payment
-      - Firebase__ApiKey=AIzaSyBxadf9VzAEg8fEfPE20OnyW9pQkRLMDys
-      - Firebase__Bucket=apnuni-9df6a.appspot.com
-      - Firebase__AuthEmail=apnunihub@gmail.com
-      - Firebase__AuthPassword=@test123
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_HTTPS_PORT=443
+      - PayOS__ReturnUrl=https://localhost:7067/api/payment
+      - PayOS__ReturnUrlFail=https://localhost:7067/api/payment
 
 networks:
   demo:
-    driver: bridge 
+    driver: bridge
 
 volumes:
   sqlserverdata:
