@@ -35,8 +35,6 @@ services:
       - ASPNETCORE_ENVIRONMENT=Production
       - ConnectionStrings__DefaultConnectionVPS=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True;
       - FMPKey=Insert_key_here
-      - JWT__Issuer=https://localhost:7067
-      - JWT__Audience=https://localhost:7067
       - JWT__SigningKey=sdgfijjh3466iu345g87g08c24g7204gr803g30587ghh35807fg39074fvg80493745gf082b507807g807fgf
       - JWT__AccessTokenExpiration=30
       - JWT__RefreshTokenExpiration=7
@@ -52,8 +50,7 @@ services:
       - PayOS__ClientId=70556595-b5cc-47ff-88bf-a26e780b0396
       - PayOS__ApiKey=b40c5d3b-9c3d-42f6-8022-4c92d1b7bd7d
       - PayOS__ChecksumKey=93246dfb9408c3e521d521f5ea788647014b99560489d4a7b5f5177722056bc1
-      - PayOS__ReturnUrl=https://localhost:7067/api/payment
-      - PayOS__ReturnUrlFail=https://localhost:7067/api/payment
+     
    
 networks:
   demo:
