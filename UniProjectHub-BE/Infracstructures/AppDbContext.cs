@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Infracstructures.FluentAPIs;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +18,11 @@ namespace Infracstructures
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
+
+        public AppDbContext()
+        {
+        }
+
         public DbSet<Users> Users { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
 
@@ -44,7 +51,8 @@ namespace Infracstructures
                 },
             };
             builder.Entity<IdentityRole>().HasData(roles);
-        }
+            builder.ApplyConfiguration(new ScheduleConfiguration());
+         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

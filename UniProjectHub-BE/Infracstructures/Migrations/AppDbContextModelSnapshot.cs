@@ -328,14 +328,23 @@ namespace Infracstructures.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Img")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsGroup")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NameLeader")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<string>("TypeOfSpace")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -369,7 +378,8 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("TeacherId")
+                    b.Property<int?>("TeacherId")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.Property<string>("TeacherId1")
@@ -403,6 +413,9 @@ namespace Infracstructures.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tags")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TaskId")
@@ -446,6 +459,9 @@ namespace Infracstructures.Migrations
 
                     b.Property<int>("RemainingTime")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -591,13 +607,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d8a1e9f1-823c-4fed-b304-bce22156d777",
+                            Id = "d2919212-ce1d-4b11-b611-15e00f5ba427",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "429cac3d-7594-4524-b6b4-32876dd1ab13",
+                            Id = "507513f2-29ab-46ef-b60f-c5e48c90d8f1",
                             Name = "User",
                             NormalizedName = "USER"
                         });

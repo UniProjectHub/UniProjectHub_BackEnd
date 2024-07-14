@@ -93,17 +93,10 @@ namespace Infracstructures
             dbSet.Remove(entityToDelete);
         }
 
-        public virtual void Update(TEntity entityToUpdate)
-        {
-            dbSet.Attach(entityToUpdate);
-            context.Entry(entityToUpdate).State = EntityState.Modified;
-            context.SaveChangesAsync();
-        }
-
+        
         public virtual async Task AddAsync(TEntity model)
         {
             await dbSet.AddAsync(model);
-            await context.SaveChangesAsync();
         }
 
         public virtual void AddAttach(TEntity model)
@@ -111,10 +104,10 @@ namespace Infracstructures
             dbSet.Attach(model).State = EntityState.Added;
         }
 
-        public virtual void AddEntry(TEntity model)
+        public virtual void  AddEntry(TEntity model)
         {
             dbSet.Entry(model).State = EntityState.Added;
-        } 
+        }
 
         public virtual async Task AddRangeAsync(List<TEntity> models)
         {
@@ -123,13 +116,7 @@ namespace Infracstructures
 
         public virtual async Task<List<TEntity>> GetAllAsync() => await dbSet.ToListAsync();
 
-        /// <summary>
-        /// The function return list of TEntity with an include method.
-        /// Example for user we want to include the relation Role: 
-        /// + GetAllAsync(user => user.Include(x => x.Role));
-        /// </summary>
-        /// <param name="include"> The linq expression for include relations we want. </param>
-        /// <returns> Return the list of TEntity include relations. </returns>
+         
         public virtual async Task<List<TEntity>> GetAllAsync(Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>>? include = null)
         {
             IQueryable<TEntity> query = dbSet;
@@ -142,6 +129,11 @@ namespace Infracstructures
 
         public virtual async Task<TEntity?> GetByIdAsync(int id) => await dbSet.FindAsync(id);
 
+        public void Update(TEntity? model)
+        {
+            dbSet.Update(model);
+        }
+
         public void UpdateRange(List<TEntity> models)
         {
             dbSet.UpdateRange(models);
@@ -150,32 +142,13 @@ namespace Infracstructures
         // Implement to pagination method
         public async Task<Pagination<TEntity>> ToPaginationAsync(int pageIndex = 0, int pageSize = 10)
         {
-            // get total count of items in the db set
-            var itemCount = await dbSet.CountAsync();
+            var totalItems = await dbSet.CountAsync();
+            var items = await dbSet.Skip(pageIndex * pageSize).Take(pageSize).ToListAsync();
 
-            // Create Pagination instance
-            // to set data related to paging
-            // Calculate and replace pageIndex and pageSize
-            // if they are invalid
-            var result = new Pagination<TEntity>()
-            {
-                PageSize = pageSize,
-                TotalItemCount = itemCount,
-                PageIndex = pageIndex,
-            };
-
-            // Take items according to the page size and page index
-            // skip items in the previous pages
-            // and take next items equal to page size
-            var items = await dbSet.Skip(result.PageIndex * result.PageSize)
-                .Take(result.PageSize)
-                .AsNoTracking()
-                .ToListAsync();
-
-            // Assign items to page
-            result.Items = items;
-            return result;
+            return new Pagination<TEntity>(items, totalItems, pageIndex, pageSize);
         }
+
+
 
         public async Task<TEntity> CloneAsync(TEntity model)
         {

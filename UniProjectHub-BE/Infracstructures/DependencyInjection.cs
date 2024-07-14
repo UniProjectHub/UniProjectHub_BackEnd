@@ -26,7 +26,44 @@ namespace Infracstructures
     public static class DependencyInjection
     {
         public static IServiceCollection AddInfractstructure(this IServiceCollection services, IConfiguration config)
-        {    // Use local DB
+        {    
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+
+
+            // Register Project-related services
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IProjectService, ProjectService>();
+
+            // Register Task-related services
+            services.AddTransient<ITaskRepository, TaskRepository>();
+            services.AddTransient<ITaskService, TaskSevice>();
+
+            // Register SubTask-related services
+            services.AddTransient<ISubTaskRepository, SubTaskRepository>();
+            services.AddTransient<ISubTaskService, SubTaskService>();
+
+            // Register MemberInTask-related services
+            services.AddTransient<IMemberInTaskService, MemberInTaskService>();
+            services.AddTransient<IMemberInTaskRepository, MemberInTaskRepository>();
+
+            // Register Blog-related services
+            services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddTransient<IBlogService, BlogService>();
+
+            // Register Category-related services
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<ICategoryService, CategoryService>();
+
+            // Register Member-related services
+            services.AddTransient<IMemberRepository, MemberRepository>();
+            services.AddTransient<IMemberService, MemberService>();
+
+            // Register Comment-related services
+            services.AddTransient<ICommentRepository, CommentRepository>();
+            services.AddTransient<ICommentService, CommentService>();
+
+            // Use local DB
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(config.GetConnectionString("UniProject")));
 
             services.AddCors(options =>
@@ -63,9 +100,6 @@ namespace Infracstructures
             // Register AutoMapper
             services.AddAutoMapper(typeof(MapperConfigs).Assembly);
             services.AddControllers();
-
-
-
 
             return services;
         }

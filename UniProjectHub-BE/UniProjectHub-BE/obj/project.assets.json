@@ -10319,6 +10319,7 @@
       "Microsoft.AspNetCore.Authentication.Google >= 8.0.5",
       "Microsoft.AspNetCore.OpenApi >= 8.0.5",
       "Microsoft.Data.SqlClient >= 5.2.0",
+      "Microsoft.EntityFrameworkCore.Analyzers >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
@@ -10328,19 +10329,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\caoco\\.nuget\\packages\\": {}
+    "C:\\Users\\adm\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+      "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
       "projectName": "UniProjectHub-BE",
-      "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
-      "packagesPath": "C:\\Users\\caoco\\.nuget\\packages\\",
-      "outputPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\UniProjectHub-BE\\obj\\",
+      "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+      "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+      "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\caoco\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10348,14 +10354,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
-              "projectPath": "E:\\Dev\\EXE202\\UniProjectHub\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj"
+            "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
+              "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj"
             }
           }
         }
@@ -10364,6 +10371,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10381,6 +10393,10 @@
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[5.2.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.Analyzers": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -10430,7 +10446,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

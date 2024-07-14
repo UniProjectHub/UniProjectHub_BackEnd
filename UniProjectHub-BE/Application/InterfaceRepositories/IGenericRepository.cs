@@ -1,8 +1,10 @@
 ﻿using Application.Commons;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +12,11 @@ namespace Application.InterfaceRepositories
 {
     public interface IGenericRepository<TModel> where TModel : class
     {
+        
+        TModel GetByID(object id);
+        void Insert(TModel entity);
+        void Delete(object id);
+        void Delete(TModel entityToDelete);
         Task<TModel> CloneAsync(TModel model);
         Task<List<TModel>> GetAllAsync();
         Task<List<TModel>> GetAllAsync(Func<IQueryable<TModel>, IIncludableQueryable<TModel, object>>? include = null);

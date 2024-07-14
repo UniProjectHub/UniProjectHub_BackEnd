@@ -21,6 +21,10 @@ namespace Application.Services
         private readonly IMemberRepository _memberRepository;
         private readonly IMapper _mapper;
         private readonly IValidator<MemberViewModel> _validator;
+        public async Task<Member> GetMemberByIdAsync(int id)
+        {
+            return await _memberRepository.GetByIdAsync(id);
+        }
 
         public MemberService(IMemberRepository memberRepository, IMapper mapper, IValidator<MemberViewModel> validator)
         {
@@ -57,14 +61,13 @@ namespace Application.Services
             if (member == null)
                 throw new KeyNotFoundException("Member not found");
 
-            var validationResult = await ValidateMemberAsync(memberViewModel);
+            var validationResult = await _validator.ValidateAsync(memberViewModel);
             if (!validationResult.IsValid)
             {
                 var validationResults = validationResult.Errors
                     .Select(e => new System.ComponentModel.DataAnnotations.ValidationResult(e.ErrorMessage, new[] { e.PropertyName }))
                     .ToList();
                 var validationMessage = string.Join("; ", validationResults.Select(vr => vr.ErrorMessage));
-               // nedd fix agian
                 throw new ValidationException(validationMessage, (IEnumerable<ValidationFailure>)validationResults);
             }
 
@@ -82,6 +85,15 @@ namespace Application.Services
         public Task<System.ComponentModel.DataAnnotations.ValidationResult> ValidateMemberAsync(MemberViewModelValidator memberViewModel)
         {
             throw new NotImplementedException();
+        }
+
+        public async System.Threading.Tasks.Task DeleteMemberAsync(int id)
+        {
+            var member = await _memberRepository.GetByIdAsync(id);
+            if (member == null)
+                throw new KeyNotFoundException("Member not found");
+
+            await _memberRepository.DeleteAsync(member);
         }
     }
 }

@@ -18,7 +18,10 @@ namespace Infracstructures.Repositories
         {
             _context = context;
         }
-
+        public async Task<List<Schedule>> GetAllSchedulesAsync()
+        {
+            return await _context.Set<Schedule>().ToListAsync();
+        }
         public async System.Threading.Tasks.Task AddAsync(Schedule model)
         {
             await _context.Set<Schedule>().AddAsync(model);
@@ -89,14 +92,9 @@ namespace Infracstructures.Repositories
                 .Take(pageSize)
                 .ToListAsync();
 
-            return new Pagination<Schedule>
-            {
-                TotalItemCount = totalRecords,
-                PageSize = pageSize,
-                PageIndex = pageIndex,
-                Items = schedules
-            };
+            return new Pagination<Schedule>(schedules, totalRecords, pageIndex, pageSize);
         }
+
 
         public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {

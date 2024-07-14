@@ -16,8 +16,15 @@ namespace Infracstructures.FluentAPIs
             builder.ToTable("Member");
             builder.HasKey(x => x.Id);
 
-            builder.HasOne(x => x.User).WithMany(x => x.Members).HasForeignKey(x => x.MenberId);
-            builder.HasOne(x => x.Project).WithMany(x => x.Members).HasForeignKey(x => x.ProjectId);
+            builder.HasOne(x => x.User)
+                .WithMany(x => x.Members)
+                .HasForeignKey(x => x.MenberId)
+             .OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasOne(x => x.Project)
+                .WithMany(x => x.Members)
+                .HasForeignKey(x => x.ProjectId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

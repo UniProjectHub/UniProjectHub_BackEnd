@@ -29,7 +29,6 @@ namespace Domain.Models
         public ICollection<MemberInTask>? MemberInTasks { get; set; }
         public ICollection<Comment>? Comments { get; set; }
         public ICollection<File>? files { get; set; }
-
     }
 
 }

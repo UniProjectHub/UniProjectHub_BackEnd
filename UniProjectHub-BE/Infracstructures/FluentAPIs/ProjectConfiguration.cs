@@ -20,7 +20,6 @@ namespace Infracstructures.FluentAPIs
             builder.HasMany(x => x.Members).WithOne(x => x.Project).OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(x => x.GroupChats).WithOne(x => x.Project).OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(x => x.Tasks).WithOne(x => x.Project).OnDelete(DeleteBehavior.Cascade);
-
         }
     }
 }

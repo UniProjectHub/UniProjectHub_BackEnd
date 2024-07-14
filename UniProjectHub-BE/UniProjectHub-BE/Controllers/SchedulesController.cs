@@ -14,7 +14,12 @@ namespace UniProjectHub_BE.Controllers
         {
             _scheduleService = scheduleService;
         }
-
+        [HttpGet("all-schedules")]
+        public async Task<IActionResult> GetAllSchedules()
+        {
+            var schedules = await _scheduleService.GetAllSchedulesAsync();
+            return Ok(schedules);
+        }
         [HttpPost("create-schedule")]
         public async Task<IActionResult> CreateSchedule([FromBody] ScheduleViewModel scheduleViewModel)
         {

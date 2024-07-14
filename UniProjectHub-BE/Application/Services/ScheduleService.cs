@@ -28,7 +28,11 @@ namespace Application.Services
         {
             return await _validator.ValidateAsync(scheduleViewModel);
         }
-
+        public async Task<IEnumerable<ScheduleViewModel>> GetAllSchedulesAsync()
+        {
+            var schedules = await _scheduleRepository.GetAllSchedulesAsync();
+            return _mapper.Map<IEnumerable<ScheduleViewModel>>(schedules);
+        }
         public async Task<Schedule> CreateScheduleAsync(ScheduleViewModel scheduleViewModel)
         {
             var validationResult = await ValidateScheduleAsync(scheduleViewModel);
