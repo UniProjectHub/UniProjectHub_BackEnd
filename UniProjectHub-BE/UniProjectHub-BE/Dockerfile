@@ -7,7 +7,6 @@ COPY UniProjectHub-BE/UniProjectHub-BE.csproj ./UniProjectHub-BE/
 COPY Domain/Domain.csproj ./Domain/
 COPY Application/Application.csproj ./Application/
 COPY Infracstructures/Infracstructures.csproj ./Infracstructures/
-
 RUN dotnet restore ./UniProjectHub-BE/UniProjectHub-BE.csproj
 
 # Copy full solution and build
@@ -24,4 +23,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
+# Expose port and run the application
+EXPOSE 80
 ENTRYPOINT ["dotnet", "UniProjectHub-BE.dll"]

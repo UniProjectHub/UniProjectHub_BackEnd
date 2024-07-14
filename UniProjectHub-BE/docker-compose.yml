@@ -3,27 +3,31 @@ version: '3.8'
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
-    ports:
-      - "1433:1433"
+    hostname: sqlserver-db
+    container_name: sqlserver
+    user: root
     environment:
       SA_PASSWORD: "sa@root123@"
       ACCEPT_EULA: "Y"
-    networks:
-      - uniprojecthub-network
-
-  uniprojecthub.api:
-    image: backendeventapi
-    build:
-      context: ./UniProjectHub-BE
-      dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql/data
+      - mssql-log:/var/opt/mssql/log
+      - mssql-secrets:/var/opt/mssql/secrets
+
+  webapi:
+    build:
+      context: .
+      dockerfile: UniProjectHub-BE/Dockerfile
+    container_name: webapi
+    ports:
+      - "80"
     depends_on:
       - sqlserver
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=uniProjectHub_data;User Id=sa;Password=sa@root123@;TrustServerCertificate=True;
-      # Add your other environment variables here
+      - ConnectionStrings__DefaultConnection=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True;
       - FMPKey=Insert_key_here
       - JWT__Issuer=https://localhost
       - JWT__Audience=https://localhost
@@ -48,14 +52,8 @@ services:
       - Firebase__Bucket=apnuni-9df6a.appspot.com
       - Firebase__AuthEmail=apnunihub@gmail.com
       - Firebase__AuthPassword=@test123
-    networks:
-      - uniprojecthub-network
 
-networks:
-  uniprojecthub-network:
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 14.225.220.0/24
-          gateway: 14.225.220.1
+volumes:
+  sqlserverdata:
+  mssql-log:
+  mssql-secrets:
