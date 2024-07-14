@@ -17,7 +17,8 @@ services:
       - sqlserverdata:/var/opt/mssql/data
       - mssql-log:/var/opt/mssql/log
       - mssql-secrets:/var/opt/mssql/secrets
-uniprojecthub-be:
+
+  uniprojecthub-be:
     image: ${DOCKER_REGISTRY-}apnunihub
     build:
       context: .
@@ -53,7 +54,7 @@ uniprojecthub-be:
       - PayOS__ChecksumKey=93246dfb9408c3e521d521f5ea788647014b99560489d4a7b5f5177722056bc1
       - PayOS__ReturnUrl=https://localhost:7067/api/payment
       - PayOS__ReturnUrlFail=https://localhost:7067/api/payment
-
+   
 networks:
   demo:
     driver: bridge
