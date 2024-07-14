@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    hostname: sqlserver-db
+    container_name: sqlserver
+    user: root
+    environment:
+      SA_PASSWORD: "sa@root123@"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql/data
+      - mssql-log:/var/opt/mssql/log
+      - mssql-secrets:/var/opt/mssql/secrets
+
+  webapi:
+    build:
+      context: .
+      dockerfile: UniProjectHub-BE/Dockerfile
+    container_name: webapi
+    ports:
+      - "80:80"
+    depends_on:
+      - sqlserver
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=sqlserver-db;Database=uniProjectHub_data;User Id=sa;Password=YourStrong@Passw0rd;TrustServerCertificate=True;
+      - FMPKey=Insert_key_here
+      - JWT__Issuer=https://localhost
+      - JWT__Audience=https://localhost
+      - JWT__SigningKey=sdgfijjh3466iu345g87g08c24g7204gr803g30587ghh35807fg39074fvg80493745gf082b507807g807fgf
+      - JWT__AccessTokenExpiration=30
+      - JWT__RefreshTokenExpiration=7
+      - Authentication__Google__ClientId=57402755078-3cjl5d90k6rs3evbriav7cg08iapik56.apps.googleusercontent.com
+      - Authentication__Google__ClientSecret=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
+      - Authentication__Facebook__AppId=3624248217891106
+      - Authentication__Facebook__AppSecret=6dfb464fc05e167316ea21d397f32931
+      - MailSettings__Mail=apnUniHub@gmail.com
+      - MailSettings__DisplayName=APN
+      - MailSettings__Password=ejrhxiupqwojsqmd
+      - MailSettings__Host=smtp.gmail.com
+      - MailSettings__Port=587
+      - PayOS__ClientId=70556595-b5cc-47ff-88bf-a26e780b0396
+      - PayOS__ApiKey=b40c5d3b-9c3d-42f6-8022-4c92d1b7bd7d
+      - PayOS__ChecksumKey=93246dfb9408c3e521d521f5ea788647014b99560489d4a7b5f5177722056bc1
+      - PayOS__ReturnUrl=https://localhost/api/payment
+      - PayOS__ReturnUrlFail=https://localhost/api/payment
+      - Firebase__ApiKey=AIzaSyBxadf9VzAEg8fEfPE20OnyW9pQkRLMDys
+      - Firebase__Bucket=apnuni-9df6a.appspot.com
+      - Firebase__AuthEmail=apnunihub@gmail.com
+      - Firebase__AuthPassword=@test123
+
+volumes:
+  sqlserverdata:
+  mssql-log:
+  mssql-secrets:
