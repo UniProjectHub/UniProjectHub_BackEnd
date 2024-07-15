@@ -1,32 +1,40 @@
-version: '3.8'
+﻿version: '3.4'
 
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2019-latest
-    ports:
-      - "1433:1433"
+    hostname: sqlserver-db
+    container_name: sqlserver
+    user: root
+    networks:
+      - demo
     environment:
       SA_PASSWORD: "sa@root123@"
       ACCEPT_EULA: "Y"
-    networks:
-      - uniprojecthub-network
-
-  uniprojecthub.api:
-    image: backendeventapi
-    build:
-      context: ./UniProjectHub-BE
-      dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "1433"
+    volumes:
+      - sqlserverdata:/var/opt/mssql/data
+      - mssql-log:/var/opt/mssql/log
+      - mssql-secrets:/var/opt/mssql/secrets
+
+  uniprojecthub-be:
+    image: ${DOCKER_REGISTRY-}apnunihub
+    build:
+      context: .
+      dockerfile: UniProjectHub-BE/Dockerfile
+    container_name: uniprojecthub-be
+    networks:
+      - demo
+    ports:
+      - "32795:8080"   # Ánh xạ cổng 8080 trong container sang cổng 32795 trên máy chủ
+      - "443:443"      # Cổng HTTPS, nếu cần
     depends_on:
       - sqlserver
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=uniProjectHub_data;User Id=sa;Password=sa@root123@;TrustServerCertificate=True;
-      # Add your other environment variables here
+      - ConnectionStrings__DefaultConnectionVPS=Server=14.225.220.108;Database=uniProjectHub_data;User Id=sa;Password=root123@;TrustServerCertificate=True;
       - FMPKey=Insert_key_here
-      - JWT__Issuer=https://localhost
-      - JWT__Audience=https://localhost
       - JWT__SigningKey=sdgfijjh3466iu345g87g08c24g7204gr803g30587ghh35807fg39074fvg80493745gf082b507807g807fgf
       - JWT__AccessTokenExpiration=30
       - JWT__RefreshTokenExpiration=7
@@ -42,20 +50,12 @@ services:
       - PayOS__ClientId=70556595-b5cc-47ff-88bf-a26e780b0396
       - PayOS__ApiKey=b40c5d3b-9c3d-42f6-8022-4c92d1b7bd7d
       - PayOS__ChecksumKey=93246dfb9408c3e521d521f5ea788647014b99560489d4a7b5f5177722056bc1
-      - PayOS__ReturnUrl=https://localhost/api/payment
-      - PayOS__ReturnUrlFail=https://localhost/api/payment
-      - Firebase__ApiKey=AIzaSyBxadf9VzAEg8fEfPE20OnyW9pQkRLMDys
-      - Firebase__Bucket=apnuni-9df6a.appspot.com
-      - Firebase__AuthEmail=apnunihub@gmail.com
-      - Firebase__AuthPassword=@test123
-    networks:
-      - uniprojecthub-network
-
+  
 networks:
-  uniprojecthub-network:
+  demo:
     driver: bridge
-    ipam:
-      driver: default
-      config:
-        - subnet: 14.225.220.0/24
-          gateway: 14.225.220.1
+
+volumes:
+  sqlserverdata:
+  mssql-log:
+  mssql-secrets:
