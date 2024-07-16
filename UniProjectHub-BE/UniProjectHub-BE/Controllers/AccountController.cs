@@ -159,7 +159,7 @@ namespace api.Controllers
                 {
                     UserName = registerDto.Username,
                     Email = registerDto.Email,
-                    EmailConfirmed = false
+                    EmailConfirmed = true
                 };
 
                 var createdUser = await userManager.CreateAsync(user, registerDto.Password);
