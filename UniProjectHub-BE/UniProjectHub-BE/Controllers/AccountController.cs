@@ -62,10 +62,10 @@ namespace api.Controllers
                 return Unauthorized(new { message = "Invalid username!" });
             }
 
-            if (!user.EmailConfirmed)
-            {
-                return Unauthorized(new { message = "Email not confirmed." });
-            }
+            //if (!user.EmailConfirmed)
+            //{
+            //    return Unauthorized(new { message = "Email not confirmed." });
+            //}
 
             var result = await signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
 
@@ -159,7 +159,7 @@ namespace api.Controllers
                 {
                     UserName = registerDto.Username,
                     Email = registerDto.Email,
-                    EmailConfirmed = false
+                    EmailConfirmed = true
                 };
 
                 var createdUser = await userManager.CreateAsync(user, registerDto.Password);
@@ -169,26 +169,26 @@ namespace api.Controllers
                     var roleResult = await userManager.AddToRoleAsync(user, "User");
                     if (roleResult.Succeeded)
                     {
-                        // Phát sinh token để xác nhận email
-                        var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
-                        token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+                        //// Phát sinh token để xác nhận email
+                        //var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
+                        //token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
 
-                        // https://localhost:5001/confirm-email?userId=fdsfds&token=xyz&returnUrl=
-                        var callbackUrl = Request.Scheme + "://" + Request.Host + Url.Action("confirmemail", "account", new { userId = user.Id, token = token });
+                        //// https://localhost:5001/confirm-email?userId=fdsfds&token=xyz&returnUrl=
+                        //var callbackUrl = Request.Scheme + "://" + Request.Host + Url.Action("confirmemail", "account", new { userId = user.Id, token = token });
 
-                        await emailSender.SendEmailAsync(user.Email,
-                            "Confirm email", callbackUrl);
+                        //await emailSender.SendEmailAsync(user.Email,
+                        //    "Confirm email", callbackUrl);
 
-                        if (userManager.Options.SignIn.RequireConfirmedAccount)
-                        {
+                        //if (userManager.Options.SignIn.RequireConfirmedAccount)
+                        //{
                             
                              
-                        }
-                        else
-                        {
-                            await signInManager.SignInAsync(user, isPersistent: false);
-                            return Ok("Create account OK");
-                        }
+                        //}
+                        //else
+                        //{
+                        //    await signInManager.SignInAsync(user, isPersistent: false);
+                        //    return Ok("Create account OK");
+                        //}
 
                         return Ok(
                             new NewUserDto
