@@ -56,7 +56,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("_myAllowSpecificOrigins",
         builder =>
         {
-            builder.WithOrigins("*")
+            builder.WithOrigins("unipro.mieutech.io.vn","localhost")
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -238,7 +238,7 @@ if (app.Environment.IsDevelopment())
 app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .AllowCredentials()
-                            .WithOrigins("*"));
+                            .WithOrigins("unipro.mieutech.io.vn","localhost"));
 
  
 app.UseAuthentication();
