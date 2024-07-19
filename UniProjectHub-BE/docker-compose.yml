@@ -27,8 +27,8 @@ services:
     networks:
       - demo
     ports:
-      - "2602:8080"   # Ánh xạ cổng 8080 trong container sang cổng 32795 trên máy chủ
-      - "1501:443"      # Cổng HTTPS, nếu cần
+      - "32795:8080"   # Ánh xạ cổng 8080 trong container sang cổng 32795 trên máy chủ
+      - "443:443"      # Cổng HTTPS, nếu cần
     depends_on:
       - sqlserver
     environment:
