@@ -56,8 +56,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("_myAllowSpecificOrigins",
         builder =>
         {
-            builder.WithOrigins("https://localhost:7067", "http://localhost:5275",
-                "http://localhost:5173", "http://localhost:5174")
+            builder.WithOrigins("https://localhost:7067","http://localhost:5275",
+                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175","http://unipro.mieutech.io.vn","http://localhost", "https://localhost","https://unipro.mieutech.io.vn", "unipro.mieutech.io.vn","localhost" )
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -240,7 +240,7 @@ app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .AllowCredentials()
                             .WithOrigins("https://localhost:7067","http://localhost:5275",
-                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175"));
+                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175","http://unipro.mieutech.io.vn","http://localhost", "https://localhost","https://unipro.mieutech.io.vn", "unipro.mieutech.io.vn","localhost" ));
 
  
 app.UseAuthentication();
