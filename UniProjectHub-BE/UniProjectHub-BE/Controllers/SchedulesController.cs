@@ -1,6 +1,7 @@
 ﻿using Application.InterfaceServies;
 using Application.ViewModels.ScheduleViewModel;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace UniProjectHub_BE.Controllers
 {
@@ -14,42 +15,67 @@ namespace UniProjectHub_BE.Controllers
         {
             _scheduleService = scheduleService;
         }
+
         [HttpGet("all-schedules")]
         public async Task<IActionResult> GetAllSchedules()
         {
             var schedules = await _scheduleService.GetAllSchedulesAsync();
             return Ok(schedules);
         }
+
         [HttpPost("create-schedule")]
-        public async Task<IActionResult> CreateSchedule([FromBody] ScheduleViewModel scheduleViewModel)
+        public async Task<IActionResult> CreateSchedule([FromBody] CreateScheduleViewModel createScheduleViewModel)
         {
             // Validate the model
-            var validationResult = await _scheduleService.ValidateScheduleAsync(scheduleViewModel);
+            var validationResult = await _scheduleService.ValidateScheduleAsync(createScheduleViewModel);
 
             // Check if there are any validation errors
             if (!validationResult.IsValid)
             {
-                return BadRequest(validationResult.Errors);
+                return BadRequest(new { Errors = validationResult.Errors.Select(e => e.ErrorMessage) });
             }
 
             // Proceed with creating the schedule
-            var result = await _scheduleService.CreateScheduleAsync(scheduleViewModel);
-            return Ok(result);
+            var result = await _scheduleService.CreateScheduleAsync(createScheduleViewModel);
+            return CreatedAtAction(nameof(GetScheduleById), new { id = result.Id }, result);
         }
 
-
         [HttpPut("update-schedule/{id}")]
-        public async Task<IActionResult> UpdateSchedule(int id, [FromBody] ScheduleViewModel scheduleViewModel)
+        public async Task<IActionResult> UpdateSchedule(int id, [FromBody] UpdateScheduleViewModel updateScheduleViewModel)
         {
-            var result = await _scheduleService.UpdateScheduleAsync(scheduleViewModel, id);
+            // Validate the model
+            var validationResult = await _scheduleService.ValidateScheduleAsync(updateScheduleViewModel);
+
+            // Check if there are any validation errors
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(new { Errors = validationResult.Errors.Select(e => e.ErrorMessage) });
+            }
+
+            // Proceed with updating the schedule
+            var result = await _scheduleService.UpdateScheduleAsync(id, updateScheduleViewModel);
+
+            // Check if the update was successful
+            if (result == null)
+            {
+                return NotFound($"Schedule with ID {id} not found.");
+            }
+
             return Ok(result);
         }
 
         [HttpDelete("delete-schedule/{id}")]
         public async Task<IActionResult> DeleteSchedule(int id)
         {
-            await _scheduleService.DeleteScheduleAsync(id);
-            return NoContent();
+            try
+            {
+                await _scheduleService.DeleteScheduleAsync(id);
+                return NoContent();
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound($"Schedule with ID {id} not found.");
+            }
         }
 
         [HttpGet("user/{userId}")]
@@ -63,6 +89,11 @@ namespace UniProjectHub_BE.Controllers
         public async Task<IActionResult> GetScheduleById(int id)
         {
             var result = await _scheduleService.GetScheduleByIdAsync(id);
+            if (result == null)
+            {
+                return NotFound($"Schedule with ID {id} not found.");
+            }
+
             return Ok(result);
         }
     }
