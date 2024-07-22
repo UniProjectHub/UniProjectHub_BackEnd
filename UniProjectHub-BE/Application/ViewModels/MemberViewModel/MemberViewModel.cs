@@ -13,6 +13,5 @@ namespace Application.ViewModels.MemberViewModel
         public Guid? UserId { get; set; }
         public int ProjectId { get; set; }
         public bool IsOwner { get; set; }
-        public int Role { get; set; }
     }
 }
