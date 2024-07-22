@@ -4,6 +4,7 @@ namespace Application.InterfaceRepositories
 {
     public interface IMemberRepository : IGenericRepository<Member>
     {
+
         Task<Member> GetByIdAsync(int id);
         Task<IEnumerable<Member>> GetAllAsync();
         Task<IEnumerable<Member>> GetMembersByProjectIdAsync(int projectId);

@@ -9,6 +9,7 @@ namespace Application.InterfaceRepositories
 {
     public interface ICommentRepository : IGenericRepository<Comment>
     {
+
         Task<IEnumerable<Comment>> GetAllCommentsByBlogIdAsync(int blogId);
     }
 }

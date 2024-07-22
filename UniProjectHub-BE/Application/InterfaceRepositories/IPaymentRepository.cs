@@ -9,6 +9,7 @@ namespace Application.InterfaceRepositories
 {
     public interface IPaymentRepository : IGenericRepository<Payment>
     {
+
         Task<Payment> GetByOrderIdAsync(string orderId);
     }
 }

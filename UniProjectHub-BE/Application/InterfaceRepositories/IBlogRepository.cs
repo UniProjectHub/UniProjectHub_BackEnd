@@ -9,6 +9,7 @@ namespace Application.InterfaceRepositories
 {
     public interface IBlogRepository : IGenericRepository<Blog>
     {
+
         Task<IEnumerable<Blog>> GetBlogsByCategoryIdAsync(int categoryId);
     }
 }
