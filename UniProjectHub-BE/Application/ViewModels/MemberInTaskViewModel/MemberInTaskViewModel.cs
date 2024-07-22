@@ -20,7 +20,7 @@ namespace Application.ViewModels.MemberInTaskViewModel
         public int TaskId { get; set; }
         [Required]
         public string MemberId { get; set; }
-        public DateTime JoinTime { get; set; } = DateTime.UtcNow;
+        public DateTime JoinTime { get; set; } = TimeHelper.GetVietnamTime();
     }
 
     public class MemberInTaskUpdateModel

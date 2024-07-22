@@ -1,5 +1,6 @@
 ﻿using Application.InterfaceRepositories;
 using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.MemberViewModel;
 using Application.ViewModels.ProjectViewModel;
 using AutoMapper;
@@ -35,7 +36,7 @@ namespace Application.Services
                 TypeOfSpace = request.TypeOfSpace,
                 Status = request.Status,
                 IsGroup = request.IsGroup,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = TimeHelper.GetVietnamTime()
             };
 
             await _unitOfWork.ProjectRepository.AddAsync(project);
@@ -46,7 +47,7 @@ namespace Application.Services
                 IsOwner = true,
                 ProjectId = project.Id,
                 Role = 1,
-                JoinTime = DateTime.UtcNow
+                JoinTime = TimeHelper.GetVietnamTime()
 
             };
             
@@ -66,7 +67,7 @@ namespace Application.Services
                             IsOwner = false,
                             ProjectId = project.Id,
                             Role = 1,
-                            JoinTime = DateTime.UtcNow
+                            JoinTime = TimeHelper.GetVietnamTime()
                         };
                         await _unitOfWork.MemberRepository.AddAsync(menber);
                         await _unitOfWork.SaveChangesAsync();

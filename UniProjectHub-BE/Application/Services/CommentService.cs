@@ -1,5 +1,6 @@
 ﻿using Application.InterfaceRepositories;
 using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.CommentViewModel;
 using AutoMapper;
 using Domain.Models;
@@ -19,6 +20,7 @@ namespace Application.Services
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
+
         public CommentService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
@@ -33,7 +35,7 @@ namespace Application.Services
             var comment = new Comment {
                 Description = commentViewModel.Description,
                 BlogId = commentViewModel.BlogId,
-                CreatedAt = DateTime.Now,
+                CreatedAt = TimeHelper.GetVietnamTime(),
                 OwnerId = commentViewModel.OwnerId,
                 Status = true
             };
