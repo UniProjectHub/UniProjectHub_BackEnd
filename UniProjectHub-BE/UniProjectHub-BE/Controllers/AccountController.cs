@@ -49,6 +49,32 @@ namespace api.Controllers
             this.currentUserService = currentUserService;
         }
 
+        [HttpPut("avatar/{userId}")]
+        public async Task<IActionResult> UpdateUserAvatar(string userId, IFormFile avatar)
+        {
+            var url = manageFirebase.ImageURL(avatar);
+            var user = await userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                return BadRequest("User not found for update");
+            }
+
+            user.AvatarURL = url;
+
+            var result = await userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
+                return BadRequest(ModelState);
+            }
+
+            return Ok(new { message = "User updated successfully." });
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {

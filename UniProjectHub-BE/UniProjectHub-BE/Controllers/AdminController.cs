@@ -25,6 +25,25 @@ namespace UniProjectHub_BE.Controllers
             _currentUserService = currentUserService;
         }
 
+        [HttpGet("{userId}")]
+        public async Task<IActionResult> GetUserById(string userId)
+        {
+            if (string.IsNullOrEmpty(userId))
+            {
+                return BadRequest(new { message = "UserId cannot be null or empty" });
+            }
+
+            var user = await _userManager.FindByIdAsync(userId);
+
+            if (user == null)
+            {
+                return NotFound(new { message = "User not found" });
+            }
+
+            return Ok(user);
+        }
+
+        
 
         // Get all users
         [HttpGet("users")]
