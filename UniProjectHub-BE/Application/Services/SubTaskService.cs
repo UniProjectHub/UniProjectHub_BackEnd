@@ -1,5 +1,6 @@
 ﻿using Application.InterfaceRepositories;
 using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.SubTaskViewModel;
 using AutoMapper;
 using Domain.Models;
@@ -67,7 +68,7 @@ namespace Application.Services
             // Set the Created date to now if not provided
             if (!request.Created.HasValue)
             {
-                subTask.Created = DateTime.Now;
+                subTask.Created = TimeHelper.GetVietnamTime();
             }
 
             // Add the subtask to the repository

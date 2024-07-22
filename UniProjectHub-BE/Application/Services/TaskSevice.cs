@@ -1,4 +1,5 @@
 ﻿using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.ProjectViewModel;
 using Application.ViewModels.TaskViewModel;
 using Domain.Models;
@@ -40,7 +41,8 @@ namespace Application.Services
                 Tags = taskViewModel.Tags,
                 Deadline = taskViewModel.Deadline,
                 Rate = taskViewModel.Rate,
-                ProjectId = projectId
+                ProjectId = projectId,
+                CreatedAt = TimeHelper.GetVietnamTime()
             };
 
             _unitOfWork.TaskRepository.AddEntry(task);
