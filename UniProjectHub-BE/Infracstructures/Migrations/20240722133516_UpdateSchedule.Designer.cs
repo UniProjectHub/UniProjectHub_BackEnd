@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240722121749_UpdateScheduleTableSchema")]
-    partial class UpdateScheduleTableSchema
+    [Migration("20240722133516_UpdateSchedule")]
+    partial class UpdateSchedule
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -369,21 +369,17 @@ namespace Infracstructures.Migrations
                     b.Property<string>("DateOfWeek")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EndTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("SlotEndTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("SlotEndTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("SlotStartTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("SlotStartTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("StartTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -604,13 +600,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "2a015d28-c156-4b55-89fd-853cdaad338a",
+                            Id = "1946d3e9-8d32-4d6d-b52d-0b79be184100",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "48ac3aa1-580b-45f3-959b-9c482b3fbb57",
+                            Id = "03c21ce1-e7f4-4625-a8ff-5723df8dd11a",
                             Name = "User",
                             NormalizedName = "USER"
                         });

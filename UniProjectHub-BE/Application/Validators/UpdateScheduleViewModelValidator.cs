@@ -21,24 +21,20 @@ namespace Application.Validators
 
             RuleFor(x => x.StartTime)
                 .NotEmpty().WithMessage("StartTime is required.")
-                .Matches(@"^(?:[01]\d|2[0-3]):(?:[0-5]\d)$").WithMessage("Start time must be in HH:mm format.")
-                .Must(BeAValidTime).WithMessage("Start time must be a valid time.");
+                .Must(BeAValidTime).WithMessage("StartTime must be a valid time.");
 
             RuleFor(x => x.EndTime)
                 .NotEmpty().WithMessage("EndTime is required.")
-                .Matches(@"^(?:[01]\d|2[0-3]):(?:[0-5]\d)$").WithMessage("End time must be in HH:mm format.")
-                .Must(BeAValidTime).WithMessage("End time must be a valid time.")
+                .Must(BeAValidTime).WithMessage("EndTime must be a valid time.")
                 .Must((model, endTime) => IsEndTimeGreaterThanStartTime(model.StartTime, endTime))
-                .WithMessage("End time must be greater than start time.");
+                .WithMessage("EndTime must be greater than StartTime.");
 
             RuleFor(x => x.SlotStartTime)
                 .NotEmpty().WithMessage("SlotStartTime is required.")
-                .Matches(@"^(?:[01]\d|2[0-3]):(?:[0-5]\d)$").WithMessage("SlotStartTime must be in HH:mm format.")
                 .Must(BeAValidTime).WithMessage("SlotStartTime must be a valid time.");
 
             RuleFor(x => x.SlotEndTime)
                 .NotEmpty().WithMessage("SlotEndTime is required.")
-                .Matches(@"^(?:[01]\d|2[0-3]):(?:[0-5]\d)$").WithMessage("SlotEndTime must be in HH:mm format.")
                 .Must(BeAValidTime).WithMessage("SlotEndTime must be a valid time.")
                 .Must((model, slotEndTime) => IsSlotEndTimeGreaterThanSlotStartTime(model.SlotStartTime, slotEndTime))
                 .WithMessage("SlotEndTime must be greater than SlotStartTime.");
@@ -48,29 +44,20 @@ namespace Application.Validators
                 .Length(3, 50).WithMessage("CourseName must be between 3 and 50 characters.");
         }
 
-        private bool BeAValidTime(string value)
+        private bool BeAValidTime(DateTime value)
         {
-            return TimeSpan.TryParse(value, out _);
+            // All DateTime values are valid so this method is not required
+            return true;
         }
 
-        private bool IsEndTimeGreaterThanStartTime(string startTime, string endTime)
+        private bool IsEndTimeGreaterThanStartTime(DateTime startTime, DateTime endTime)
         {
-            if (TimeSpan.TryParse(startTime, out TimeSpan start) &&
-                TimeSpan.TryParse(endTime, out TimeSpan end))
-            {
-                return end > start;
-            }
-            return false;
+            return endTime > startTime;
         }
 
-        private bool IsSlotEndTimeGreaterThanSlotStartTime(string slotStartTime, string slotEndTime)
+        private bool IsSlotEndTimeGreaterThanSlotStartTime(DateTime slotStartTime, DateTime slotEndTime)
         {
-            if (TimeSpan.TryParse(slotStartTime, out TimeSpan slotStart) &&
-                TimeSpan.TryParse(slotEndTime, out TimeSpan slotEnd))
-            {
-                return slotEnd > slotStart;
-            }
-            return false;
+            return slotEndTime > slotStartTime;
         }
     }
 }
