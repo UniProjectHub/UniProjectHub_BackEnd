@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\viewmodels\\scheduleviewmodel\\scheduleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\viewmodels\\scheduleviewmodel\\scheduleviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\domain\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\schedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240722121749_UpdateScheduleTableSchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infracstructures\\Migrations\\20240722121749_UpdateScheduleTableSchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\validators\\memberviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\validators\\memberviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\domain\\models\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\subtask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\mappers\\mapperconfigs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\mappers\\mapperconfigs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\validators\\updatescheduleviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\validators\\updatescheduleviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\domain\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\validators\\createscheduleviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\validators\\createscheduleviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\validators\\memberviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\validators\\memberviewmodelvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\services\\projectsevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\projectsevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\services\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\scheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\interfaceservies\\ischeduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -87,58 +91,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MapperConfigs.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Mappers\\MapperConfigs.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
-              "RelativeToolTip": "Infracstructures\\Mappers\\MapperConfigs.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAowDcAAAApAAAA",
+              "Title": "20240722121749_UpdateScheduleTableSchema.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240722121749_UpdateScheduleTableSchema.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240722121749_UpdateScheduleTableSchema.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240722121749_UpdateScheduleTableSchema.cs",
+              "RelativeToolTip": "Infracstructures\\Migrations\\20240722121749_UpdateScheduleTableSchema.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAiwIUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T11:55:00.047Z",
+              "WhenOpened": "2024-07-22T12:17:50.008Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CreateScheduleViewModelValidator.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Validators\\CreateScheduleViewModelValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Validators\\CreateScheduleViewModelValidator.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Validators\\CreateScheduleViewModelValidator.cs",
-              "RelativeToolTip": "Application\\Validators\\CreateScheduleViewModelValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T11:51:19.228Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ScheduleViewModel.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\ViewModels\\ScheduleViewModel\\ScheduleViewModel.cs",
-              "RelativeDocumentMoniker": "Application\\ViewModels\\ScheduleViewModel\\ScheduleViewModel.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\ViewModels\\ScheduleViewModel\\ScheduleViewModel.cs",
-              "RelativeToolTip": "Application\\ViewModels\\ScheduleViewModel\\ScheduleViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAVAAAA",
+              "Title": "Schedule.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Schedule.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Schedule.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Schedule.cs*",
+              "RelativeToolTip": "Domain\\Models\\Schedule.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T11:52:04.142Z",
+              "WhenOpened": "2024-07-22T12:12:14.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UpdateScheduleViewModelValidator.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Validators\\UpdateScheduleViewModelValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Validators\\UpdateScheduleViewModelValidator.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Validators\\UpdateScheduleViewModelValidator.cs",
-              "RelativeToolTip": "Application\\Validators\\UpdateScheduleViewModelValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T11:52:41.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MemberViewModelValidator.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Validators\\MemberViewModelValidator.cs",
               "RelativeDocumentMoniker": "Application\\Validators\\MemberViewModelValidator.cs",
@@ -151,7 +133,59 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SubTask.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\SubTask.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\SubTask.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\SubTask.cs",
+              "RelativeToolTip": "Domain\\Models\\SubTask.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T12:12:13.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Comment.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Comment.cs",
+              "RelativeToolTip": "Domain\\Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T12:11:50.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectSevice.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\ProjectSevice.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProjectSevice.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\ProjectSevice.cs",
+              "RelativeToolTip": "Application\\Services\\ProjectSevice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T12:06:54.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MapperConfigs.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Mappers\\MapperConfigs.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
+              "RelativeToolTip": "Infracstructures\\Mappers\\MapperConfigs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T11:55:00.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
@@ -164,20 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ScheduleService.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\ScheduleService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\ScheduleService.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\ScheduleService.cs",
-              "RelativeToolTip": "Application\\Services\\ScheduleService.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAADwv2oAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T11:36:01.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IScheduleService.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceServies\\IScheduleService.cs",
               "RelativeDocumentMoniker": "Application\\InterfaceServies\\IScheduleService.cs",
@@ -190,7 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SchedulesController.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\SchedulesController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\SchedulesController.cs",
