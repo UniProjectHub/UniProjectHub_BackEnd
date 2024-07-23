@@ -42,7 +42,9 @@ namespace Application.Services
                 Deadline = taskViewModel.Deadline,
                 Rate = taskViewModel.Rate,
                 ProjectId = projectId,
-                CreatedAt = TimeHelper.GetVietnamTime()
+                CreatedAt = TimeHelper.GetVietnamTime(),
+                StartDate = taskViewModel.StartDate,
+                RemainingTime = taskViewModel.RemainingTime
             };
 
             _unitOfWork.TaskRepository.AddEntry(task);
@@ -62,12 +64,16 @@ namespace Application.Services
             var showTask = new ShowTask
             {
                 Id = task.Id,
+                ProjectId= task.ProjectId,
                 TaskName = task.TaskName,
                 Status = task.Status,
                 Category = task.Category,
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
+                CreatedAt = task.CreatedAt,
+                StartDate = task.StartDate,
+                RemainingTime= task.RemainingTime
             };
             var subTasks = await _unitOfWork.SubTaskRepository.GetAllSubTasksByTaskIdAsync(id);
             ShowSubTask showSubTask = new ShowSubTask();
@@ -125,6 +131,9 @@ namespace Application.Services
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
+                CreatedAt = task.CreatedAt,
+                StartDate = task.StartDate,
+                RemainingTime = task.RemainingTime
             });
 
             return taskViewModels;
@@ -143,6 +152,9 @@ namespace Application.Services
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
+                StartDate= task.StartDate,
+                CreatedAt= task.CreatedAt,
+                RemainingTime= task.RemainingTime
             });
 
             return taskViewModels;
@@ -162,6 +174,8 @@ namespace Application.Services
             task.Tags = taskViewModel.Tags;
             task.Deadline = taskViewModel.Deadline;
             task.Rate = taskViewModel.Rate;
+            task.StartDate = taskViewModel.StartDate;
+            task.RemainingTime = taskViewModel.RemainingTime;
 
             await _unitOfWork.SaveChangesAsync();
             return taskViewModel;
