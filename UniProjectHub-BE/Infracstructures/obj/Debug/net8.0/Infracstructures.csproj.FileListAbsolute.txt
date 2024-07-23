@@ -36,3 +36,5 @@ D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\I
 D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\ref\Infracstructures.dll
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\bin\Debug\net8.0\Infracstructures.runtimeconfig.json
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.genruntimeconfig.cache
+D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\Infracstructures\bin\Debug\net8.0\Infracstructures.runtimeconfig.json
+D:\Study\cn8\EXE201\MainGit\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.genruntimeconfig.cache
