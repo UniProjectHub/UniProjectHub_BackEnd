@@ -7,8 +7,28 @@
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\memberservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\interfacerepositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\interfacerepositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\domain\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{823192CD-1142-4350-9E15-90FE2E5794B1}|Domain\\Domain.csproj|solutionrelative:domain\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\blogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\repositories\\filemanagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\filemanagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\repositories\\dashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\interfacerepositories\\ifilemanagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\interfacerepositories\\ifilemanagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\repositories\\filemanagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\filemanagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\application\\interfacerepositories\\idashboardrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,7 +102,70 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Program.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAwEsAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T12:04:26.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MemberService.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\MemberService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\MemberService.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\MemberService.cs",
+              "RelativeToolTip": "Application\\Services\\MemberService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:10:27.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\NotificationService.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Application\\Services\\NotificationService.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAUwFEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:03:47.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "INotificationRepository.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceRepositories\\INotificationRepository.cs",
+              "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\INotificationRepository.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceRepositories\\INotificationRepository.cs",
+              "RelativeToolTip": "Application\\InterfaceRepositories\\INotificationRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:02:56.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Notification.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Notification.cs",
+              "RelativeToolTip": "Domain\\Models\\Notification.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBMAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T15:02:01.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "BlogRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Repositories\\BlogRepository.cs",
@@ -94,12 +173,11 @@
               "RelativeToolTip": "Infracstructures\\Repositories\\BlogRepository.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAIA3wBoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:52:17.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:52:17.506Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "DashboardRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Repositories\\DashboardRepository.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Repositories\\DashboardRepository.cs",
@@ -107,38 +185,23 @@
               "RelativeToolTip": "Infracstructures\\Repositories\\DashboardRepository.cs",
               "ViewState": "AQIAADoAAAAAAAAAAAAAAFEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:44:44.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:44:44.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FileManageRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Repositories\\FileManageRepository.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Repositories\\FileManageRepository.cs",
               "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Repositories\\FileManageRepository.cs",
               "RelativeToolTip": "Infracstructures\\Repositories\\FileManageRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABWAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:49:17.711Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:49:17.711Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
-              "RelativeToolTip": "UniProjectHub-BE\\Program.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAQwEsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:43:29.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "IFileManageRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IFileManageRepository.cs",
               "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\IFileManageRepository.cs",
@@ -146,12 +209,11 @@
               "RelativeToolTip": "Application\\InterfaceRepositories\\IFileManageRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:49:21.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:49:21.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Infracstructures\\AppDbContext.cs",
@@ -159,12 +221,11 @@
               "RelativeToolTip": "Infracstructures\\AppDbContext.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAwBsAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:51:16.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:51:16.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "IDashboardRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IDashboardRepository.cs",
               "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\IDashboardRepository.cs",
@@ -172,12 +233,11 @@
               "RelativeToolTip": "Application\\InterfaceRepositories\\IDashboardRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:44:59.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:44:59.265Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "DashboardController.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\DashboardController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\DashboardController.cs",
@@ -185,8 +245,7 @@
               "RelativeToolTip": "UniProjectHub-BE\\Controllers\\DashboardController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwBgAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-22T14:44:03.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-22T14:44:03.19Z"
             }
           ]
         },

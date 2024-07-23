@@ -73,7 +73,8 @@ builder.Services.AddScoped<IGroupChatRepository, GroupChatRepository>();
 builder.Services.AddScoped<IGroupChatService, GroupChatService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
-
+//builder.Services.AddScoped<INotificationService, NotificationService>();
+//builder.Services.AddScoped<INotificationRepository, INotificationRepository>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
