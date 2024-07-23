@@ -46,7 +46,7 @@ namespace Application.Services
                 MenberId = ownerId,
                 IsOwner = true,
                 ProjectId = project.Id,
-                Role = 1,
+                Role = "",
                 JoinTime = TimeHelper.GetVietnamTime()
 
             };
@@ -66,7 +66,7 @@ namespace Application.Services
                             MenberId = memberInProject.UserId,
                             IsOwner = false,
                             ProjectId = project.Id,
-                            Role = 1,
+                            Role = "",
                             JoinTime = TimeHelper.GetVietnamTime()
                         };
                         await _unitOfWork.MemberRepository.AddAsync(menber);

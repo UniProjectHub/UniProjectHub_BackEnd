@@ -12,8 +12,10 @@ namespace Application.Validators
     {
         public MemberViewModelValidator()
         {
-            RuleFor(x => x.ProjectId).NotEmpty();
-            RuleFor(x => x.Id).NotEmpty();
+            RuleFor(x => x.ProjectId).NotEmpty().WithMessage("ProjectId is required.");
+            RuleFor(x => x.Id).NotEmpty().WithMessage("Id is required.");
+            RuleFor(x => x.UserId).NotEmpty().WithMessage("UserId is required.");
+            RuleFor(x => x.IsOwner).NotNull().WithMessage("IsOwner is required.");
          }
     }
 }

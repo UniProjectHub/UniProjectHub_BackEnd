@@ -13,8 +13,6 @@ namespace Application.InterfaceServies
     public interface IMemberService
     {
         Task<Member> GetMemberByIdAsync(int id);
-
-         
         Task<Member> CreateMemberAsync(MemberViewModel memberViewModel);
         Task<Member> UpdateMemberAsync(MemberViewModel memberViewModel, int id);
         System.Threading.Tasks.Task DeleteMemberAsync(int id);

@@ -36,10 +36,11 @@ public class MemberService : IMemberService
 
     public async Task<Member> CreateMemberAsync(MemberViewModel memberViewModel)
     {
-        var validationResult = await ValidateMemberAsync(memberViewModel);
+        var validator = new MemberViewModelValidator();
+        var validationResult = await validator.ValidateAsync(memberViewModel);
+
         if (!validationResult.IsValid)
         {
-            // Collect validation errors into a single string
             var validationMessage = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
             throw new FluentValidation.ValidationException(validationMessage);
         }
