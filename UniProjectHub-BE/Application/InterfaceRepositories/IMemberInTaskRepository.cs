@@ -9,6 +9,7 @@ namespace Application.InterfaceRepositories
 {
     public interface IMemberInTaskRepository : IGenericRepository<MemberInTask>
     {
+
         Task<IEnumerable<MemberInTask>> GetByTaskIdAsync(int taskId);
     }
 }

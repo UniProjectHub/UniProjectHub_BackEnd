@@ -168,7 +168,7 @@
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
           }
         },
@@ -470,7 +470,7 @@
           "System.Text.Encoding.CodePages": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -527,7 +527,7 @@
           "Microsoft.CodeAnalysis.Common": "[4.5.0]"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -587,7 +587,7 @@
           "Microsoft.CodeAnalysis.Workspaces.Common": "[4.5.0]"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -649,7 +649,7 @@
           "System.Threading.Channels": "6.0.0"
         },
         "compile": {
-          "lib/netcoreapp3.1/_._": {
+          "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll": {
             "related": ".pdb;.xml"
           }
         },
@@ -1088,7 +1088,7 @@
           "System.Text.Json": "8.0.0"
         },
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Microsoft.Extensions.DependencyModel.dll": {
             "related": ".xml"
           }
         },
@@ -1563,7 +1563,7 @@
           "System.CodeDom": "4.4.0"
         },
         "compile": {
-          "lib/netstandard2.0/_._": {}
+          "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
@@ -1939,7 +1939,7 @@
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "ref/netstandard2.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
@@ -1989,7 +1989,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Collections.Immutable.dll": {
             "related": ".xml"
           }
         },
@@ -2018,7 +2018,7 @@
       "System.Composition.AttributedModel/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Composition.AttributedModel.dll": {
             "related": ".xml"
           }
         },
@@ -2037,7 +2037,7 @@
           "System.Composition.AttributedModel": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Composition.Convention.dll": {
             "related": ".xml"
           }
         },
@@ -2056,7 +2056,7 @@
           "System.Composition.Runtime": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Composition.Hosting.dll": {
             "related": ".xml"
           }
         },
@@ -2072,7 +2072,7 @@
       "System.Composition.Runtime/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Composition.Runtime.dll": {
             "related": ".xml"
           }
         },
@@ -2093,7 +2093,7 @@
           "System.Composition.Runtime": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Composition.TypedParts.dll": {
             "related": ".xml"
           }
         },
@@ -2441,7 +2441,7 @@
       "System.IO.Pipelines/6.0.3": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
             "related": ".xml"
           }
         },
@@ -2717,7 +2717,7 @@
           "System.Collections.Immutable": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Reflection.Metadata.dll": {
             "related": ".xml"
           }
         },
@@ -3238,7 +3238,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
             "related": ".xml"
           }
         },
@@ -3342,7 +3342,7 @@
       "System.Threading.Channels/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Threading.Channels.dll": {
             "related": ".xml"
           }
         },
@@ -3494,6 +3494,8 @@
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.0",
           "Microsoft.Extensions.Identity.Core": "8.0.5",
           "Microsoft.IdentityModel.JsonWebTokens": "7.5.2",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.5.2",
@@ -10440,19 +10442,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\PhiDN11\\.nuget\\packages\\": {}
+    "C:\\Users\\adm\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+      "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
       "projectName": "UniProjectHub-BE",
-      "projectPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
-      "packagesPath": "C:\\Users\\PhiDN11\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\obj\\",
+      "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+      "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
+      "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\PhiDN11\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\adm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10460,14 +10467,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
-              "projectPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj"
+            "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
+              "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj"
             }
           }
         }
@@ -10555,7 +10563,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

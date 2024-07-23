@@ -13,8 +13,7 @@ namespace Application.Validators
         public MemberViewModelValidator()
         {
             RuleFor(x => x.ProjectId).NotEmpty();
-            RuleFor(x => x.MemberId).NotEmpty();
-            RuleFor(x => x.Role).InclusiveBetween(1, 5);
-        }
+            RuleFor(x => x.Id).NotEmpty();
+         }
     }
 }

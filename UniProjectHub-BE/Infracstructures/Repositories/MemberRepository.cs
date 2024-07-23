@@ -15,18 +15,15 @@ namespace Infracstructures.Repositories
         private readonly AppDbContext _context;
         private readonly DbSet<Member> _dbSet;
 
-       
-
-
-        public async Task<Member> GetByIdAsync(int id)
-        {
-            return await _context.Members.FindAsync(id);
-        }
-
         public MemberRepository(AppDbContext context)
         {
             _context = context;
             _dbSet = context.Set<Member>();
+        }
+
+        public async Task<Member> GetByIdAsync(int id)
+        {
+            return await _dbSet.FindAsync(id);
         }
 
         public async System.Threading.Tasks.Task AddAsync(Member member)
@@ -37,12 +34,14 @@ namespace Infracstructures.Repositories
 
         public void AddAttach(Member model)
         {
-            throw new NotImplementedException();
+            _dbSet.Attach(model);
+            _context.SaveChanges();
         }
 
         public void AddEntry(Member model)
         {
-            throw new NotImplementedException();
+            _context.Entry(model).State = EntityState.Added;
+            _context.SaveChanges();
         }
 
         public async System.Threading.Tasks.Task AddRangeAsync(List<Member> models)
@@ -55,10 +54,17 @@ namespace Infracstructures.Repositories
         {
             var clonedMember = new Member
             {
-                 
+                ProjectId = model.ProjectId,
+                MenberId = model.MenberId,
+                IsOwner = model.IsOwner,
+                Role = model.Role,
+                JoinTime = model.JoinTime,
+                LeftTime = model.LeftTime,
+                User = model.User,
+                Project = model.Project
             };
 
-            _dbSet.Add(clonedMember);
+            await _dbSet.AddAsync(clonedMember);
             await _context.SaveChangesAsync();
 
             return clonedMember;
@@ -76,16 +82,21 @@ namespace Infracstructures.Repositories
 
         public void Delete(Member entityToDelete)
         {
-            throw new NotImplementedException();
+            if (_context.Entry(entityToDelete).State == EntityState.Detached)
+            {
+                _dbSet.Attach(entityToDelete);
+            }
+            _dbSet.Remove(entityToDelete);
+            _context.SaveChanges();
         }
 
         public async System.Threading.Tasks.Task DeleteAsync(Member member)
         {
-            _context.Members.Remove(member);
+            _dbSet.Remove(member);
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<Member>> GetAllAsync()
+        public async Task<IEnumerable<Member>> GetAllAsync()
         {
             return await _dbSet.ToListAsync();
         }
@@ -119,7 +130,6 @@ namespace Infracstructures.Repositories
             return _dbSet.Find(id);
         }
 
-        
         public async Task<IEnumerable<Member>> GetMembersByProjectIdAsync(int projectId)
         {
             return await _dbSet.Where(m => m.ProjectId == projectId).ToListAsync();
@@ -150,46 +160,42 @@ namespace Infracstructures.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
-        {
-            throw new NotImplementedException();
-        }
-
         public void UpdateRange(List<Member> models)
         {
             _dbSet.UpdateRange(models);
             _context.SaveChanges();
         }
 
-        void IGenericRepository<Member>.Update(Member model)
-        {
-            throw new NotImplementedException();
-        }
-
-       
         public async Task<IEnumerable<int>> GetProjectIdsByUserOwnerAsync(string userId)
         {
-            return await _context.Set<Member>()
+            return await _dbSet
                 .Where(m => m.MenberId == userId && m.IsOwner)
                 .Select(m => m.ProjectId)
                 .ToListAsync();
         }
+
         public async Task<IEnumerable<int>> GetProjectIdsByUserNotOwnerAsync(string userId)
         {
-            return await _context.Set<Member>()
-                .Where(m => m.MenberId == userId && m.IsOwner == false)
+            return await _dbSet
+                .Where(m => m.MenberId == userId && !m.IsOwner)
                 .Select(m => m.ProjectId)
                 .ToListAsync();
         }
+
         public async Task<IEnumerable<int>> GetProjectIdsByUserAsync(string userId)
         {
-            return await _context.Set<Member>()
+            return await _dbSet
                 .Where(m => m.MenberId == userId)
                 .Select(m => m.ProjectId)
                 .ToListAsync();
         }
 
-        System.Threading.Tasks.Task IMemberRepository.UpdateAsync(Member member)
+        Task<List<Member>> IGenericRepository<Member>.GetAllAsync()
+        {
+            return _dbSet.ToListAsync();
+        }
+
+        public System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {
             throw new NotImplementedException();
         }

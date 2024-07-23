@@ -4,6 +4,7 @@ using Infracstructures;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240722133044_UpdateScheduleT")]
+    partial class UpdateScheduleT
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -597,13 +600,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1946d3e9-8d32-4d6d-b52d-0b79be184100",
+                            Id = "6b310db0-5ed9-47e6-845b-f2d81f344999",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "03c21ce1-e7f4-4625-a8ff-5723df8dd11a",
+                            Id = "52152a30-fbf9-467d-84c3-ae8e0cef2901",
                             Name = "User",
                             NormalizedName = "USER"
                         });

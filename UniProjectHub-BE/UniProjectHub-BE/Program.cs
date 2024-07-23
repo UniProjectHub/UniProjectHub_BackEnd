@@ -71,6 +71,9 @@ builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddScoped<IScheduleService, ScheduleService>();
 builder.Services.AddScoped<IGroupChatRepository, GroupChatRepository>();
 builder.Services.AddScoped<IGroupChatService, GroupChatService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
@@ -135,7 +138,8 @@ builder.Services.AddAutoMapper(typeof(MapperConfigs).Assembly);
 
 // Add FluentValidation
 builder.Services.AddValidatorsFromAssemblyContaining<ScheduleViewModelValidator>();
-
+builder.Services.AddValidatorsFromAssemblyContaining<CreateScheduleViewModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateScheduleViewModelValidator>();
 //Mail setting
 builder.Services.AddOptions();
 var mailsettings = builder.Configuration.GetSection("MailSettings");

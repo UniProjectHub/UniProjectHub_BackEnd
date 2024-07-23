@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240704201930_RemoveTeacherIdFromSchedule")]
-    partial class RemoveTeacherIdFromSchedule
+    [Migration("20240722133516_UpdateSchedule")]
+    partial class UpdateSchedule
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -381,20 +381,10 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("TeacherId")
-                        .IsRequired()
-                        .HasColumnType("int");
-
-                    b.Property<string>("TeacherId1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TeacherId1");
 
                     b.HasIndex("UserId");
 
@@ -610,13 +600,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d2919212-ce1d-4b11-b611-15e00f5ba427",
+                            Id = "1946d3e9-8d32-4d6d-b52d-0b79be184100",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "507513f2-29ab-46ef-b60f-c5e48c90d8f1",
+                            Id = "03c21ce1-e7f4-4625-a8ff-5723df8dd11a",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -855,18 +845,10 @@ namespace Infracstructures.Migrations
 
             modelBuilder.Entity("Domain.Models.Schedule", b =>
                 {
-                    b.HasOne("Domain.Models.Users", "Teacher")
-                        .WithMany()
-                        .HasForeignKey("TeacherId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Domain.Models.Users", "User")
                         .WithMany("Schedules")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("Teacher");
 
                     b.Navigation("User");
                 });

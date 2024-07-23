@@ -19,7 +19,8 @@ namespace Infracstructures.Mappers
     {
         public MapperConfigs()
         {
-            CreateMap<Member, MemberViewModel>().ReverseMap();
+            CreateMap<Member, MemberViewModel>()
+            .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.MenberId));
             CreateMap<GroupChat, GroupChatViewModel>().ReverseMap();
             CreateMap<File, FileViewModel>().ReverseMap();
             //Project
@@ -50,6 +51,25 @@ namespace Infracstructures.Mappers
             CreateMap<ScheduleViewModel, Schedule>()
     .ForMember(dest => dest.Id, opt => opt.Ignore()); // Assuming Id is an identity column
             CreateMap<Schedule, ScheduleViewModel>();
+            CreateMap<CreateScheduleViewModel, Schedule>()
+            .ForMember(dest => dest.Id, opt => opt.Ignore()) // Ignore Id if it's auto-generated
+            .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
+            .ForMember(dest => dest.DateOfWeek, opt => opt.MapFrom(src => src.DateOfWeek))
+            .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime))
+            .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime))
+            .ForMember(dest => dest.SlotStartTime, opt => opt.MapFrom(src => src.SlotStartTime))
+            .ForMember(dest => dest.SlotEndTime, opt => opt.MapFrom(src => src.SlotEndTime))
+            .ForMember(dest => dest.CourseName, opt => opt.MapFrom(src => src.CourseName));
+
+            CreateMap<UpdateScheduleViewModel, Schedule>()
+                .ForMember(dest => dest.Id, opt => opt.Ignore()) // Ignore Id if it's auto-generated
+                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
+                .ForMember(dest => dest.DateOfWeek, opt => opt.MapFrom(src => src.DateOfWeek))
+                .ForMember(dest => dest.StartTime, opt => opt.MapFrom(src => src.StartTime))
+                .ForMember(dest => dest.EndTime, opt => opt.MapFrom(src => src.EndTime))
+                .ForMember(dest => dest.SlotStartTime, opt => opt.MapFrom(src => src.SlotStartTime))
+                .ForMember(dest => dest.SlotEndTime, opt => opt.MapFrom(src => src.SlotEndTime))
+                .ForMember(dest => dest.CourseName, opt => opt.MapFrom(src => src.CourseName));
 
         }
     }

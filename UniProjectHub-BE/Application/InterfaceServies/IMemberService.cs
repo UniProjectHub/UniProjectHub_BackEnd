@@ -14,10 +14,11 @@ namespace Application.InterfaceServies
     {
         Task<Member> GetMemberByIdAsync(int id);
 
-        Task<ValidationResult> ValidateMemberAsync(MemberViewModelValidator memberViewModel);
+         
         Task<Member> CreateMemberAsync(MemberViewModel memberViewModel);
         Task<Member> UpdateMemberAsync(MemberViewModel memberViewModel, int id);
         System.Threading.Tasks.Task DeleteMemberAsync(int id);
         Task<IEnumerable<MemberViewModel>> GetMembersByProjectIdAsync(int projectId);
+        Task<IEnumerable<MemberViewModel>> GetAllMembersAsync();
     }
 }
