@@ -42,7 +42,8 @@ namespace Application.Services
                 Deadline = taskViewModel.Deadline,
                 Rate = taskViewModel.Rate,
                 ProjectId = projectId,
-                CreatedAt = TimeHelper.GetVietnamTime()
+                CreatedAt = TimeHelper.GetVietnamTime(),
+                StartDate = taskViewModel.StartDate
             };
 
             _unitOfWork.TaskRepository.AddEntry(task);
@@ -68,6 +69,8 @@ namespace Application.Services
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
+                CreatedAt = task.CreatedAt,
+                StartDate = task.StartDate
             };
             var subTasks = await _unitOfWork.SubTaskRepository.GetAllSubTasksByTaskIdAsync(id);
             ShowSubTask showSubTask = new ShowSubTask();
@@ -125,6 +128,9 @@ namespace Application.Services
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
+                CreatedAt = task.CreatedAt,
+                StartDate = task.StartDate
+
             });
 
             return taskViewModels;
@@ -143,6 +149,8 @@ namespace Application.Services
                 Tags = task.Tags,
                 Deadline = task.Deadline,
                 Rate = task.Rate,
+                StartDate= task.StartDate,
+                CreatedAt= task.CreatedAt
             });
 
             return taskViewModels;
@@ -162,6 +170,7 @@ namespace Application.Services
             task.Tags = taskViewModel.Tags;
             task.Deadline = taskViewModel.Deadline;
             task.Rate = taskViewModel.Rate;
+            task.StartDate = taskViewModel.StartDate;
 
             await _unitOfWork.SaveChangesAsync();
             return taskViewModel;
