@@ -1,17 +1,9 @@
 ﻿using Application.InterfaceServies;
 using Application.ViewModels;
-using Application.ViewModels.ProjectViewModel;
 using Application.ViewModels.TaskViewModel;
 using Domain.Models;
 using Infracstructures;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static Application.ViewModels.ProjectViewModel.ProjectViewModel;
 
 namespace Application.Services
 {
@@ -25,16 +17,18 @@ namespace Application.Services
             _unitOfWork = unitOfWork;
             _userManager = userManager;
         }
+
         // Create
-        public async Task<TaskViewModel> CreateTaskAsync(int projectId, TaskViewModel taskViewModel)
+        public async Task<CreateTaskModel> CreateTaskAsync(int projectId, CreateTaskModel taskViewModel)
         {
-            var projects = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
-            if (projects == null)
+            var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+            if (project == null)
             {
                 return null;
             }
+
             var task = new Domain.Models.Task
-            {   
+            {
                 TaskName = taskViewModel.TaskName,
                 Status = taskViewModel.Status,
                 Category = taskViewModel.Category,
@@ -44,8 +38,11 @@ namespace Application.Services
                 ProjectId = projectId,
                 CreatedAt = TimeHelper.GetVietnamTime(),
                 StartDate = taskViewModel.StartDate,
-                RemainingTime = taskViewModel.RemainingTime
+                RemainingTime = taskViewModel.RemainingTime,
+                OwnerId = taskViewModel.OwnerId,  
             };
+
+            Console.WriteLine($"Task OwnerId before saving: {task.OwnerId}");
 
             _unitOfWork.TaskRepository.AddEntry(task);
             await _unitOfWork.SaveChangesAsync();
@@ -64,7 +61,7 @@ namespace Application.Services
             var showTask = new ShowTask
             {
                 Id = task.Id,
-                ProjectId= task.ProjectId,
+                ProjectId = task.ProjectId,
                 TaskName = task.TaskName,
                 Status = task.Status,
                 Category = task.Category,
@@ -73,41 +70,30 @@ namespace Application.Services
                 Rate = task.Rate,
                 CreatedAt = task.CreatedAt,
                 StartDate = task.StartDate,
-                RemainingTime= task.RemainingTime
+                RemainingTime = task.RemainingTime,
+                OwnerId = task.OwnerId
             };
+
             var subTasks = await _unitOfWork.SubTaskRepository.GetAllSubTasksByTaskIdAsync(id);
-            ShowSubTask showSubTask = new ShowSubTask();
             if (subTasks.Any())
             {
-                showTask.SubTasks = new List<ShowSubTask>();
-                foreach (var subTask in subTasks)
+                showTask.SubTasks = subTasks.Select(subTask => new ShowSubTask
                 {
-                    showSubTask = new ShowSubTask
-                    {
-                        Id = subTask.Id,
-                        Description = subTask.Description,
-                        Deadline = subTask.Deadline,
-                        Tags = subTask.Tags
-                    };
-                    showTask.SubTasks.Add(showSubTask);
-                }
+                    Id = subTask.Id,
+                    Description = subTask.Description,
+                    Deadline = subTask.Deadline,
+                    Tags = subTask.Tags
+                }).ToList();
             }
+
             var members = await _unitOfWork.MemberInTaskRepository.GetByTaskIdAsync(id);
-            var user = new Users();
-            ShowMember showMember = new ShowMember();
             if (members.Any())
             {
-                showTask.members = new List<ShowMember>();
-                foreach (var member in members)
+                showTask.members = members.Select(member => new ShowMember
                 {
-                    user = _userManager.Users.FirstOrDefault(x => x.Id == member.MemberId);
-                    showMember = new ShowMember
-                    {
-                        Id = member.MemberId,
-                        Name = user.UserName
-                    };
-                    showTask.members.Add(showMember);
-                }
+                    Id = member.MemberId,
+                    Name = _userManager.Users.FirstOrDefault(x => x.Id == member.MemberId)?.UserName
+                }).ToList();
             }
 
             return showTask;
@@ -115,16 +101,37 @@ namespace Application.Services
 
         public async Task<IEnumerable<TaskViewModel>> GetTasksByProjectIdAsync(int projectId)
         {
-            var projects = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
-            if (projects == null)
+            var project = await _unitOfWork.ProjectRepository.GetByIdAsync(projectId);
+            if (project == null)
             {
                 return null;
             }
+
             var tasks = await _unitOfWork.TaskRepository.GetTasksByProjectIdAsync(projectId);
 
-            var taskViewModels = tasks.Select(task => new TaskViewModel
+            return tasks.Select(task => new TaskViewModel
             {
-                Id= task.Id,
+                Id = task.Id,
+                TaskName = task.TaskName,
+                Status = task.Status,
+                Category = task.Category,
+                Tags = task.Tags,
+                Deadline = task.Deadline,
+                Rate = task.Rate,
+                CreatedAt = task.CreatedAt,
+                StartDate = task.StartDate,
+                RemainingTime = task.RemainingTime,
+                OwnerId = task.OwnerId
+            });
+        }
+
+        public async Task<IEnumerable<TaskViewModel>> GetTasksAsync()
+        {
+            var tasks = await _unitOfWork.TaskRepository.GetAllAsync();
+
+            return tasks.Select(task => new TaskViewModel
+            {OwnerId = task.OwnerId,
+                Id = task.Id,
                 TaskName = task.TaskName,
                 Status = task.Status,
                 Category = task.Category,
@@ -135,32 +142,9 @@ namespace Application.Services
                 StartDate = task.StartDate,
                 RemainingTime = task.RemainingTime
             });
-
-            return taskViewModels;
         }
 
-        public async Task<IEnumerable<TaskViewModel>> GetTasksAsync()
-        {
-            var tasks = await _unitOfWork.TaskRepository.GetAllAsync();
-
-            var taskViewModels = tasks.Select(task => new TaskViewModel
-            {
-                Id = task.Id,
-                TaskName = task.TaskName,
-                Status = task.Status,
-                Category = task.Category,
-                Tags = task.Tags,
-                Deadline = task.Deadline,
-                Rate = task.Rate,
-                StartDate= task.StartDate,
-                CreatedAt= task.CreatedAt,
-                RemainingTime= task.RemainingTime
-            });
-
-            return taskViewModels;
-        }
-
-        public async Task<TaskViewModel> UpdateTaskAsync(int id, TaskViewModel taskViewModel)
+        public async Task<UpdateTaskModel> UpdateTaskAsync(int id, UpdateTaskModel taskViewModel)
         {
             var task = await _unitOfWork.TaskRepository.GetByIdAsync(id);
             if (task == null)
@@ -190,9 +174,7 @@ namespace Application.Services
             }
 
             _unitOfWork.TaskRepository.Delete(task);
-            var result = await _unitOfWork.SaveChangesAsync() > 0; // Check if any changes were saved
-
-            return result;
+            return await _unitOfWork.SaveChangesAsync() > 0;
         }
     }
 }

@@ -38,6 +38,9 @@ namespace Infracstructures.Mappers
 
             // Task
             CreateMap<Domain.Models.Task, TaskViewModel>().ReverseMap();
+            CreateMap<CreateTaskModel, Domain.Models.Task>()
+                    .ForMember(dest => dest.OwnerId, opt => opt.MapFrom(src => src.OwnerId))
+                    .ReverseMap();
 
             // SubTask
             CreateMap<SubTask, SubTaskViewModel>().ReverseMap();

@@ -9,11 +9,12 @@ namespace Application.InterfaceServies
 {
     public interface ITaskService
     {
-        Task<TaskViewModel> CreateTaskAsync(int procheckId, TaskViewModel taskViewModel);
         Task<ShowTask> GetTaskAsync(int id);
+        Task<CreateTaskModel> CreateTaskAsync(int projectId, CreateTaskModel taskViewModel);
+       
         Task<IEnumerable<TaskViewModel>> GetTasksAsync();
         Task<IEnumerable<TaskViewModel>> GetTasksByProjectIdAsync(int projectId);
-        Task<TaskViewModel> UpdateTaskAsync(int id, TaskViewModel taskViewModel);
+        Task<UpdateTaskModel> UpdateTaskAsync(int id, UpdateTaskModel taskViewModel); // Ensure this matches
         Task<bool> DeleteTaskAsync(int id);
     }
 }
