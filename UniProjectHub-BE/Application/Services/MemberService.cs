@@ -5,7 +5,7 @@ using Application.ViewModels.MemberViewModel;
 using AutoMapper;
 using Domain.Models;
 using FluentValidation;
-using FluentValidation.Results; // Import FluentValidation.ValidationResult
+using FluentValidation.Results;  
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations; // Import System.ComponentModel.DataAnnotations.ValidationResult
 using System.Linq;
@@ -16,12 +16,14 @@ public class MemberService : IMemberService
     private readonly IMemberRepository _memberRepository;
     private readonly IMapper _mapper;
     private readonly IValidator<MemberViewModel> _validator;
+    private readonly IValidator<CreateMemberViewModel> _createMemberValidator;
 
-    public MemberService(IMemberRepository memberRepository, IMapper mapper, IValidator<MemberViewModel> validator)
+    public MemberService(IMemberRepository memberRepository, IMapper mapper, IValidator<MemberViewModel> validator, IValidator<CreateMemberViewModel> createMemberValidator)
     {
         _memberRepository = memberRepository;
         _mapper = mapper;
         _validator = validator;
+        _createMemberValidator = createMemberValidator;
     }
 
     public async Task<Member> GetMemberByIdAsync(int id)
@@ -34,10 +36,14 @@ public class MemberService : IMemberService
         return await _validator.ValidateAsync(memberViewModel);
     }
 
-    public async Task<Member> CreateMemberAsync(MemberViewModel memberViewModel)
+    public async Task<FluentValidation.Results.ValidationResult> ValidateCreateMemberAsync(CreateMemberViewModel createMemberView)
     {
-        var validator = new MemberViewModelValidator();
-        var validationResult = await validator.ValidateAsync(memberViewModel);
+        return await _createMemberValidator.ValidateAsync(createMemberView);
+    }
+
+    public async Task<Member> CreateMemberAsync(CreateMemberViewModel createMemberView)
+    {
+        var validationResult = await ValidateCreateMemberAsync(createMemberView);
 
         if (!validationResult.IsValid)
         {
@@ -45,10 +51,12 @@ public class MemberService : IMemberService
             throw new FluentValidation.ValidationException(validationMessage);
         }
 
-        var member = _mapper.Map<Member>(memberViewModel);
+        // Assuming the member object should be created from CreateMemberViewModel
+        var member = _mapper.Map<Member>(createMemberView);
         await _memberRepository.AddAsync(member);
         return member;
     }
+
 
     public async Task<Member> UpdateMemberAsync(MemberViewModel memberViewModel, int id)
     {
@@ -56,10 +64,9 @@ public class MemberService : IMemberService
         if (member == null)
             throw new KeyNotFoundException("Member not found");
 
-        var validationResult = await _validator.ValidateAsync(memberViewModel);
+        var validationResult = await ValidateMemberAsync(memberViewModel);
         if (!validationResult.IsValid)
         {
-            // Collect validation errors into a single string
             var validationMessage = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
             throw new FluentValidation.ValidationException(validationMessage);
         }
@@ -88,11 +95,5 @@ public class MemberService : IMemberService
             throw new KeyNotFoundException("Member not found");
 
         await _memberRepository.DeleteAsync(member);
-    }
-
-    // Remove or implement the following method if needed
-    public Task<FluentValidation.Results.ValidationResult> ValidateMemberAsync(MemberViewModelValidator memberViewModel)
-    {
-        throw new NotImplementedException();
     }
 }

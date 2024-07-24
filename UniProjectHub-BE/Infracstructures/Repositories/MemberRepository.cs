@@ -189,7 +189,10 @@ namespace Infracstructures.Repositories
                 .Select(m => m.ProjectId)
                 .ToListAsync();
         }
-
+        public async Task<Member> GetMemberByIdAsync(string userId)
+        {
+            return await _dbSet.FirstOrDefaultAsync(m => m.MenberId == userId);
+        }
         Task<List<Member>> IGenericRepository<Member>.GetAllAsync()
         {
             return _dbSet.ToListAsync();

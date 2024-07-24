@@ -23,6 +23,7 @@ namespace Infracstructures.Mappers
             CreateMap<Member, MemberViewModel>()
                 .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.MenberId));
             CreateMap<MemberViewModel, Member>();
+            CreateMap<CreateMemberViewModel, Member>();
 
             // GroupChat
             CreateMap<GroupChat, GroupChatViewModel>().ReverseMap();

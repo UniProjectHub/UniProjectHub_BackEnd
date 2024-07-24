@@ -75,6 +75,8 @@ builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 //builder.Services.AddScoped<INotificationService, NotificationService>();
 //builder.Services.AddScoped<INotificationRepository, INotificationRepository>();
+builder.Services.AddScoped<IValidator<MemberViewModel>, MemberViewModelValidator>();
+builder.Services.AddScoped<IValidator<CreateMemberViewModel>, CreateMemberViewModelValidator>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);

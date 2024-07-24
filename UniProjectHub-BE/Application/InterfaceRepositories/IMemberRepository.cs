@@ -11,6 +11,7 @@ namespace Application.InterfaceRepositories
         Task<IEnumerable<int>> GetProjectIdsByUserOwnerAsync(string userId);
         Task<IEnumerable<int>> GetProjectIdsByUserNotOwnerAsync(string userId);
         Task<IEnumerable<int>> GetProjectIdsByUserAsync(string userId);
+        Task<Member> GetMemberByIdAsync(string userId);
         System.Threading.Tasks.Task AddAsync(Member member);
         System.Threading.Tasks.Task UpdateAsync(Member member);
         System.Threading.Tasks.Task DeleteAsync(Member member);

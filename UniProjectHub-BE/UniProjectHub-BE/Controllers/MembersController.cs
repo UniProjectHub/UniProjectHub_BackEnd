@@ -22,26 +22,27 @@ namespace UniProjectHub_BE.Controllers
         }
 
         [HttpPost("add-member")]
-        public async Task<IActionResult> CreateMember([FromBody] MemberViewModel memberViewModel)
+        public async Task<IActionResult> CreateMember([FromBody] CreateMemberViewModel createMemberView)
         {
-            var validator = new MemberViewModelValidator();
-            var validationResult = await validator.ValidateAsync(memberViewModel);
+            var validator = new CreateMemberViewModelValidator();  
+            var validationResult = await validator.ValidateAsync(createMemberView);
 
             if (!validationResult.IsValid)
             {
-                return BadRequest(validationResult.Errors); // Return validation errors
+                return BadRequest(validationResult.Errors);  
             }
 
             try
             {
-                var result = await _memberService.CreateMemberAsync(memberViewModel);
+                var result = await _memberService.CreateMemberAsync(createMemberView);
                 return Ok(result); // 200 OK with the created member or appropriate response
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error: {ex.Message}"); // 500 Internal Server Error
+                return StatusCode(500, $"Error: {ex.Message}");  
             }
         }
+
 
         [HttpPut("update-member/{id}")]
         public async Task<IActionResult> UpdateMember(int id, [FromBody] MemberViewModel memberViewModel)
@@ -72,7 +73,7 @@ namespace UniProjectHub_BE.Controllers
             try
             {
                 await _memberService.DeleteMemberAsync(id);
-                return NoContent(); // 204 No Content upon successful deletion
+                return Ok("Xóa thành công Members");
             }
             catch (Exception ex)
             {
