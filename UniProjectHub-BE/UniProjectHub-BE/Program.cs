@@ -90,7 +90,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<MemberViewModelValidator>()
 // Swagger/OpenAPI configuration
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "ASP.System API", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "UNIPROJECT HUB DELOY BY AnDB", Version = "v1" });
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
