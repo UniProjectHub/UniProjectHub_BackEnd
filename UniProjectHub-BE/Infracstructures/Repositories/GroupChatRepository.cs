@@ -22,7 +22,7 @@ namespace Infracstructures.Repositories
             _context = context;
             _dbSet = context.Set<GroupChat>();
         }
- 
+
         public async System.Threading.Tasks.Task AddAsync(GroupChat model) => await dbSet.AddAsync(model);
 
         public void AddAttach(GroupChat model)
@@ -35,8 +35,6 @@ namespace Infracstructures.Repositories
             throw new NotImplementedException();
         }
 
-       
-
         public async System.Threading.Tasks.Task AddRangeAsync(List<GroupChat> models) => await dbSet.AddRangeAsync(models);
 
         public async Task<GroupChat> CloneAsync(GroupChat model)
@@ -47,13 +45,20 @@ namespace Infracstructures.Repositories
             return clone;
         }
 
-        public System.Threading.Tasks.Task DeleteAsync(int id)
+        public async System.Threading.Tasks.Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var groupChat = await _context.GroupChats.FindAsync(id);
+            if (groupChat == null)
+            {
+                throw new KeyNotFoundException("Group chat not found");
+            }
+
+            _context.GroupChats.Remove(groupChat);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<List<GroupChat>> GetAllAsync() => await dbSet.ToListAsync();
-        
+
         public async Task<List<GroupChat>> GetAllAsync(Func<IQueryable<GroupChat>, IIncludableQueryable<GroupChat, object>>? include = null)
         {
             IQueryable<GroupChat> query = dbSet;
@@ -84,7 +89,6 @@ namespace Infracstructures.Repositories
 
             return new Pagination<TEntity>(items, totalRecords, pageIndex, pageSize);
         }
-
 
         public async System.Threading.Tasks.Task UpdateAsync(GroupChat groupChat)
         {
