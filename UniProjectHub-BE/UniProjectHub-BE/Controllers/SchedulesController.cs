@@ -1,5 +1,6 @@
 ﻿using Application.InterfaceServies;
 using Application.ViewModels.ScheduleViewModel;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -23,21 +24,27 @@ namespace UniProjectHub_BE.Controllers
             return Ok(schedules);
         }
 
+        /*  [HttpPost("create-schedule")]
+          public async Task<IActionResult> CreateSchedule([FromBody] CreateScheduleViewModel createScheduleViewModel)
+          {
+              // Validate the model
+              var validationResult = await _scheduleService.ValidateScheduleAsync(createScheduleViewModel);
+
+              // Check if there are any validation errors
+              if (!validationResult.IsValid)
+              {
+                  return BadRequest(new { Errors = validationResult.Errors.Select(e => e.ErrorMessage) });
+              }
+
+              // Proceed with creating the schedule
+              var result = await _scheduleService.CreateScheduleAsync(createScheduleViewModel);
+              return CreatedAtAction(nameof(GetScheduleById), new { id = result.Id }, result);
+          }*/
         [HttpPost("create-schedule")]
-        public async Task<IActionResult> CreateSchedule([FromBody] CreateScheduleViewModel createScheduleViewModel)
+        public async Task<IActionResult> CreateRecurringSchedules([FromBody] CreateScheduleViewModel createScheduleViewModel)
         {
-            // Validate the model
-            var validationResult = await _scheduleService.ValidateScheduleAsync(createScheduleViewModel);
-
-            // Check if there are any validation errors
-            if (!validationResult.IsValid)
-            {
-                return BadRequest(new { Errors = validationResult.Errors.Select(e => e.ErrorMessage) });
-            }
-
-            // Proceed with creating the schedule
-            var result = await _scheduleService.CreateScheduleAsync(createScheduleViewModel);
-            return CreatedAtAction(nameof(GetScheduleById), new { id = result.Id }, result);
+            var schedules = await _scheduleService.CreateRecurringSchedulesAsync(createScheduleViewModel);
+            return CreatedAtAction(nameof(GetAllSchedules), new { }, schedules);
         }
 
         [HttpPut("update-schedule/{id}")]
@@ -70,7 +77,7 @@ namespace UniProjectHub_BE.Controllers
             try
             {
                 await _scheduleService.DeleteScheduleAsync(id);
-                return NoContent();
+                return Ok("Delete success");
             }
             catch (KeyNotFoundException)
             {

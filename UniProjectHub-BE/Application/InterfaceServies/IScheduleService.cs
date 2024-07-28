@@ -11,6 +11,8 @@ namespace Application.InterfaceServies
 {
     public interface IScheduleService
     {
+        Task<IEnumerable<ScheduleViewModel>> CreateRecurringSchedulesAsync(CreateScheduleViewModel createScheduleViewModel);
+
         Task<IEnumerable<ScheduleViewModel>> GetAllSchedulesAsync();
         Task<ScheduleViewModel> CreateScheduleAsync(CreateScheduleViewModel createScheduleViewModel);
         Task<ScheduleViewModel> UpdateScheduleAsync(int id, UpdateScheduleViewModel updateScheduleViewModel);

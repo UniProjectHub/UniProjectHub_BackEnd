@@ -35,6 +35,36 @@ namespace Application.Services
             var schedules = await _scheduleRepository.GetAllSchedulesAsync();
             return _mapper.Map<IEnumerable<ScheduleViewModel>>(schedules);
         }
+        public async Task<IEnumerable<ScheduleViewModel>> CreateRecurringSchedulesAsync(CreateScheduleViewModel createScheduleViewModel)
+        {
+            // Validate the input
+            var validationResult = await ValidateScheduleAsync(createScheduleViewModel);
+            if (!validationResult.IsValid)
+            {
+                var validationMessage = string.Join("; ", validationResult.Errors.Select(e => e.ErrorMessage));
+                throw new ValidationException(validationMessage);
+            }
+
+            var schedules = new List<Schedule>();
+            var currentDate = DateTime.Parse(createScheduleViewModel.StartTime.ToShortDateString());
+
+            while (currentDate <= createScheduleViewModel.EndTime)
+            {
+                if (currentDate.DayOfWeek.ToString() == createScheduleViewModel.DateOfWeek)
+                {
+                    var schedule = _mapper.Map<Schedule>(createScheduleViewModel);
+                    schedule.StartTime = currentDate.Date + createScheduleViewModel.SlotStartTime.TimeOfDay;
+                    schedule.EndTime = currentDate.Date + createScheduleViewModel.SlotEndTime.TimeOfDay;
+                    schedules.Add(schedule);
+                }
+
+                currentDate = currentDate.AddDays(1);
+            }
+
+            await _scheduleRepository.AddRangeAsync(schedules);
+
+            return _mapper.Map<IEnumerable<ScheduleViewModel>>(schedules);
+        }
 
         public async Task<ScheduleViewModel> CreateScheduleAsync(CreateScheduleViewModel createScheduleViewModel)
         {
