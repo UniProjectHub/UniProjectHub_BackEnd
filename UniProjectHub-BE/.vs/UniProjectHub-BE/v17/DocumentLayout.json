@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\repositories\\groupchatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\repositories\\groupchatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +70,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Program.cs",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAAAP0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T05:07:29.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GroupChatService.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\GroupChatService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\GroupChatService.cs",
@@ -74,12 +91,11 @@
               "RelativeToolTip": "Application\\Services\\GroupChatService.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAA6wGAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:36:38.565Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-28T18:36:38.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GroupChatController.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\GroupChatController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\GroupChatController.cs",
@@ -87,12 +103,11 @@
               "RelativeToolTip": "UniProjectHub-BE\\Controllers\\GroupChatController.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAuwGIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:36:22.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-28T18:36:22.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GroupChatRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Repositories\\GroupChatRepository.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Repositories\\GroupChatRepository.cs",
@@ -105,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ScheduleService.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\ScheduleService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\ScheduleService.cs",
@@ -113,8 +128,7 @@
               "RelativeToolTip": "Application\\Services\\ScheduleService.cs",
               "ViewState": "AQIAAGgAAAAAAAAAAAAgwIEAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:35:02.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-28T18:35:02.004Z"
             }
           ]
         },
