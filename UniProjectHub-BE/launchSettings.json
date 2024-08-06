@@ -21,7 +21,7 @@
     "Container (Dockerfile)": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "http://14.225.220.108:2602/swagger" // URL cho Docker container
+      "launchUrl": "http://14.225.220.108:32795/swagger", // URL cho Docker container
       "environmentVariables": {
         "ASPNETCORE_HTTP_PORTS": "8080" // Cổng mà ứng dụng chạy trong Docker container
       },
