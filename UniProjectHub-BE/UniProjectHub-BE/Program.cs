@@ -59,7 +59,7 @@ builder.Services.AddCors(options =>
             builder.WithOrigins("https://localhost:7067","http://localhost:5275",
                 "http://localhost:5173", "http://localhost:5174", "http://localhost:5175",
                 "http://103.20.97.210", "https://uniprojecthub.edu.vn", 
-                "http://uniprojecthub.edu.vn/")
+                "http://uniprojecthub.edu.vn")
 
                    .AllowAnyHeader()
                    .AllowAnyMethod();
@@ -251,7 +251,7 @@ app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowCredentials()
                             .WithOrigins("https://localhost:7067","http://localhost:5275",
                 "http://localhost:5173", "http://localhost:5174", "http://localhost:5175","http://unipro.mieutech.io.vn","http://localhost", "https://localhost", "http://103.20.97.210", "https://uniprojecthub.edu.vn",
-                "http://uniprojecthub.edu.vn/"));
+                "http://uniprojecthub.edu.vn"));
 
  
 app.UseAuthentication();

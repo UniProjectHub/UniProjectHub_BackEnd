@@ -17,11 +17,11 @@
     }
     public class CreateTaskModel
     {
-        public string? OwnerId { get; set; }
-        public string TaskName { get; set; }
+        public string OwnerId { get; set; }
+        public string? TaskName { get; set; }
         public int Status { get; set; }
-        public string Category { get; set; }
-        public string Tags { get; set; }
+        public string? Category { get; set; }
+        public string? Tags { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime Deadline { get; set; }
@@ -45,7 +45,7 @@
     }
     public class ShowTask
     {
-        public string? OwnerId { get; set; }
+        public string OwnerId { get; set; }
 
         public int Id { get; set; }
         public int ProjectId { get; set; }
