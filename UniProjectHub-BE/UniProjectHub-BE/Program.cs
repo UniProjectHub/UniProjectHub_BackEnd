@@ -93,8 +93,19 @@ builder.Services.AddValidatorsFromAssemblyContaining<MemberViewModelValidator>()
 // Swagger/OpenAPI configuration
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "UNIPROJECT HUB DELOY BY AnDB", Version = "v1" });
-    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "UNIPROJECtHUB_APN_EXE201", // The title of your API
+        Version = "v1/andb", // The version of your API
+        Description = "API Deloy by AnBinh", // Optional description
+        Contact = new OpenApiContact
+        {
+            Name = "BinhAn",
+            Email = "Dan1314705@gmail.com",
+            Url = new Uri("https://www.facebook.com/heens.1703/")
+        },
+        
+    }); options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,

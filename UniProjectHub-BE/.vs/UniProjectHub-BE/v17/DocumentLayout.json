@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:.dockerignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.dcproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.override.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\uniprojecthub-be.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\uniprojecthub-be.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\uniprojecthub-be.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\uniprojecthub-be.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\mappers\\mapperconfigs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\mappers\\mapperconfigs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,8 +94,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "global.json",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\global.json",
+              "RelativeDocumentMoniker": "global.json",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\global.json",
+              "RelativeToolTip": "global.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-06T08:10:37.089Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -90,25 +148,167 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\launchSettings.json",
+              "RelativeDocumentMoniker": "launchSettings.json",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\launchSettings.json",
+              "RelativeToolTip": "launchSettings.json",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-06T08:10:38.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Program.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAAAGsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T05:07:29.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAB0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-08-06T08:10:27.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": ".dockerignore",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\.dockerignore",
+              "RelativeDocumentMoniker": ".dockerignore",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\.dockerignore",
+              "RelativeToolTip": ".dockerignore",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-06T08:10:24.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "docker-compose.dcproj",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.dcproj",
+              "RelativeDocumentMoniker": "docker-compose.dcproj",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.dcproj",
+              "RelativeToolTip": "docker-compose.dcproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-06T08:10:19.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "docker-compose.override.yml",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.override.yml",
+              "RelativeDocumentMoniker": "docker-compose.override.yml",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\docker-compose.override.yml",
+              "RelativeToolTip": "docker-compose.override.yml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-08-06T08:10:17.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Properties\\launchSettings.json",
+              "RelativeToolTip": "UniProjectHub-BE\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-06T08:06:26.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UniProjectHub-BE",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\UniProjectHub-BE.csproj",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.csproj",
+              "RelativeToolTip": "UniProjectHub-BE\\UniProjectHub-BE.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-06T08:06:25.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UniProjectHub-BE.http",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.http",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\UniProjectHub-BE.http",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\UniProjectHub-BE.http",
+              "RelativeToolTip": "UniProjectHub-BE\\UniProjectHub-BE.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-08-06T08:05:49.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\launchSettings.json",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\launchSettings.json",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\launchSettings.json",
+              "RelativeToolTip": "UniProjectHub-BE\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-06T08:05:41.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\appsettings.json",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
+              "RelativeToolTip": "UniProjectHub-BE\\appsettings.json",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-06T08:05:31.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Dockerfile",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Dockerfile",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Dockerfile",
               "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Dockerfile",
               "RelativeToolTip": "UniProjectHub-BE\\Dockerfile",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-08-06T08:04:08.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "MembersController.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MembersController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\MembersController.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MembersController.cs*",
-              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\MembersController.cs*",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MembersController.cs",
+              "RelativeToolTip": "UniProjectHub-BE\\Controllers\\MembersController.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAAwB0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T07:48:50.99Z",
@@ -116,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 15,
               "Title": "IMemberService.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceServies\\IMemberService.cs",
               "RelativeDocumentMoniker": "Application\\InterfaceServies\\IMemberService.cs",
@@ -129,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
               "Title": "MemberService.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Services\\MemberService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\MemberService.cs",
@@ -142,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 16,
               "Title": "MemberViewModel.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\ViewModels\\MemberViewModel\\MemberViewModel.cs",
               "RelativeDocumentMoniker": "Application\\ViewModels\\MemberViewModel\\MemberViewModel.cs",
@@ -155,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 17,
               "Title": "Member.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Models\\Member.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Member.cs",
@@ -168,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 18,
               "Title": "CreateMemberViewModelValidator.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Validators\\CreateMemberViewModelValidator.cs",
               "RelativeDocumentMoniker": "Application\\Validators\\CreateMemberViewModelValidator.cs",
@@ -181,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 19,
               "Title": "IMemberRepository.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IMemberRepository.cs",
               "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\IMemberRepository.cs",
@@ -194,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 20,
               "Title": "MapperConfigs.cs",
               "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Mappers\\MapperConfigs.cs",
@@ -203,19 +403,6 @@
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-06T07:54:02.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
-              "RelativeToolTip": "UniProjectHub-BE\\Program.cs",
-              "ViewState": "AQIAAPYAAAAAAAAAAAAAAP0AAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T05:07:29.663Z",
               "EditorCaption": ""
             }
           ]
