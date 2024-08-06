@@ -97,15 +97,17 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "UNIPROJECtHUB_APN_EXE201", // The title of your API
         Version = "v1/andb", // The version of your API
-        Description = "API Deloy by AnBinh", // Optional description
+        Description = "API Deloy by AnBinh  Visit our websites for more information: https://uniprojecthub.edu.vn, http://uniprojecthub.edu.vn",
         Contact = new OpenApiContact
         {
             Name = "BinhAn",
             Email = "Dan1314705@gmail.com",
-            Url = new Uri("https://www.facebook.com/heens.1703/")
+            Url = new Uri("https://www.facebook.com/heens.1703/"),
         },
-        
-    }); options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+       
+
+    });
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.ApiKey,
