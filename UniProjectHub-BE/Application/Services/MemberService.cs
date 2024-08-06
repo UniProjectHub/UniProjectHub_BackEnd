@@ -53,6 +53,7 @@ public class MemberService : IMemberService
 
         // Assuming the member object should be created from CreateMemberViewModel
         var member = _mapper.Map<Member>(createMemberView);
+        member.JoinTime = DateTime.UtcNow;  // Set JoinTime if not provided
         await _memberRepository.AddAsync(member);
         return member;
     }

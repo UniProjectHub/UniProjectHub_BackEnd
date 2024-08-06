@@ -24,24 +24,33 @@ namespace UniProjectHub_BE.Controllers
         [HttpPost("add-member")]
         public async Task<IActionResult> CreateMember([FromBody] CreateMemberViewModel createMemberView)
         {
-            var validator = new CreateMemberViewModelValidator();  
+            var validator = new CreateMemberViewModelValidator();
             var validationResult = await validator.ValidateAsync(createMemberView);
 
             if (!validationResult.IsValid)
             {
-                return BadRequest(validationResult.Errors);  
+                return BadRequest(validationResult.Errors);
             }
 
             try
             {
                 var result = await _memberService.CreateMemberAsync(createMemberView);
-                return Ok(result); // 200 OK with the created member or appropriate response
+                return Ok(new
+                {
+                    Id = result.Id,
+                    ProjectId = result.ProjectId,
+                    MenberId = result.MenberId,
+                    IsOwner = result.IsOwner,
+                    Role = result.Role,
+                    JoinTime = result.JoinTime,
+                }); // Return the member details
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error: {ex.Message}");  
+                return StatusCode(500, $"Error: {ex.Message}");
             }
         }
+
 
 
         [HttpPut("update-member/{id}")]
