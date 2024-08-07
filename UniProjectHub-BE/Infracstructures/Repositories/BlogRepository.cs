@@ -23,7 +23,12 @@ namespace Infracstructures.Repositories
                 .Where(b => b.CategoryID == categoryId)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<Blog>> GetBlogsByOwnerIdAsync(string userId)
+        {
+            return await _context.Set<Blog>()
+                .Where(b => b.OwnerId == userId)
+                .ToListAsync();
+        }
 
-        
     }
 }
