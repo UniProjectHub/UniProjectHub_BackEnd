@@ -30,14 +30,14 @@ namespace UniProjectHub_BE.Controllers
 
         [HttpPost]
         [Route("upload-file")]
-        public async Task<IActionResult> UploadFile(IFormFile _IFormFile, FileUploadDTO fileViewModel)
+        public async Task<IActionResult> UploadFile(IFormFile _IFormFile, int TaskId, string UserId)
         {
             var validationResult = _iManageImage.ValidateFileSize(_IFormFile);
             if (!validationResult.Item1)
             {
                 return BadRequest(validationResult.Item2);
             }
-            var checkDupplicateFileName = await _fileService.IsDuplicateFileAsync(fileViewModel.TaskId, _IFormFile.FileName);
+            var checkDupplicateFileName = await _fileService.IsDuplicateFileAsync(TaskId, _IFormFile.FileName);
             if (checkDupplicateFileName)
             {
                 return BadRequest("Dupplicate file name");
@@ -48,12 +48,13 @@ namespace UniProjectHub_BE.Controllers
             {
                 return BadRequest("Upload fail");
             }
-            FileViewModel file = new FileViewModel { 
+            FileViewModel file = new FileViewModel
+            {
                 CreatedAt = DateTime.Now,
                 Filename = uploadResult.Filename,
                 RealFileName = uploadResult.RealFileName,
-                TaskId = fileViewModel.TaskId,
-                UserId = fileViewModel.UserId,
+                TaskId = TaskId,
+                UserId = UserId,
             };
             var result = await _fileService.CreateFileAsync(file);
 
