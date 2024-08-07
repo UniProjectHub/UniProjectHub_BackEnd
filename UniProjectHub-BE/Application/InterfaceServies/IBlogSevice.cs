@@ -15,5 +15,6 @@ namespace Application.InterfaceServies
         System.Threading.Tasks.Task UpdateBlogAsync(BlogUpdateModel blogUpdateModel);
         System.Threading.Tasks.Task DeleteBlogAsync(int id);
         Task<IEnumerable<BlogModelView>> GetBlogsByCategoryIdAsync(int categoryId);
+        Task<IEnumerable<BlogModelView>> GetBlogsByOwnerIdAsync(string userId);
     }
 }

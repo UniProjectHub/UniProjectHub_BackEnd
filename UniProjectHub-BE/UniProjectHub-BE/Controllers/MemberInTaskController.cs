@@ -47,7 +47,7 @@ namespace UniProjectHub_BE.Controllers
             var memberInTasks = await _memberInTaskService.GetByTaskIdAsync(taskId);
             if (memberInTasks == null || !memberInTasks.Any())
             {
-                return NotFound();
+                return Ok(null);
             }
             return Ok(memberInTasks);
         }

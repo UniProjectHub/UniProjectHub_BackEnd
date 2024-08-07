@@ -11,5 +11,6 @@ namespace Application.InterfaceRepositories
     {
 
         Task<IEnumerable<Blog>> GetBlogsByCategoryIdAsync(int categoryId);
+        Task<IEnumerable<Blog>> GetBlogsByOwnerIdAsync(string userId);
     }
 }

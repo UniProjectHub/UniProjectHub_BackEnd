@@ -48,7 +48,7 @@ namespace Application.Services
                 MenberId = ownerId,
                 IsOwner = true,
                 ProjectId = project.Id,
-                Role = "",
+                Role = "LEADER",
                 JoinTime = TimeHelper.GetVietnamTime()
 
             };
@@ -65,10 +65,11 @@ namespace Application.Services
                     if (memberInProject.UserId != ownerId){
                         menber = new Member
                         {
+                            
                             MenberId = memberInProject.UserId,
                             IsOwner = false,
                             ProjectId = project.Id,
-                            Role = "",
+                            Role = "MEMBER",
                             JoinTime = TimeHelper.GetVietnamTime()
                         };
                         await _unitOfWork.MemberRepository.AddAsync(menber);

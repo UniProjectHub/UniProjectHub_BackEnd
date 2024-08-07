@@ -46,6 +46,11 @@ namespace Application.Services
             var blogs = await _unitOfWork.BlogRepository.GetBlogsByCategoryIdAsync(categoryId);
             return _mapper.Map<IEnumerable<BlogModelView>>(blogs);
         }
+        public async Task<IEnumerable<BlogModelView>> GetBlogsByOwnerIdAsync(string userId)
+        {
+            var blogs = await _unitOfWork.BlogRepository.GetBlogsByOwnerIdAsync(userId);
+            return _mapper.Map<IEnumerable<BlogModelView>>(blogs);
+        }
 
         public async Task<IEnumerable<BlogModelView>> GetBlogsAsync()
         {
