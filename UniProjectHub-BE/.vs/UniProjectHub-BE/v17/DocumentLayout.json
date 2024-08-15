@@ -3,7 +3,19 @@
   "WorkspaceRootPath": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\filemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D223DF12-9C21-4B9E-806B-FF53C99FC25B}|docker-compose.dcproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D223DF12-9C21-4B9E-806B-FF53C99FC25B}|docker-compose.dcproj|solutionrelative:global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\uniprojecthub-be\\uploads\\staticcontent\\.gitattributes_638533155876959359.gitattributes||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\uploads\\staticcontent\\.gitattributes_638533155876959359.gitattributes||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\uniprojecthub-be\\controllers\\filemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\filemanagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +23,7 @@
       "RelativeMoniker": "D:0:0:{DEC9EE4D-70D6-47C4-85F1-697F5AAB6017}|Application\\Application.csproj|solutionrelative:application\\services\\memberintaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D223DF12-9C21-4B9E-806B-FF53C99FC25B}|docker-compose.dcproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{D223DF12-9C21-4B9E-806B-FF53C99FC25B}|docker-compose.dcproj|solutionrelative:global.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|d:\\study\\cn8\\exe201\\maingit\\uniprojecthub-be\\uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -52,10 +60,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|solutionrelative:uniprojecthub-be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78EC86CA-6F37-499A-9949-4274F29135A7}|UniProjectHub-BE\\UniProjectHub-BE.csproj|D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\uniprojecthub-be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -108,7 +112,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 17,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -180,20 +184,104 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": ".gitattributes_638533155876959359.gitattributes",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Uploads\\StaticContent\\.gitattributes_638533155876959359.gitattributes",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\Uploads\\StaticContent\\.gitattributes_638533155876959359.gitattributes",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Uploads\\StaticContent\\.gitattributes_638533155876959359.gitattributes",
+              "RelativeToolTip": "UniProjectHub-BE\\Uploads\\StaticContent\\.gitattributes_638533155876959359.gitattributes",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-08-15T13:18:45.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FileManagerController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\FileManagerController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\FileManagerController.cs",
               "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\FileManagerController.cs",
               "RelativeToolTip": "UniProjectHub-BE\\Controllers\\FileManagerController.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwD0AAAAJAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAAAzwDYAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:57:50.56Z",
+              "WhenOpened": "2024-08-07T13:57:50.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBlogRepository.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IBlogRepository.cs",
+              "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\IBlogRepository.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IBlogRepository.cs",
+              "RelativeToolTip": "Application\\InterfaceRepositories\\IBlogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T07:19:41.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BlogRepository.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\BlogRepository.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
+              "RelativeToolTip": "Infracstructures\\Repositories\\BlogRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T07:18:11.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MapperConfigs.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Mappers\\MapperConfigs.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
+              "RelativeToolTip": "Infracstructures\\Mappers\\MapperConfigs.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T07:15:26.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "global.json",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\global.json",
+              "RelativeDocumentMoniker": "global.json",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\global.json",
+              "RelativeToolTip": "global.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-23T01:53:52.448Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "MemberInTaskService.cs",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\MemberInTaskService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\MemberInTaskService.cs",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\MemberInTaskService.cs",
+              "RelativeToolTip": "Application\\Services\\MemberInTaskService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T07:10:51.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
+              "RelativeDocumentMoniker": "UniProjectHub-BE\\appsettings.json",
+              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
+              "RelativeToolTip": "UniProjectHub-BE\\appsettings.json",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAC0AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-04T17:11:00.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IBlogSevice.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceServies\\IBlogSevice.cs",
               "RelativeDocumentMoniker": "Application\\InterfaceServies\\IBlogSevice.cs",
@@ -206,81 +294,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IBlogRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "RelativeDocumentMoniker": "Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "RelativeToolTip": "Application\\InterfaceRepositories\\IBlogRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T07:19:41.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BlogRepository.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Repositories\\BlogRepository.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Repositories\\BlogRepository.cs",
-              "RelativeToolTip": "Infracstructures\\Repositories\\BlogRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T07:18:11.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MapperConfigs.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Mappers\\MapperConfigs.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Mappers\\MapperConfigs.cs",
-              "RelativeToolTip": "Infracstructures\\Mappers\\MapperConfigs.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T07:15:26.307Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "global.json",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\global.json",
-              "RelativeDocumentMoniker": "global.json",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\global.json",
-              "RelativeToolTip": "global.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-23T01:53:52.448Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MemberInTaskService.cs",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\MemberInTaskService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\MemberInTaskService.cs",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\MemberInTaskService.cs",
-              "RelativeToolTip": "Application\\Services\\MemberInTaskService.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T07:10:51.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "BlogController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\BlogController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\BlogController.cs",
               "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\BlogController.cs",
               "RelativeToolTip": "UniProjectHub-BE\\Controllers\\BlogController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T07:21:10.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T07:21:10.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "MemberInTaskController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\MemberInTaskController.cs",
@@ -292,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "ProjectSevice.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\ProjectSevice.cs",
               "RelativeDocumentMoniker": "Application\\Services\\ProjectSevice.cs",
@@ -304,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "MemberService.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\MemberService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\MemberService.cs",
@@ -316,7 +341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Member.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Domain\\Models\\Member.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Member.cs",
@@ -328,19 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
-              "RelativeDocumentMoniker": "UniProjectHub-BE\\appsettings.json",
-              "ToolTip": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\appsettings.json",
-              "RelativeToolTip": "UniProjectHub-BE\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-04T17:11:00.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Program.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Program.cs",
@@ -352,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -362,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "TaskSevice.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\Services\\TaskSevice.cs",
               "RelativeDocumentMoniker": "Application\\Services\\TaskSevice.cs",
@@ -374,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\launchSettings.json",
               "RelativeDocumentMoniker": "launchSettings.json",
@@ -386,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Infracstructures\\AppDbContext.cs",
@@ -398,7 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "TaskViewModel.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Application\\ViewModels\\TaskViewModel\\TaskViewModel.cs",
               "RelativeDocumentMoniker": "Application\\ViewModels\\TaskViewModel\\TaskViewModel.cs",
@@ -410,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "20240722133516_UpdateSchedule.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240722133516_UpdateSchedule.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240722133516_UpdateSchedule.cs",
@@ -422,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Users.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Domain\\Models\\Users.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Users.cs",
@@ -434,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Microsoft.NET.Sdk.DefaultItems.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
@@ -444,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "20240702204656_update-task-subtask-project.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240702204656_update-task-subtask-project.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240702204656_update-task-subtask-project.cs",
@@ -456,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "20240722133516_UpdateSchedule.Designer.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240722133516_UpdateSchedule.Designer.cs",
               "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240722133516_UpdateSchedule.Designer.cs",
@@ -468,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\UniProjectHub-BE\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "UniProjectHub-BE\\Controllers\\TaskController.cs",
@@ -495,7 +508,7 @@
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 335,
           "SelectedChildIndex": -1,
           "Children": [
             {
