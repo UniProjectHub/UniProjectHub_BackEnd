@@ -1,4 +1,9 @@
- 
+# Team Memmer 
+# Duong Binh An	-	"Code BE(Member, Schedule, Dashboard, Groupchat, Notification, Comment), Deloy sever on VPS, Data normalization"
+
+ Ngoc Phi	 -	"Code BE (Project, Task, Blog)"	
+ Van Cong	-	"Code BE(Authen, User, Admin, File, Payment)"
+
 # UniProjectHub_BackEnd
 
 This repository contains the backend services for UniProjectHub, a platform for managing schedules and courses.
