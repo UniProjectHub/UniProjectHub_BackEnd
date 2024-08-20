@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace UniProjectHub_BE.Controllers
 {
@@ -21,26 +22,36 @@ namespace UniProjectHub_BE.Controllers
         }
 
         [HttpPost("add-member")]
-        public async Task<IActionResult> CreateMember([FromBody] MemberViewModel memberViewModel)
+        public async Task<IActionResult> CreateMember([FromBody] CreateMemberViewModel createMemberView)
         {
-            var validator = new MemberViewModelValidator();
-            var validationResult = await validator.ValidateAsync(memberViewModel);
+            var validator = new CreateMemberViewModelValidator();
+            var validationResult = await validator.ValidateAsync(createMemberView);
 
             if (!validationResult.IsValid)
             {
-                return BadRequest(validationResult.Errors); // Return validation errors
+                return BadRequest(validationResult.Errors);
             }
 
             try
             {
-                var result = await _memberService.CreateMemberAsync(memberViewModel);
-                return Ok(result); // 200 OK with the created member or appropriate response
+                var result = await _memberService.CreateMemberAsync(createMemberView);
+                return Ok(new
+                {
+                    Id = result.Id,
+                    ProjectId = result.ProjectId,
+                    MenberId = result.MenberId,
+                    IsOwner = result.IsOwner,
+                    Role = result.Role,
+                    JoinTime = result.JoinTime,
+                }); // Return the member details
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Error: {ex.Message}"); // 500 Internal Server Error
+                return StatusCode(500, $"Error: {ex.Message}");
             }
         }
+
+
 
         [HttpPut("update-member/{id}")]
         public async Task<IActionResult> UpdateMember(int id, [FromBody] MemberViewModel memberViewModel)
@@ -63,7 +74,7 @@ namespace UniProjectHub_BE.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}"); // 500 Internal Server Error
             }
         }
-    
+
 
         [HttpDelete("delete-member/{id}")]
         public async Task<IActionResult> DeleteMember(int id)
@@ -71,7 +82,7 @@ namespace UniProjectHub_BE.Controllers
             try
             {
                 await _memberService.DeleteMemberAsync(id);
-                return NoContent(); // 204 No Content upon successful deletion
+                return Ok("Xóa thành công Members");
             }
             catch (Exception ex)
             {
@@ -96,5 +107,24 @@ namespace UniProjectHub_BE.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}"); // 500 Internal Server Error
             }
         }
+
+        [HttpGet("get-all-members")]
+        public async Task<IActionResult> GetAllMembers()
+        {
+            try
+            {
+                var result = await _memberService.GetAllMembersAsync();
+                if (result == null || !result.Any())
+                {
+                    return NotFound(); // 404 Not Found if no members found
+                }
+                return Ok(result); // 200 OK with the list of members or appropriate response
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}"); // 500 Internal Server Error
+            }
+        }
+
     }
 }

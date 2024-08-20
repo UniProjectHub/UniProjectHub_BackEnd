@@ -9,10 +9,23 @@ namespace Application.ViewModels.MemberViewModel
 {
     public class MemberViewModel
     {
-        //public Users UserId;
+        public int Id { get; set; }
+        public Guid? UserId { get; set; }
         public int ProjectId { get; set; }
-        public string MemberId { get; set; }
         public bool IsOwner { get; set; }
-        public int Role { get; set; }
+        public string? Role { get; set; }
+        public Guid? MenberId { get; set; }
+    }
+    public class CreateMemberViewModel
+    {
+        
+
+        public Guid? UserId { get; set; }
+        public int ProjectId { get; set; }
+        public bool IsOwner { get; set; }
+        public string? Role { get; set; }
+        public string? MenberId { get; set; }
+
+       
     }
 }

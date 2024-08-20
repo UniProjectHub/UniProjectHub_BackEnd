@@ -1,4 +1,5 @@
 ﻿using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.CategoryViewModel;
 using AutoMapper;
 using Domain.Models;
@@ -25,7 +26,7 @@ namespace Application.Services
         {
             var category = new Category
             {
-                CreatedAt = DateTime.Now,
+                CreatedAt = TimeHelper.GetVietnamTime(),
                 Name = categoryViewModel.Name,
                 Description = categoryViewModel.Description,
             };

@@ -44,6 +44,16 @@ namespace UniProjectHub_BE.Controllers
             }
             return Ok(blogs);
         }
+        [HttpGet("GetBlogsByOwnerIdAsync/{userId}")]
+        public async Task<ActionResult<IEnumerable<BlogModelView>>> GetBlogsByOwnerIdAsync(string userId)
+        {
+            var blogs = await _blogService.GetBlogsByOwnerIdAsync(userId);
+            if (blogs == null || !blogs.Any())
+            {
+                return Ok(null);
+            }
+            return Ok(blogs);
+        }
 
         [HttpGet("GetBlogsAsync")]
         public async Task<ActionResult<IEnumerable<BlogModelView>>> GetBlogsAsync()

@@ -9,6 +9,7 @@ namespace Application.InterfaceRepositories
 {
     public interface IUserRepository
     {
+ 
         Task<Users> GetByIdAsync(string userId);
 
     }

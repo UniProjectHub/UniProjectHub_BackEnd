@@ -1,4 +1,5 @@
 @UniProjectHub_BE_HostAddress = http://localhost:5275
+@UniProjectHub_BE_HostAddress = https://localhost:2620
 
 GET {{UniProjectHub_BE_HostAddress}}/weatherforecast/
 Accept: application/json

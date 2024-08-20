@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.BlogModelView;
 using AutoMapper;
 using Domain.Models;
@@ -16,7 +17,6 @@ namespace Application.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
-
         public BlogService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
@@ -25,6 +25,7 @@ namespace Application.Services
         public async Task<BlogModelView> CreateBlogAsync(BlogCreateModel blogCreateModel)
         {
             var blog = _mapper.Map<Blog>(blogCreateModel);
+            blog.CreatedAt = TimeHelper.GetVietnamTime();
             await _unitOfWork.BlogRepository.AddAsync(blog);
             await _unitOfWork.SaveChangesAsync();
             return _mapper.Map<BlogModelView>(blog);
@@ -43,6 +44,11 @@ namespace Application.Services
         public async Task<IEnumerable<BlogModelView>> GetBlogsByCategoryIdAsync(int categoryId)
         {
             var blogs = await _unitOfWork.BlogRepository.GetBlogsByCategoryIdAsync(categoryId);
+            return _mapper.Map<IEnumerable<BlogModelView>>(blogs);
+        }
+        public async Task<IEnumerable<BlogModelView>> GetBlogsByOwnerIdAsync(string userId)
+        {
+            var blogs = await _unitOfWork.BlogRepository.GetBlogsByOwnerIdAsync(userId);
             return _mapper.Map<IEnumerable<BlogModelView>>(blogs);
         }
 

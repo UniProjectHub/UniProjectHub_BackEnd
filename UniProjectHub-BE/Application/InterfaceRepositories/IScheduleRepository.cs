@@ -9,6 +9,8 @@ namespace Application.InterfaceRepositories
 {
     public interface IScheduleRepository : IGenericRepository<Schedule>
     {
+        
+
         void Delete(Schedule schedule);
         Task<List<Schedule>> GetAllSchedulesAsync();
 

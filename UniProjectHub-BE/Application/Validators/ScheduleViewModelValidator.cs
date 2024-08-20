@@ -15,24 +15,27 @@ namespace Application.Validators
 
             RuleFor(x => x.StartTime)
                 .NotEmpty().WithMessage("Start time is required.")
-                .Must(BeAValidDateTime).WithMessage("Start time must be a valid date and time.");
+                .Must(BeAValidTime).WithMessage("Start time must be a valid time.");
 
             RuleFor(x => x.EndTime)
                 .NotEmpty().WithMessage("End time is required.")
-                .Must(BeAValidDateTime).WithMessage("End time must be a valid date and time.")
-                .GreaterThan(x => x.StartTime).WithMessage("End time must be greater than start time.");
-
-            
-            
+                .Must(BeAValidTime).WithMessage("End time must be a valid time.")
+                .Must((model, endTime) => IsEndTimeGreaterThanStartTime(model.StartTime, endTime))
+                .WithMessage("End time must be greater than start time.");
 
             RuleFor(x => x.CourseName)
                 .NotEmpty().WithMessage("Course name is required.");
         }
 
-        private bool BeAValidDateTime(DateTime value)
+        private bool BeAValidTime(DateTime value)
         {
-            // You can add custom logic here to validate the DateTime format if necessary
+            // All DateTime values are valid so this method is not required
             return true;
+        }
+
+        private bool IsEndTimeGreaterThanStartTime(DateTime startTime, DateTime endTime)
+        {
+            return endTime > startTime;
         }
     }
 }

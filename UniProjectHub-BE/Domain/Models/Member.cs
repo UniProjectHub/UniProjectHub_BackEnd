@@ -12,7 +12,7 @@ namespace Domain.Models
         public int ProjectId { get; set; }
         public string? MenberId { get; set; }
         public bool IsOwner { get; set; }
-        public int Role {  get; set; }
+        public string? Role {  get; set; }
         public DateTime JoinTime { get; set; }
         public DateTime LeftTime { get; set; }
         public Users? User { get; set; }

@@ -16,3 +16,5 @@ D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstr
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\refint\Infracstructures.dll
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.pdb
 D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\ref\Infracstructures.dll
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\bin\Debug\net8.0\Infracstructures.runtimeconfig.json
+D:\UNIVERSITY\SE_8_SU_2024\EXE201\do\UniProjectHub_De\UniProjectHub-BE\Infracstructures\obj\Debug\net8.0\Infracstructures.genruntimeconfig.cache

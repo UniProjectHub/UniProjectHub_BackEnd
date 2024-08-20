@@ -9,6 +9,7 @@ namespace Application.InterfaceRepositories
 {
     public interface ISubTaskRepository: IGenericRepository<SubTask>
     {
+ 
         Task<IEnumerable<SubTask>> GetAllSubTasksByTaskIdAsync(int taskId);
     }
 }

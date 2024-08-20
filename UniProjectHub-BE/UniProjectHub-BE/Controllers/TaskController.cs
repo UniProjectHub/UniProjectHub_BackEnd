@@ -20,15 +20,20 @@ namespace UniProjectHub_BE.Controllers
         }
 
         [HttpPost("CreateTask/{projectId}")]
-        public async Task<IActionResult> CreateTask(int projectId, TaskViewModel request)
+        public async Task<IActionResult> CreateTask(int projectId, [FromBody] CreateTaskModel request)
         {
-            var taskViewModel = await _taskService.CreateTaskAsync(projectId, request);
-            if (taskViewModel != null)
-                return Ok(); // Task deleted successfully
-            else
-                return Ok(null); // Task not found or delete operation failed
+            if (request == null)
+            {
+                return BadRequest("Request body cannot be null");
+            }
 
+            // Log request data
+            Console.WriteLine($"Request OwnerId: {request.OwnerId}");
+
+            var result = await _taskService.CreateTaskAsync(projectId, request);
+            return result != null ? Ok(result) : BadRequest("Failed to create task");
         }
+
 
         [HttpGet("GetAllTasks")]
         public async Task<IActionResult> GetAllTasks()
@@ -61,7 +66,7 @@ namespace UniProjectHub_BE.Controllers
         }
 
         [HttpPut("UpdateTask/{id}")]
-        public async Task<IActionResult> UpdateTask(int id, TaskViewModel request)
+        public async Task<IActionResult> UpdateTask(int id, UpdateTaskModel request)
         {
             var updatedTaskViewModel = await _taskService.UpdateTaskAsync(id, request);
             if (updatedTaskViewModel == null)

@@ -17,7 +17,7 @@ namespace Domain.Models
         public string? University { get; set; }
         public bool IsMale { get; set; }
         public string? AvatarURL { get; set; }
-
+        public bool IsMemberCard { get; set; } = false;
         public bool IsActive { get; set; } = true; // Add the IsActive property with a default value
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpiryTime { get; set; }

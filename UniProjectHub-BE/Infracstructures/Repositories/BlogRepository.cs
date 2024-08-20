@@ -12,7 +12,7 @@ namespace Infracstructures.Repositories
     public class BlogRepository : GenericRepository<Blog>, IBlogRepository
     {
         private readonly AppDbContext _context;
-
+ 
         public BlogRepository(AppDbContext context) : base(context)
         {
             _context = context;
@@ -23,5 +23,12 @@ namespace Infracstructures.Repositories
                 .Where(b => b.CategoryID == categoryId)
                 .ToListAsync();
         }
+        public async Task<IEnumerable<Blog>> GetBlogsByOwnerIdAsync(string userId)
+        {
+            return await _context.Set<Blog>()
+                .Where(b => b.OwnerId == userId)
+                .ToListAsync();
+        }
+
     }
 }

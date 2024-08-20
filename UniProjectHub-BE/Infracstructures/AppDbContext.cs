@@ -25,11 +25,20 @@ namespace Infracstructures
 
         public DbSet<Users> Users { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
+        public DbSet<Domain.Models.Task> Tasks { get; set; } // Ensure this is added
 
         public DbSet<Member> Members { get; set; }
         public DbSet<GroupChat> GroupChats { get; set; }
         public DbSet<Payment> Payments { get; set; }
-        protected override void OnModelCreating(ModelBuilder builder)
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Domain.Models.File> Files { get; set; }
+         public DbSet<MemberInTask> MemberInTasks { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+         public DbSet<Project> Projects { get; set; }
+         public DbSet<SubTask> SubTasks { get; set; }
+         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 

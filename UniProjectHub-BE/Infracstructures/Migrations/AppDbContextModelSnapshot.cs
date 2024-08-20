@@ -200,8 +200,8 @@ namespace Infracstructures.Migrations
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -441,6 +441,9 @@ namespace Infracstructures.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("OwnerId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");
 
@@ -462,9 +465,14 @@ namespace Infracstructures.Migrations
                     b.Property<string>("TaskName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProjectId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Task", (string)null);
                 });
@@ -502,6 +510,9 @@ namespace Infracstructures.Migrations
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsMale")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMemberCard")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsStudent")
@@ -597,14 +608,14 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3003c618-9540-4981-a067-4324b366edb7",
-                            Name = "Admin",
+                             Id = "c9c54e2a-4b29-4992-a007-0b9cb0469b37",
+                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "2e830097-ec1d-4737-bbbb-1c9bc95cece1",
-                            Name = "User",
+                             Id = "5ccc7f98-08e8-4ea3-bc24-0569cfb01691",
+                             Name = "User",
                             NormalizedName = "USER"
                         });
                 });
@@ -869,7 +880,13 @@ namespace Infracstructures.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Domain.Models.Users", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
                     b.Navigation("Project");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

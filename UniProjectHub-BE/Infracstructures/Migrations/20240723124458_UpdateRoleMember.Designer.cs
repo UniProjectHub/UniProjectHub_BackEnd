@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infracstructures.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240704201930_RemoveTeacherIdFromSchedule")]
-    partial class RemoveTeacherIdFromSchedule
+    [Migration("20240723124458_UpdateRoleMember")]
+    partial class UpdateRoleMember
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -203,8 +203,8 @@ namespace Infracstructures.Migrations
                     b.Property<int>("ProjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -381,20 +381,10 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("TeacherId")
-                        .IsRequired()
-                        .HasColumnType("int");
-
-                    b.Property<string>("TeacherId1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TeacherId1");
 
                     b.HasIndex("UserId");
 
@@ -517,6 +507,9 @@ namespace Infracstructures.Migrations
                     b.Property<bool>("IsMale")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsMemberCard")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsStudent")
                         .HasColumnType("bit");
 
@@ -610,13 +603,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d2919212-ce1d-4b11-b611-15e00f5ba427",
+                            Id = "fed901ef-8e7e-482d-a18a-4708ca92dfeb",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "507513f2-29ab-46ef-b60f-c5e48c90d8f1",
+                            Id = "d50d9ed4-738d-4200-ae56-524b1e0cefac",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -855,18 +848,10 @@ namespace Infracstructures.Migrations
 
             modelBuilder.Entity("Domain.Models.Schedule", b =>
                 {
-                    b.HasOne("Domain.Models.Users", "Teacher")
-                        .WithMany()
-                        .HasForeignKey("TeacherId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Domain.Models.Users", "User")
                         .WithMany("Schedules")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("Teacher");
 
                     b.Navigation("User");
                 });

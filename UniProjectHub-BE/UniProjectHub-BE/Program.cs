@@ -43,7 +43,9 @@ using Infracstructures;
 using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 // Configuration
 builder.Configuration.SetBasePath(Directory.GetCurrentDirectory())
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
@@ -54,8 +56,11 @@ builder.Services.AddCors(options =>
     options.AddPolicy("_myAllowSpecificOrigins",
         builder =>
         {
-            builder.WithOrigins("https://localhost:7067", "http://localhost:5275",
-                "http://localhost:5173", "http://localhost:5174")
+            builder.WithOrigins("https://localhost:7067","http://localhost:5275",
+                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175",
+                "http://103.20.97.210", "https://uniprojecthub.edu.vn", 
+                "http://uniprojecthub.edu.vn")
+
                    .AllowAnyHeader()
                    .AllowAnyMethod();
         });
@@ -69,6 +74,12 @@ builder.Services.AddScoped<IScheduleRepository, ScheduleRepository>();
 builder.Services.AddScoped<IScheduleService, ScheduleService>();
 builder.Services.AddScoped<IGroupChatRepository, GroupChatRepository>();
 builder.Services.AddScoped<IGroupChatService, GroupChatService>();
+builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
+//builder.Services.AddScoped<INotificationService, NotificationService>();
+//builder.Services.AddScoped<INotificationRepository, INotificationRepository>();
+builder.Services.AddScoped<IValidator<MemberViewModel>, MemberViewModelValidator>();
+builder.Services.AddScoped<IValidator<CreateMemberViewModel>, CreateMemberViewModelValidator>();
 
 // AutoMapper
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
@@ -82,7 +93,20 @@ builder.Services.AddValidatorsFromAssemblyContaining<MemberViewModelValidator>()
 // Swagger/OpenAPI configuration
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "ASP.System API", Version = "v1" });
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "UNIPROJECtHUB_APN_EXE201", // The title of your API
+        Version = "v1/andb", // The version of your API
+        Description = "API Deloy by AnBinh  Visit our websites for more information: https://uniprojecthub.edu.vn, http://uniprojecthub.edu.vn",
+        Contact = new OpenApiContact
+        {
+            Name = "BinhAn",
+            Email = "Dan1314705@gmail.com",
+            Url = new Uri("https://www.facebook.com/heens.1703/"),
+        },
+       
+
+    });
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,
@@ -133,7 +157,8 @@ builder.Services.AddAutoMapper(typeof(MapperConfigs).Assembly);
 
 // Add FluentValidation
 builder.Services.AddValidatorsFromAssemblyContaining<ScheduleViewModelValidator>();
-
+builder.Services.AddValidatorsFromAssemblyContaining<CreateScheduleViewModelValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateScheduleViewModelValidator>();
 //Mail setting
 builder.Services.AddOptions();
 var mailsettings = builder.Configuration.GetSection("MailSettings");
@@ -162,7 +187,7 @@ builder.Services.AddIdentity<Users, IdentityRole>(options =>
     options.User.RequireUniqueEmail = true;
 
     // Cấu hình đăng nhập.
-    options.SignIn.RequireConfirmedEmail = true;
+    options.SignIn.RequireConfirmedEmail = false;
     options.SignIn.RequireConfirmedPhoneNumber = false;
     options.SignIn.RequireConfirmedAccount = true;
 })
@@ -238,10 +263,10 @@ app.UseCors(policy => policy.AllowAnyHeader()
                             .AllowAnyMethod()
                             .AllowCredentials()
                             .WithOrigins("https://localhost:7067","http://localhost:5275",
-                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175"));
+                "http://localhost:5173", "http://localhost:5174", "http://localhost:5175","http://unipro.mieutech.io.vn","http://localhost", "https://localhost", "http://103.20.97.210", "https://uniprojecthub.edu.vn",
+                "http://uniprojecthub.edu.vn"));
 
-app.UseHttpsRedirection();
-
+ 
 app.UseAuthentication();
 app.UseAuthorization();
 

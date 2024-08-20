@@ -9,5 +9,6 @@ namespace Application.InterfaceRepositories
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
+
     }
 }

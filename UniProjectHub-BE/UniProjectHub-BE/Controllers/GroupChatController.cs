@@ -76,11 +76,23 @@ namespace UniProjectHub_BE.Controllers
             }
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGroupChat(int id)
         {
-            await _groupChatService.DeleteGroupChatAsync(id);
-            return NoContent();
+            try
+            {
+                await _groupChatService.DeleteGroupChatAsync(id);
+                return Ok(); // Or appropriate status code
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Log the exception and return a generic error
+                return StatusCode(StatusCodes.Status500InternalServerError, "An unexpected error occurred.");
+            }
         }
     }
 }

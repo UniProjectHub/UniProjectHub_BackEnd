@@ -1,5 +1,6 @@
 ﻿using Application.InterfaceRepositories;
 using Application.InterfaceServies;
+using Application.ViewModels;
 using Application.ViewModels.MemberViewModel;
 using Application.ViewModels.ProjectViewModel;
 using AutoMapper;
@@ -35,18 +36,20 @@ namespace Application.Services
                 TypeOfSpace = request.TypeOfSpace,
                 Status = request.Status,
                 IsGroup = request.IsGroup,
-                CreatedAt = DateTime.UtcNow
+                Img = request.Img,
+                CreatedAt = TimeHelper.GetVietnamTime()
             };
 
             await _unitOfWork.ProjectRepository.AddAsync(project);
             await _unitOfWork.SaveChangesAsync();
+           
             var menber = new Member
             {
                 MenberId = ownerId,
                 IsOwner = true,
                 ProjectId = project.Id,
-                Role = 1,
-                JoinTime = DateTime.UtcNow
+                Role = "LEADER",
+                JoinTime = TimeHelper.GetVietnamTime()
 
             };
             
@@ -62,11 +65,12 @@ namespace Application.Services
                     if (memberInProject.UserId != ownerId){
                         menber = new Member
                         {
+                            
                             MenberId = memberInProject.UserId,
                             IsOwner = false,
                             ProjectId = project.Id,
-                            Role = 1,
-                            JoinTime = DateTime.UtcNow
+                            Role = "MEMBER",
+                            JoinTime = TimeHelper.GetVietnamTime()
                         };
                         await _unitOfWork.MemberRepository.AddAsync(menber);
                         await _unitOfWork.SaveChangesAsync();
@@ -100,7 +104,8 @@ namespace Application.Services
                 TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
-                CreatedAt = p.CreatedAt
+                CreatedAt = p.CreatedAt,
+                Img = p.Img
             });
         }
 
@@ -119,7 +124,8 @@ namespace Application.Services
                 TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
-                CreatedAt = project.CreatedAt
+                CreatedAt = project.CreatedAt, 
+                Img = project.Img
             };
         }
 
@@ -147,7 +153,8 @@ namespace Application.Services
                 Status = p.Status,
                 IsGroup = p.IsGroup,
                 CreatedAt = p.CreatedAt,
-                IsOwner = true
+                IsOwner = true,
+                Img = p.Img
             });
         }
         public async Task<IEnumerable<ProjectViewModel>> GetGroupProjectsByUserAsync(string userId)
@@ -172,7 +179,8 @@ namespace Application.Services
                         Status = project.Status,
                         IsGroup = project.IsGroup,
                         CreatedAt = project.CreatedAt,
-                        IsOwner = true
+                        IsOwner = true, 
+                        Img = project.Img
                     });
                 }
             }
@@ -192,6 +200,7 @@ namespace Application.Services
                         Status = project.Status,
                         IsGroup = project.IsGroup,
                         CreatedAt = project.CreatedAt,
+                        Img = project.Img,
                         IsOwner = false
                     });
                 }
@@ -222,7 +231,8 @@ namespace Application.Services
                 TypeOfSpace = p.TypeOfSpace,
                 Status = p.Status,
                 IsGroup = p.IsGroup,
-                CreatedAt = p.CreatedAt
+                CreatedAt = p.CreatedAt,
+                Img= p.Img
             });
         }
 
@@ -240,6 +250,7 @@ namespace Application.Services
             project.TypeOfSpace = request.TypeOfSpace;
             project.Status = request.Status;
             project.IsGroup = request.IsGroup;
+            project.Img = request.Img;
 
             _unitOfWork.ProjectRepository.Update(project);
             await _unitOfWork.SaveChangesAsync();
@@ -252,7 +263,8 @@ namespace Application.Services
                 TypeOfSpace = project.TypeOfSpace,
                 Status = project.Status,
                 IsGroup = project.IsGroup,
-                CreatedAt = project.CreatedAt
+                CreatedAt = project.CreatedAt,
+                Img = project.Img
             };
         }
 
