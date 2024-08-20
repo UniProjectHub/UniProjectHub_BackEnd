@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\migrations\\20240704201930_removeteacheridfromschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\migrations\\20240704201930_removeteacheridfromschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|d:\\university\\se_8_su_2024\\exe201\\do\\uniprojecthub_de\\uniprojecthub-be\\infracstructures\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC58C71F-77F5-43E0-B508-03F774552390}|Infracstructures\\Infracstructures.csproj|solutionrelative:infracstructures\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,8 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AQIAAPcAAAAAAAAAAAAQwA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T09:21:58.69Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -55,32 +67,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20240704201930_RemoveTeacherIdFromSchedule.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240704201930_RemoveTeacherIdFromSchedule.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\20240704201930_RemoveTeacherIdFromSchedule.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\20240704201930_RemoveTeacherIdFromSchedule.cs",
-              "RelativeToolTip": "Infracstructures\\Migrations\\20240704201930_RemoveTeacherIdFromSchedule.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwAkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T09:33:41.936Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AQIAAPcAAAAAAAAAAAAQwA4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T09:21:58.69Z",
-              "EditorCaption": ""
             }
           ]
         },
