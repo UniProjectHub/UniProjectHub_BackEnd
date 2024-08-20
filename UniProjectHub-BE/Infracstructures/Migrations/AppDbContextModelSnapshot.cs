@@ -378,20 +378,10 @@ namespace Infracstructures.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("TeacherId")
-                        .IsRequired()
-                        .HasColumnType("int");
-
-                    b.Property<string>("TeacherId1")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("TeacherId1");
 
                     b.HasIndex("UserId");
 
@@ -607,13 +597,13 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "d2919212-ce1d-4b11-b611-15e00f5ba427",
+                            Id = "3003c618-9540-4981-a067-4324b366edb7",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "507513f2-29ab-46ef-b60f-c5e48c90d8f1",
+                            Id = "2e830097-ec1d-4737-bbbb-1c9bc95cece1",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -852,18 +842,10 @@ namespace Infracstructures.Migrations
 
             modelBuilder.Entity("Domain.Models.Schedule", b =>
                 {
-                    b.HasOne("Domain.Models.Users", "Teacher")
-                        .WithMany()
-                        .HasForeignKey("TeacherId1")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Domain.Models.Users", "User")
                         .WithMany("Schedules")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
-
-                    b.Navigation("Teacher");
 
                     b.Navigation("User");
                 });
