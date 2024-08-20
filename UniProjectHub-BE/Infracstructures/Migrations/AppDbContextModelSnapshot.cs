@@ -608,14 +608,14 @@ namespace Infracstructures.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c9c54e2a-4b29-4992-a007-0b9cb0469b37",
-                            Name = "Admin",
+                             Id = "c9c54e2a-4b29-4992-a007-0b9cb0469b37",
+                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "5ccc7f98-08e8-4ea3-bc24-0569cfb01691",
-                            Name = "User",
+                             Id = "5ccc7f98-08e8-4ea3-bc24-0569cfb01691",
+                             Name = "User",
                             NormalizedName = "USER"
                         });
                 });
