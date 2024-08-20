@@ -112,7 +112,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 335,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 22,
+=======
+          "SelectedChildIndex": 9,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -152,6 +156,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< Updated upstream
               "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
@@ -241,10 +246,14 @@
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T07:15:26.307Z"
+=======
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "global.json",
               "DocumentMoniker": "D:\\Study\\cn8\\EXE201\\MainGit\\UniProjectHub-BE\\global.json",
               "RelativeDocumentMoniker": "global.json",
@@ -490,6 +499,17 @@
               "ViewState": "AQIAABAAAAAAAAAAAAAswCMAAABBAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-23T01:45:58.119Z"
+=======
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Infracstructures\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAFgCAAAAAAAAAAAAAGkCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T09:21:58.69Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         },
