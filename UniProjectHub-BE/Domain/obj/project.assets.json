@@ -817,11 +817,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\adm\\Source\\Repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\adm\\Source\\Repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-      "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\adm\\Source\\Repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

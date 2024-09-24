@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {}
+    "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {}
   },
   "projects": {
-    "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj": {
+    "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\obj\\",
+        "outputPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj"
+              "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj"
               }
             }
           }
@@ -133,14 +133,14 @@
         }
       }
     },
-    "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj": {
+    "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -204,14 +204,14 @@
         }
       }
     },
-    "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
+    "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+        "projectUniqueName": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
         "projectName": "Infracstructures",
-        "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
+        "projectPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\Infracstructures.csproj",
         "packagesPath": "C:\\Users\\adm\\.nuget\\packages\\",
-        "outputPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Infracstructures\\obj\\",
+        "outputPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Infracstructures\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -233,8 +233,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj": {
-                "projectPath": "D:\\UNIVERSITY\\SE_8_SU_2024\\EXE201\\do\\UniProjectHub_De\\UniProjectHub-BE\\Application\\Application.csproj"
+              "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\adm\\source\\repos\\UniProjectHub_BackEnd\\UniProjectHub-BE\\Application\\Application.csproj"
               }
             }
           }
